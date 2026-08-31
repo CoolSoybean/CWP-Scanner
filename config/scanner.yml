@@ -1,0 +1,16 @@
+scanner:
+  min_bars: 180
+  cache_refresh_days: 10
+  max_workers: 4
+  watchlist_max_trading_days: 15
+  output_none: false
+  engine_mode: v1.8.5-source-port
+
+notifications:
+  telegram_enabled: true
+  email_enabled: false
+  immediate_change_types:
+    - NEW_ENTRY
+    - READY_TO_ENTRY
+    - NEW_READY
+    - WATCH_TO_READY

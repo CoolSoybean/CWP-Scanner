@@ -1,0 +1,2340 @@
+//@version=6
+indicator(
+    "Chan + Wyckoff + Price Action System V1.8.5",
+    shorttitle="CWP1.8.5",
+    overlay=true,
+    max_labels_count=500,
+    max_lines_count=500
+)
+
+// ======================================================
+// 1. INPUT GROUPS
+// ======================================================
+
+var string G_MKT  = "1. Market Profile"
+var string G_CHAN = "2. Chan Structure Engine"
+var string G_WYC  = "3. Wyckoff Inside Zhongshu"
+var string G_PA   = "4. Price Action Trigger"
+var string G_RISK = "5. Risk Management"
+var string G_VIS  = "6. Visual Display"
+var string G_CLR  = "7. Colours"
+
+// ======================================================
+// 1.1 MARKET PROFILE
+// ======================================================
+
+marketModeInput = input.string(
+    "Auto",
+    "Market Profile",
+    options=["Auto", "China A-Shares", "US Equities", "Other Equities", "Crypto"],
+    group=G_MKT
+)
+
+tradeDirectionInput = input.string(
+    "Both",
+    "Trade Direction",
+    options=["Both", "Long Only", "Short Only"],
+    group=G_MKT
+)
+
+// ======================================================
+// 1.2 CHAN
+// ======================================================
+
+fractalMinBarsInput = input.int(
+    3,
+    "Base Minimum Bars Between Strokes",
+    minval=2,
+    maxval=10,
+    group=G_CHAN
+)
+
+strokeMinAtrInput = input.float(
+    1.0,
+    "Base Minimum Stroke Move (ATR)",
+    minval=0.25,
+    maxval=5.0,
+    step=0.05,
+    group=G_CHAN
+)
+
+zsPositionBull = input.float(
+    0.65,
+    "Bullish Zhongshu Position",
+    minval=0.50,
+    maxval=0.90,
+    step=0.05,
+    group=G_CHAN
+)
+
+zsPositionBear = input.float(
+    0.35,
+    "Bearish Zhongshu Position",
+    minval=0.10,
+    maxval=0.50,
+    step=0.05,
+    group=G_CHAN
+)
+
+maxStoredStrokes = input.int(
+    30,
+    "Maximum Stored Strokes",
+    minval=10,
+    maxval=100,
+    group=G_CHAN
+)
+
+secondPointMaxBars = input.int(
+    20,
+    "2B / 2S Maximum Lifecycle Bars",
+    minval=5,
+    maxval=60,
+    group=G_CHAN
+)
+
+thirdPointMaxBars = input.int(
+    12,
+    "3B / 3S Retest Window",
+    minval=3,
+    maxval=30,
+    group=G_CHAN
+)
+
+// ======================================================
+// 1.3 WYCKOFF
+// ======================================================
+
+volMaLength = input.int(
+    20,
+    "Volume SMA",
+    minval=5,
+    maxval=100,
+    group=G_WYC
+)
+
+wycTestMaxBars = input.int(
+    20,
+    "Climax → Secondary Test Window",
+    minval=3,
+    maxval=60,
+    group=G_WYC
+)
+
+springConfirmBars = input.int(
+    5,
+    "Spring / UTAD Confirmation Window",
+    minval=1,
+    maxval=15,
+    group=G_WYC
+)
+
+wycClimaxRangeAtrInput = input.float(
+    1.5,
+    "Base Climax Range (ATR)",
+    minval=0.5,
+    maxval=5.0,
+    step=0.1,
+    group=G_WYC
+)
+
+wycClimaxVolInput = input.float(
+    1.5,
+    "Base Climax Volume / SMA",
+    minval=1.0,
+    maxval=5.0,
+    step=0.1,
+    group=G_WYC
+)
+
+// ======================================================
+// 1.4 PRICE ACTION
+// ======================================================
+
+microFractalBars = input.int(
+    2,
+    "Micro Swing Confirmation Bars",
+    minval=1,
+    maxval=5,
+    group=G_PA
+)
+
+sweepLookback = input.int(
+    5,
+    "Liquidity Sweep Lookback",
+    minval=3,
+    maxval=20,
+    group=G_PA
+)
+
+enableZsBreakoutEntry = input.bool(
+    true,
+    "Enable Direct Zhongshu Breakout Entry",
+    group=G_PA
+)
+
+// ======================================================
+// 1.5 RISK
+// ======================================================
+
+rrRatio1 = input.float(
+    2.0,
+    "Fallback TP1 R:R",
+    minval=0.5,
+    step=0.5,
+    group=G_RISK
+)
+
+rrRatio2 = input.float(
+    3.0,
+    "TP2 R:R",
+    minval=1.0,
+    step=0.5,
+    group=G_RISK
+)
+
+slBufferAtrInput = input.float(
+    0.30,
+    "Base Structural SL Buffer (ATR)",
+    minval=0.0,
+    maxval=2.0,
+    step=0.05,
+    group=G_RISK
+)
+
+riskSegmentBars = input.int(
+    6,
+    "Risk Panel Width (Bars)",
+    minval=3,
+    maxval=20,
+    group=G_RISK
+)
+
+riskMaxDisplayBars = input.int(
+    20,
+    "Maximum Risk Display Bars",
+    minval=5,
+    maxval=100,
+    group=G_RISK
+)
+
+hideTp1AfterHit = input.bool(
+    true,
+    "Hide TP1 After Reached",
+    group=G_RISK
+)
+
+hideRiskAfterTradeClosed = input.bool(
+    true,
+    "Hide Risk Panel After SL / TP2",
+    group=G_RISK
+)
+
+// ======================================================
+// 1.6 VISUAL
+// ======================================================
+
+showStrokes = input.bool(true, "Show Chan Strokes", group=G_VIS)
+
+showZhongshu = input.bool(true, "Show Active Zhongshu", group=G_VIS)
+
+showChanLabels = input.bool(true, "Show Chan Structure Labels", group=G_VIS)
+
+showWyckoffLabels = input.bool(true, "Show Spring / UTAD Labels", group=G_VIS)
+
+showBreakoutLabels = input.bool(true, "Show Zhongshu Break Labels", group=G_VIS)
+
+showEntryLabels = input.bool(true, "Show Final Entry Labels", group=G_VIS)
+
+showRisk = input.bool(true, "Show Active Risk Panel", group=G_VIS)
+
+showPotentialFirstPoint = input.bool(false, "Show Potential 1B / 1S", group=G_VIS)
+
+dashboardMode = input.string(
+    "Compact",
+    "Dashboard Mode",
+    options=["Compact", "Debug"],
+    group=G_VIS
+)
+
+showDashboard = input.bool(true, "Show Dashboard", group=G_VIS)
+
+// ======================================================
+// 1.7 COLOURS
+// ======================================================
+
+cBull = input.color(#00E676, "Bull", group=G_CLR)
+
+cBear = input.color(#E040FB, "Bear", group=G_CLR)
+
+cZsHigh = input.color(#FF5252, "Zhongshu High", group=G_CLR)
+
+cZsLow = input.color(#00C853, "Zhongshu Low", group=G_CLR)
+
+cSl = input.color(#FF5252, "Stop Loss", group=G_CLR)
+
+cTp1 = input.color(#FFD54F, "TP1", group=G_CLR)
+
+cTp2 = input.color(#00C853, "TP2", group=G_CLR)
+
+// ======================================================
+// 2. MARKET DETECTION
+// ======================================================
+
+f_detect_market() =>
+    string p = syminfo.prefix
+    string t = syminfo.type
+    string tk = syminfo.ticker
+    string cur = syminfo.currency
+
+    bool prefixA = p == "SSE" or p == "SZSE" or p == "SH" or p == "SZ" or p == "BSE" or p == "BJ"
+    bool currencyA = cur == "CNY" and (t == "stock" or t == "fund" or t == "index")
+    bool suffixA = str.endswith(tk, ".SS") or str.endswith(tk, ".SZ") or str.endswith(tk, ".SH") or str.endswith(tk, ".BJ")
+    bool detectedA = prefixA or currencyA or suffixA
+    bool detectedCrypto = p == "BINANCE" or p == "OKX" or p == "BYBIT" or p == "COINBASE" or p == "KUCOIN" or p == "BITGET" or p == "GATEIO" or p == "MEXC" or t == "crypto"
+    bool detectedUS = p == "NASDAQ" or p == "NYSE" or p == "AMEX" or p == "BATS" or p == "ARCA"
+
+    string result = "Other Equities"
+
+    if detectedA
+        result := "China A-Shares"
+    else if detectedCrypto
+        result := "Crypto"
+    else if detectedUS
+        result := "US Equities"
+
+    result
+
+string marketType = marketModeInput
+
+if marketModeInput == "Auto"
+    marketType := f_detect_market()
+
+bool isChinaA = marketType == "China A-Shares"
+
+bool isUS = marketType == "US Equities"
+
+bool isCrypto = marketType == "Crypto"
+
+bool allowLong = isChinaA ? true : tradeDirectionInput == "Both" or tradeDirectionInput == "Long Only"
+
+bool allowShort = isChinaA ? false : tradeDirectionInput == "Both" or tradeDirectionInput == "Short Only"
+
+// ======================================================
+// 3. CORE REFERENCES
+// ======================================================
+
+float atr14 = ta.atr(14)
+
+float atr14Ref = atr14[1]
+
+float atrSlow = ta.sma(atr14, 100)
+
+float volSma = ta.sma(volume, volMaLength)
+
+float atrRatio = not na(atrSlow) and atrSlow > 0 ? atr14 / atrSlow : 1.0
+
+float volatilityScale = 1.0
+
+if atrRatio > 1.30
+    volatilityScale := 1.20
+else if atrRatio < 0.80
+    volatilityScale := 0.85
+
+// ======================================================
+// 4. MARKET PROFILE
+// ======================================================
+
+int pStrokeMinBars = fractalMinBarsInput
+
+float pStrokeAtr = strokeMinAtrInput
+
+float pZsToleranceAtr = 0.30
+
+float pSpringToleranceAtr = 1.00
+
+float pSlBufferAtr = slBufferAtrInput
+
+float pClimaxRangeAtr = wycClimaxRangeAtrInput
+
+float pClimaxVolume = wycClimaxVolInput
+
+float pStToleranceAtr = 0.75
+
+bool pVolumeHardConfirm = true
+
+bool pGapSensitive = true
+
+if isChinaA
+    pStrokeMinBars := math.max(fractalMinBarsInput, 5)
+    pStrokeAtr := 1.10
+    pZsToleranceAtr := 0.25
+    pSpringToleranceAtr := 1.00
+    pSlBufferAtr := 0.25
+    pClimaxRangeAtr := 1.50
+    pClimaxVolume := 1.50
+    pStToleranceAtr := 0.60
+    pVolumeHardConfirm := true
+    pGapSensitive := true
+
+else if isUS
+    pStrokeMinBars := math.max(fractalMinBarsInput, 4)
+    pStrokeAtr := 0.90
+    pZsToleranceAtr := 0.30
+    pSpringToleranceAtr := 1.00
+    pSlBufferAtr := 0.30
+    pClimaxRangeAtr := 1.50
+    pClimaxVolume := 1.50
+    pStToleranceAtr := 0.75
+    pVolumeHardConfirm := true
+    pGapSensitive := true
+
+else if isCrypto
+    pStrokeMinBars := math.max(fractalMinBarsInput, 4)
+    pStrokeAtr := 1.30
+    pZsToleranceAtr := 0.50
+    pSpringToleranceAtr := 1.50
+    pSlBufferAtr := 0.50
+    pClimaxRangeAtr := 1.80
+    pClimaxVolume := 1.30
+    pStToleranceAtr := 1.00
+    pVolumeHardConfirm := false
+    pGapSensitive := false
+
+else
+    pStrokeMinBars := math.max(fractalMinBarsInput, 4)
+
+pStrokeAtr *= volatilityScale
+
+pZsToleranceAtr *= volatilityScale
+
+pSpringToleranceAtr *= volatilityScale
+
+pSlBufferAtr *= volatilityScale
+
+pStToleranceAtr *= volatilityScale
+
+// ======================================================
+// 5. CONSTANTS
+// ======================================================
+
+const int FRACTAL_NONE = 0
+
+const int FRACTAL_TOP = 1
+
+const int FRACTAL_BOTTOM = -1
+
+const int REGIME_UNKNOWN = 0
+
+const int REGIME_BULL_TREND = 1
+
+const int REGIME_BEAR_TREND = -1
+
+const int REGIME_BULL_ZS = 2
+
+const int REGIME_BEAR_ZS = -2
+
+const int REGIME_NEUTRAL_ZS = 3
+
+const int REGIME_TRANSITION = 4
+
+const int WYC_NEUTRAL = 0
+
+const int WYC_ACCUM_WATCH = 1
+
+const int WYC_DISTRIB_WATCH = -1
+
+const int WYC_ACCUMULATION = 2
+
+const int WYC_DISTRIBUTION = -2
+
+const int SETUP_NONE = 0
+
+const int SETUP_SPRING = 1
+
+const int SETUP_SECOND_BUY = 2
+
+const int SETUP_THIRD_BUY = 3
+
+const int SETUP_ZS_BREAKOUT = 4
+
+const int SETUP_UTAD = -1
+
+const int SETUP_SECOND_SELL = -2
+
+const int SETUP_THIRD_SELL = -3
+
+const int SETUP_ZS_BREAKDOWN = -4
+
+// ======================================================
+// 6. CONFIRMED FRACTALS
+// ======================================================
+
+bool rawTopFractal = high[1] > high[2] and high[1] >= high
+
+bool rawBottomFractal = low[1] < low[2] and low[1] <= low
+
+float fractalAtr = atr14[1]
+
+// ======================================================
+// 7. CHAN STROKE ENGINE
+// ======================================================
+
+var array<float> strokePrices = array.new_float()
+
+var array<int> strokeTypes = array.new_int()
+
+var array<int> strokeBars = array.new_int()
+
+var int latestFractalType = FRACTAL_NONE
+
+var float latestFractalPrice = na
+
+var int latestFractalBar = na
+
+bool newStrokeCreated = false
+
+if rawTopFractal and barstate.isconfirmed
+    int candidateBar = bar_index - 1
+    float candidatePrice = high[1]
+    int n = array.size(strokePrices)
+
+    if n == 0
+        array.push(strokePrices, candidatePrice)
+        array.push(strokeTypes, FRACTAL_TOP)
+        array.push(strokeBars, candidateBar)
+
+        latestFractalType := FRACTAL_TOP
+        latestFractalPrice := candidatePrice
+        latestFractalBar := candidateBar
+
+        newStrokeCreated := true
+
+    else
+        int lastType = array.get(strokeTypes, n - 1)
+        float lastPrice = array.get(strokePrices, n - 1)
+        int lastBar = array.get(strokeBars, n - 1)
+
+        if lastType == FRACTAL_TOP
+            if candidatePrice > lastPrice
+                array.set(strokePrices, n - 1, candidatePrice)
+                array.set(strokeBars, n - 1, candidateBar)
+
+                latestFractalType := FRACTAL_TOP
+                latestFractalPrice := candidatePrice
+                latestFractalBar := candidateBar
+
+        else
+            bool enoughBars = candidateBar - lastBar >= pStrokeMinBars
+            bool enoughMove = not na(fractalAtr) and candidatePrice - lastPrice >= fractalAtr * pStrokeAtr
+
+            if enoughBars and enoughMove
+                array.push(strokePrices, candidatePrice)
+                array.push(strokeTypes, FRACTAL_TOP)
+                array.push(strokeBars, candidateBar)
+
+                latestFractalType := FRACTAL_TOP
+                latestFractalPrice := candidatePrice
+                latestFractalBar := candidateBar
+
+                newStrokeCreated := true
+
+if rawBottomFractal and barstate.isconfirmed
+    int candidateBar = bar_index - 1
+    float candidatePrice = low[1]
+    int n = array.size(strokePrices)
+
+    if n == 0
+        array.push(strokePrices, candidatePrice)
+        array.push(strokeTypes, FRACTAL_BOTTOM)
+        array.push(strokeBars, candidateBar)
+
+        latestFractalType := FRACTAL_BOTTOM
+        latestFractalPrice := candidatePrice
+        latestFractalBar := candidateBar
+
+        newStrokeCreated := true
+
+    else
+        int lastType = array.get(strokeTypes, n - 1)
+        float lastPrice = array.get(strokePrices, n - 1)
+        int lastBar = array.get(strokeBars, n - 1)
+
+        if lastType == FRACTAL_BOTTOM
+            if candidatePrice < lastPrice
+                array.set(strokePrices, n - 1, candidatePrice)
+                array.set(strokeBars, n - 1, candidateBar)
+
+                latestFractalType := FRACTAL_BOTTOM
+                latestFractalPrice := candidatePrice
+                latestFractalBar := candidateBar
+
+        else
+            bool enoughBars = candidateBar - lastBar >= pStrokeMinBars
+            bool enoughMove = not na(fractalAtr) and lastPrice - candidatePrice >= fractalAtr * pStrokeAtr
+
+            if enoughBars and enoughMove
+                array.push(strokePrices, candidatePrice)
+                array.push(strokeTypes, FRACTAL_BOTTOM)
+                array.push(strokeBars, candidateBar)
+
+                latestFractalType := FRACTAL_BOTTOM
+                latestFractalPrice := candidatePrice
+                latestFractalBar := candidateBar
+
+                newStrokeCreated := true
+
+while array.size(strokePrices) > maxStoredStrokes
+    array.shift(strokePrices)
+    array.shift(strokeTypes)
+    array.shift(strokeBars)
+
+// ======================================================
+// 8. STROKE STRUCTURE
+// ======================================================
+
+bool bullStrokeStructure = false
+
+bool bearStrokeStructure = false
+
+int strokeCount = array.size(strokePrices)
+
+if strokeCount >= 4
+    float p0 = array.get(strokePrices, strokeCount - 4)
+    float p1 = array.get(strokePrices, strokeCount - 3)
+    float p2 = array.get(strokePrices, strokeCount - 2)
+    float p3 = array.get(strokePrices, strokeCount - 1)
+
+    int t0 = array.get(strokeTypes, strokeCount - 4)
+    int t1 = array.get(strokeTypes, strokeCount - 3)
+    int t2 = array.get(strokeTypes, strokeCount - 2)
+    int t3 = array.get(strokeTypes, strokeCount - 1)
+
+    if t0 == FRACTAL_TOP and t1 == FRACTAL_BOTTOM and t2 == FRACTAL_TOP and t3 == FRACTAL_BOTTOM
+        bullStrokeStructure := p2 > p0 and p3 > p1
+        bearStrokeStructure := p2 < p0 and p3 < p1
+
+    else if t0 == FRACTAL_BOTTOM and t1 == FRACTAL_TOP and t2 == FRACTAL_BOTTOM and t3 == FRACTAL_TOP
+        bullStrokeStructure := p2 > p0 and p3 > p1
+        bearStrokeStructure := p2 < p0 and p3 < p1
+
+// ======================================================
+// 9. RECENT STROKE REFERENCES
+// ======================================================
+
+float lastStrokeHigh = na
+
+float previousStrokeHigh = na
+
+float lastStrokeLow = na
+
+float previousStrokeLow = na
+
+if strokeCount >= 2
+    for i = 0 to strokeCount - 1
+        int idx = strokeCount - 1 - i
+        int st = array.get(strokeTypes, idx)
+        float sp = array.get(strokePrices, idx)
+
+        if st == FRACTAL_TOP
+            if na(lastStrokeHigh)
+                lastStrokeHigh := sp
+            else if na(previousStrokeHigh)
+                previousStrokeHigh := sp
+
+        if st == FRACTAL_BOTTOM
+            if na(lastStrokeLow)
+                lastStrokeLow := sp
+            else if na(previousStrokeLow)
+                previousStrokeLow := sp
+
+// ======================================================
+// 10. ZHONGSHU ENGINE
+// ======================================================
+
+bool currentZsValid = false
+
+float currentZG = na
+
+float currentZD = na
+
+float currentGG = na
+
+float currentDD = na
+
+int currentZsStartBar = na
+
+if strokeCount >= 4
+    float s0 = array.get(strokePrices, strokeCount - 4)
+    float s1 = array.get(strokePrices, strokeCount - 3)
+    float s2 = array.get(strokePrices, strokeCount - 2)
+    float s3 = array.get(strokePrices, strokeCount - 1)
+
+    int b0 = array.get(strokeBars, strokeCount - 4)
+
+    float h1 = math.max(s0, s1)
+    float l1 = math.min(s0, s1)
+
+    float h2 = math.max(s1, s2)
+    float l2 = math.min(s1, s2)
+
+    float h3 = math.max(s2, s3)
+    float l3 = math.min(s2, s3)
+
+    currentZG := math.min(h1, math.min(h2, h3))
+    currentZD := math.max(l1, math.max(l2, l3))
+
+    currentGG := math.max(h1, math.max(h2, h3))
+    currentDD := math.min(l1, math.min(l2, l3))
+
+    currentZsValid := currentZG > currentZD
+    currentZsStartBar := b0
+
+// ======================================================
+// 11. ACTIVE ZHONGSHU
+// ======================================================
+
+var bool zsActive = false
+
+var float zsZG = na
+
+var float zsZD = na
+
+var float zsGG = na
+
+var float zsDD = na
+
+var int zsStartBar = na
+
+var float prevZsZG = na
+
+var float prevZsZD = na
+
+var int lastZsIdentityBar = na
+
+bool newZhongshuCreated = false
+
+if currentZsValid
+    if not zsActive
+        zsActive := true
+
+        zsZG := currentZG
+        zsZD := currentZD
+        zsGG := currentGG
+        zsDD := currentDD
+
+        zsStartBar := currentZsStartBar
+        lastZsIdentityBar := currentZsStartBar
+
+        newZhongshuCreated := true
+
+    else
+        float mergedZG = math.min(zsZG, currentZG)
+        float mergedZD = math.max(zsZD, currentZD)
+
+        if mergedZG > mergedZD
+            zsZG := mergedZG
+            zsZD := mergedZD
+
+            zsGG := math.max(zsGG, currentGG)
+            zsDD := math.min(zsDD, currentDD)
+
+        else
+            prevZsZG := zsZG
+            prevZsZD := zsZD
+
+            zsZG := currentZG
+            zsZD := currentZD
+
+            zsGG := currentGG
+            zsDD := currentDD
+
+            zsStartBar := currentZsStartBar
+            lastZsIdentityBar := currentZsStartBar
+
+            newZhongshuCreated := true
+
+// ======================================================
+// 12. BREAK LIFECYCLE
+// ======================================================
+
+var bool bullBreakRegistered = false
+
+var bool bearBreakRegistered = false
+
+if newZhongshuCreated
+    bullBreakRegistered := false
+    bearBreakRegistered := false
+
+// ======================================================
+// 13. CHAN REGIME
+// ======================================================
+
+float zsPosition = 0.5
+
+if zsActive and not na(zsZG) and not na(zsZD) and zsZG > zsZD
+    zsPosition := (close - zsZD) / (zsZG - zsZD)
+
+bool risingZhongshu = not na(prevZsZG) and not na(zsZD) and zsZD > prevZsZG
+
+bool fallingZhongshu = not na(prevZsZD) and not na(zsZG) and zsZG < prevZsZD
+
+int chanRegime = REGIME_UNKNOWN
+
+if bullBreakRegistered and bullStrokeStructure
+    chanRegime := REGIME_BULL_TREND
+
+else if bearBreakRegistered and bearStrokeStructure
+    chanRegime := REGIME_BEAR_TREND
+
+else if zsActive
+    if risingZhongshu and bullStrokeStructure
+        chanRegime := REGIME_BULL_TREND
+
+    else if fallingZhongshu and bearStrokeStructure
+        chanRegime := REGIME_BEAR_TREND
+
+    else if zsPosition >= zsPositionBull and not bearStrokeStructure
+        chanRegime := REGIME_BULL_ZS
+
+    else if zsPosition <= zsPositionBear and not bullStrokeStructure
+        chanRegime := REGIME_BEAR_ZS
+
+    else
+        chanRegime := REGIME_NEUTRAL_ZS
+
+else
+    if bullStrokeStructure
+        chanRegime := REGIME_BULL_TREND
+
+    else if bearStrokeStructure
+        chanRegime := REGIME_BEAR_TREND
+
+    else
+        chanRegime := REGIME_TRANSITION
+
+// ======================================================
+// 14. REGIME MEMORY
+// ======================================================
+
+var int regimeBeforeZhongshu = REGIME_UNKNOWN
+
+if newZhongshuCreated
+    if bullStrokeStructure
+        regimeBeforeZhongshu := REGIME_BULL_TREND
+
+    else if bearStrokeStructure
+        regimeBeforeZhongshu := REGIME_BEAR_TREND
+
+    else
+        regimeBeforeZhongshu := REGIME_TRANSITION
+
+// ======================================================
+// 15. MICRO STRUCTURE
+// ======================================================
+
+float microPivotHigh = ta.pivothigh(high, microFractalBars, microFractalBars)
+
+float microPivotLow = ta.pivotlow(low, microFractalBars, microFractalBars)
+
+var float microSwingHigh = na
+
+var int microSwingHighBar = na
+
+var float microSwingLow = na
+
+var int microSwingLowBar = na
+
+if not na(microPivotHigh)
+    microSwingHigh := microPivotHigh
+    microSwingHighBar := bar_index - microFractalBars
+
+if not na(microPivotLow)
+    microSwingLow := microPivotLow
+    microSwingLowBar := bar_index - microFractalBars
+
+bool bullMicroBos = not na(microSwingHigh) and not na(microSwingHighBar) and bar_index > microSwingHighBar and close > microSwingHigh and close > open
+
+bool bearMicroBos = not na(microSwingLow) and not na(microSwingLowBar) and bar_index > microSwingLowBar and close < microSwingLow and close < open
+
+// ======================================================
+// 16. PA SUPPORT
+// ======================================================
+
+float sweepLow = ta.lowest(low, sweepLookback)[1]
+
+float sweepHigh = ta.highest(high, sweepLookback)[1]
+
+bool bullSweep = not na(sweepLow) and low < sweepLow and close > sweepLow and close > open
+
+bool bearSweep = not na(sweepHigh) and high > sweepHigh and close < sweepHigh and close < open
+
+bool bullishEngulfing = close > open and close[1] < open[1] and close >= open[1] and open <= close[1]
+
+bool bearishEngulfing = close < open and close[1] > open[1] and close <= open[1] and open >= close[1]
+
+// ======================================================
+// 17. SECOND BUY / SELL
+// ======================================================
+
+var bool firstBuyActive = false
+
+var float firstBuyLow = na
+
+var int firstBuyBar = na
+
+var bool secondBuyPending = false
+
+var float secondBuyLow = na
+
+var float secondBuyConfirmHigh = na
+
+var int secondBuyPullbackBar = na
+
+var bool firstSellActive = false
+
+var float firstSellHigh = na
+
+var int firstSellBar = na
+
+var bool secondSellPending = false
+
+var float secondSellHigh = na
+
+var float secondSellConfirmLow = na
+
+var int secondSellPullbackBar = na
+
+bool potentialFirstBuy = bearStrokeStructure and not firstBuyActive and not na(lastStrokeHigh) and not na(lastStrokeLow) and close > lastStrokeHigh and close > open
+
+bool potentialFirstSell = bullStrokeStructure and not firstSellActive and not na(lastStrokeHigh) and not na(lastStrokeLow) and close < lastStrokeLow and close < open
+
+if potentialFirstBuy
+    firstBuyActive := true
+    firstBuyLow := lastStrokeLow
+    firstBuyBar := bar_index
+
+    secondBuyPending := false
+    secondBuyLow := na
+    secondBuyConfirmHigh := na
+    secondBuyPullbackBar := na
+
+if potentialFirstSell
+    firstSellActive := true
+    firstSellHigh := lastStrokeHigh
+    firstSellBar := bar_index
+
+    secondSellPending := false
+    secondSellHigh := na
+    secondSellConfirmLow := na
+    secondSellPullbackBar := na
+
+bool firstBuyWindow = firstBuyActive and not na(firstBuyBar) and bar_index > firstBuyBar and bar_index - firstBuyBar <= secondPointMaxBars
+
+bool firstSellWindow = firstSellActive and not na(firstSellBar) and bar_index > firstSellBar and bar_index - firstSellBar <= secondPointMaxBars
+
+bool secondBuyPullback = firstBuyWindow and not na(microPivotLow) and not na(firstBuyLow) and microPivotLow > firstBuyLow
+
+bool secondSellPullback = firstSellWindow and not na(microPivotHigh) and not na(firstSellHigh) and microPivotHigh < firstSellHigh
+
+if secondBuyPullback
+    secondBuyPending := true
+    secondBuyLow := microPivotLow
+    secondBuyConfirmHigh := microSwingHigh
+    secondBuyPullbackBar := bar_index - microFractalBars
+
+if secondSellPullback
+    secondSellPending := true
+    secondSellHigh := microPivotHigh
+    secondSellConfirmLow := microSwingLow
+    secondSellPullbackBar := bar_index - microFractalBars
+
+bool secondBuyEntry = allowLong and secondBuyPending and not na(secondBuyConfirmHigh) and close > secondBuyConfirmHigh and bullMicroBos and barstate.isconfirmed
+
+bool secondSellEntry = allowShort and secondSellPending and not na(secondSellConfirmLow) and close < secondSellConfirmLow and bearMicroBos and barstate.isconfirmed
+
+bool secondBuyInvalidated = secondBuyPending and not na(firstBuyLow) and low < firstBuyLow
+
+bool secondSellInvalidated = secondSellPending and not na(firstSellHigh) and high > firstSellHigh
+
+bool firstBuyExpired = firstBuyActive and not na(firstBuyBar) and bar_index - firstBuyBar > secondPointMaxBars
+
+bool firstSellExpired = firstSellActive and not na(firstSellBar) and bar_index - firstSellBar > secondPointMaxBars
+
+if secondBuyEntry or secondBuyInvalidated or firstBuyExpired
+    firstBuyActive := false
+    secondBuyPending := false
+
+if secondSellEntry or secondSellInvalidated or firstSellExpired
+    firstSellActive := false
+    secondSellPending := false
+
+// ======================================================
+// 18. WYCKOFF INSIDE ZHONGSHU
+// ======================================================
+
+var int wycState = WYC_NEUTRAL
+
+var float wycClimaxExtreme = na
+
+var float wycClimaxVolume = na
+
+var int wycClimaxBar = na
+
+if newZhongshuCreated
+    wycState := WYC_NEUTRAL
+    wycClimaxExtreme := na
+    wycClimaxVolume := na
+    wycClimaxBar := na
+
+float candleRange = high - low
+
+float closeLocation = candleRange > 0 ? (close - low) / candleRange : 0.5
+
+float zsTol = not na(atr14Ref) ? atr14Ref * pZsToleranceAtr : 0.0
+
+bool insideZhongshuContext = zsActive and not bullBreakRegistered and not bearBreakRegistered
+
+bool nearZsLow = insideZhongshuContext and not na(zsZD) and low <= zsZD + zsTol
+
+bool nearZsHigh = insideZhongshuContext and not na(zsZG) and high >= zsZG - zsTol
+
+bool wycWideRange = not na(atr14Ref) and candleRange >= atr14Ref * pClimaxRangeAtr
+
+bool wycHighVolume = not na(volSma[1]) and volume >= volSma[1] * pClimaxVolume
+
+bool climaxParticipationOkay = pVolumeHardConfirm ? wycHighVolume : true
+
+bool scLike = insideZhongshuContext and nearZsLow and wycWideRange and climaxParticipationOkay and closeLocation >= 0.35
+
+bool bcLike = insideZhongshuContext and nearZsHigh and wycWideRange and climaxParticipationOkay and closeLocation <= 0.65
+
+if scLike
+    wycState := WYC_ACCUM_WATCH
+    wycClimaxExtreme := low
+    wycClimaxVolume := volume
+    wycClimaxBar := bar_index
+
+if bcLike
+    wycState := WYC_DISTRIB_WATCH
+    wycClimaxExtreme := high
+    wycClimaxVolume := volume
+    wycClimaxBar := bar_index
+
+float stTolerance = not na(atr14Ref) ? atr14Ref * pStToleranceAtr : 0.0
+
+bool wycTestWindow = not na(wycClimaxBar) and bar_index > wycClimaxBar and bar_index - wycClimaxBar <= wycTestMaxBars
+
+bool testVolumeContracted = not na(wycClimaxVolume) and volume < wycClimaxVolume
+
+bool cryptoSoftTest = isCrypto and not na(volSma[1]) and volume <= volSma[1] * 1.20
+
+bool testEffortOkay = pVolumeHardConfirm ? testVolumeContracted : testVolumeContracted or cryptoSoftTest
+
+bool accumulationST = wycState == WYC_ACCUM_WATCH and wycTestWindow and not na(wycClimaxExtreme) and math.abs(low - wycClimaxExtreme) <= stTolerance and testEffortOkay
+
+bool distributionST = wycState == WYC_DISTRIB_WATCH and wycTestWindow and not na(wycClimaxExtreme) and math.abs(high - wycClimaxExtreme) <= stTolerance and testEffortOkay
+
+if accumulationST
+    wycState := WYC_ACCUMULATION
+
+if distributionST
+    wycState := WYC_DISTRIBUTION
+
+bool wycWatchExpired = (wycState == WYC_ACCUM_WATCH or wycState == WYC_DISTRIB_WATCH) and not na(wycClimaxBar) and bar_index - wycClimaxBar > wycTestMaxBars
+
+if wycWatchExpired
+    wycState := WYC_NEUTRAL
+    wycClimaxExtreme := na
+    wycClimaxVolume := na
+    wycClimaxBar := na
+
+// ======================================================
+// 19. SPRING / UTAD
+// ======================================================
+
+float springTolerance = not na(atr14Ref) ? atr14Ref * pSpringToleranceAtr : 0.0
+
+bool springEvent = insideZhongshuContext and wycState == WYC_ACCUMULATION and not na(zsZD) and low < zsZD and low >= zsZD - springTolerance and close > zsZD
+
+bool utadEvent = insideZhongshuContext and wycState == WYC_DISTRIBUTION and not na(zsZG) and high > zsZG and high <= zsZG + springTolerance and close < zsZG and not isChinaA
+
+var bool springPending = false
+
+var float springLow = na
+
+var float springHigh = na
+
+var int springBar = na
+
+var float springTarget = na
+
+var bool utadPending = false
+
+var float utadHigh = na
+
+var float utadLow = na
+
+var int utadBar = na
+
+var float utadTarget = na
+
+if springEvent
+    springPending := true
+    springLow := low
+    springHigh := high
+    springBar := bar_index
+    springTarget := zsZG
+
+if utadEvent
+    utadPending := true
+    utadHigh := high
+    utadLow := low
+    utadBar := bar_index
+    utadTarget := zsZD
+
+bool springWindow = springPending and not na(springBar) and bar_index > springBar and bar_index - springBar <= springConfirmBars
+
+bool utadWindow = utadPending and not na(utadBar) and bar_index > utadBar and bar_index - utadBar <= springConfirmBars
+
+bool springInvalidated = springPending and not na(springLow) and low < springLow
+
+bool utadInvalidated = utadPending and not na(utadHigh) and high > utadHigh
+
+bool springEntry = allowLong and springWindow and not springInvalidated and close > springHigh and bullMicroBos and barstate.isconfirmed
+
+bool utadEntry = allowShort and utadWindow and not utadInvalidated and close < utadLow and bearMicroBos and barstate.isconfirmed
+
+bool springExpired = springPending and not na(springBar) and bar_index - springBar > springConfirmBars
+
+bool utadExpired = utadPending and not na(utadBar) and bar_index - utadBar > springConfirmBars
+
+if springEntry or springInvalidated or springExpired
+    springPending := false
+
+if utadEntry or utadInvalidated or utadExpired
+    utadPending := false
+
+// ======================================================
+// 20. ZHONGSHU BREAKOUT
+// ======================================================
+
+bool meaningfulGapUp = pGapSensitive and not na(atr14Ref) and open > high[1] + atr14Ref * 0.30
+
+bool meaningfulGapDown = pGapSensitive and not na(atr14Ref) and open < low[1] - atr14Ref * 0.30
+
+bool bullishZsBreakCandidate = zsActive and not bullBreakRegistered and not na(zsZG) and (close > zsZG + zsTol or (meaningfulGapUp and close > zsZG))
+
+bool bearishZsBreakCandidate = zsActive and not bearBreakRegistered and not na(zsZD) and (close < zsZD - zsTol or (meaningfulGapDown and close < zsZD))
+
+bool freshBullishZsBreak = bullishZsBreakCandidate
+
+bool freshBearishZsBreak = bearishZsBreakCandidate
+
+if freshBullishZsBreak
+    bullBreakRegistered := true
+
+if freshBearishZsBreak
+    bearBreakRegistered := true
+
+// ======================================================
+// 21. DIRECT BREAKOUT
+// ======================================================
+
+bool zsBreakoutLongEntry = enableZsBreakoutEntry and allowLong and freshBullishZsBreak and bullMicroBos and barstate.isconfirmed
+
+bool zsBreakdownShortEntry = enableZsBreakoutEntry and allowShort and freshBearishZsBreak and bearMicroBos and barstate.isconfirmed
+
+// ======================================================
+// 22. THIRD BUY / THIRD SELL
+// ======================================================
+
+var bool thirdBuyPending = false
+
+var bool thirdSellPending = false
+
+var float thirdBuyLevel = na
+
+var float thirdSellLevel = na
+
+var int thirdBuyBreakBar = na
+
+var int thirdSellBreakBar = na
+
+var float thirdBuyPullbackLow = na
+
+var float thirdSellPullbackHigh = na
+
+if freshBullishZsBreak
+    thirdBuyPending := true
+    thirdSellPending := false
+
+    thirdBuyLevel := zsZG
+    thirdBuyBreakBar := bar_index
+    thirdBuyPullbackLow := na
+
+if freshBearishZsBreak
+    thirdSellPending := true
+    thirdBuyPending := false
+
+    thirdSellLevel := zsZD
+    thirdSellBreakBar := bar_index
+    thirdSellPullbackHigh := na
+
+bool thirdBuyWindow = thirdBuyPending and not na(thirdBuyBreakBar) and bar_index > thirdBuyBreakBar and bar_index - thirdBuyBreakBar <= thirdPointMaxBars
+
+bool thirdSellWindow = thirdSellPending and not na(thirdSellBreakBar) and bar_index > thirdSellBreakBar and bar_index - thirdSellBreakBar <= thirdPointMaxBars
+
+bool thirdBuyRetest = thirdBuyWindow and not na(thirdBuyLevel) and low <= thirdBuyLevel + zsTol and low >= thirdBuyLevel - zsTol and close > thirdBuyLevel
+
+bool thirdSellRetest = thirdSellWindow and not na(thirdSellLevel) and high >= thirdSellLevel - zsTol and high <= thirdSellLevel + zsTol and close < thirdSellLevel
+
+if thirdBuyRetest
+    thirdBuyPullbackLow := low
+
+if thirdSellRetest
+    thirdSellPullbackHigh := high
+
+bool thirdBuyEntry = allowLong and thirdBuyRetest and bullMicroBos and barstate.isconfirmed
+
+bool thirdSellEntry = allowShort and thirdSellRetest and bearMicroBos and barstate.isconfirmed
+
+bool thirdBuyExpired = thirdBuyPending and not na(thirdBuyBreakBar) and bar_index - thirdBuyBreakBar > thirdPointMaxBars
+
+bool thirdSellExpired = thirdSellPending and not na(thirdSellBreakBar) and bar_index - thirdSellBreakBar > thirdPointMaxBars
+
+bool thirdBuyInvalidated = thirdBuyPending and not na(thirdBuyLevel) and close < thirdBuyLevel - zsTol
+
+bool thirdSellInvalidated = thirdSellPending and not na(thirdSellLevel) and close > thirdSellLevel + zsTol
+
+if thirdBuyEntry or thirdBuyExpired or thirdBuyInvalidated
+    thirdBuyPending := false
+
+if thirdSellEntry or thirdSellExpired or thirdSellInvalidated
+    thirdSellPending := false
+
+// ======================================================
+// 23. FINAL ENTRY PRIORITY
+// ======================================================
+
+bool longEntry = false
+
+bool shortEntry = false
+
+int activeEntrySetup = SETUP_NONE
+
+if springEntry
+    longEntry := true
+    activeEntrySetup := SETUP_SPRING
+
+else if secondBuyEntry
+    longEntry := true
+    activeEntrySetup := SETUP_SECOND_BUY
+
+else if thirdBuyEntry
+    longEntry := true
+    activeEntrySetup := SETUP_THIRD_BUY
+
+else if zsBreakoutLongEntry
+    longEntry := true
+    activeEntrySetup := SETUP_ZS_BREAKOUT
+
+if utadEntry
+    shortEntry := true
+    activeEntrySetup := SETUP_UTAD
+
+else if secondSellEntry
+    shortEntry := true
+    activeEntrySetup := SETUP_SECOND_SELL
+
+else if thirdSellEntry
+    shortEntry := true
+    activeEntrySetup := SETUP_THIRD_SELL
+
+else if zsBreakdownShortEntry
+    shortEntry := true
+    activeEntrySetup := SETUP_ZS_BREAKDOWN
+
+if isChinaA
+    shortEntry := false
+
+// ======================================================
+// 24. ACTIVE RISK STATE
+// ======================================================
+
+var bool activeRiskReady = false
+
+var bool activeRiskLong = false
+
+var bool activeTp1Hit = false
+
+var bool activeTradeClosed = false
+
+var float activeEntryPrice = na
+
+var float activeSlPrice = na
+
+var float activeTp1Price = na
+
+var float activeTp2Price = na
+
+var int activeEntryTime = na
+
+var int activeEntryBar = na
+
+var string activeSetupText = ""
+
+var string activeSlTooltip = ""
+
+var string activeTp1Tooltip = ""
+
+var string activeTp2Tooltip = ""
+
+bool newRiskSet = false
+
+// ======================================================
+// 25. LONG RISK
+// ======================================================
+
+if longEntry and not na(atr14Ref)
+    float slAnchor = low
+    float structuralTarget = na
+
+    string setupText = "Long"
+    string slTip = ""
+    string tp1Tip = ""
+    string tp2Tip = ""
+
+    if activeEntrySetup == SETUP_SPRING
+        slAnchor := not na(springLow) ? springLow : low
+        structuralTarget := springTarget
+
+        setupText := "Spring Long"
+
+        slTip := "[Spring Long SL]\nInvalidation below the Spring structural extreme plus ATR buffer."
+
+        tp1Tip := "[Spring Long TP1]\nFirst structural objective is the opposite Zhongshu boundary when valid."
+
+        tp2Tip := "[Spring Long TP2]\nExtended continuation target based on configured R multiple."
+
+    else if activeEntrySetup == SETUP_SECOND_BUY
+        slAnchor := not na(secondBuyLow) ? secondBuyLow : low
+
+        setupText := "2B Long"
+
+        slTip := "[Chan Second Buy SL]\nInvalidation below the first valid pullback low following structural reversal."
+
+        tp1Tip := "[Chan Second Buy TP1]\nInitial objective based on configured R:R."
+
+        tp2Tip := "[Chan Second Buy TP2]\nExtended continuation objective."
+
+    else if activeEntrySetup == SETUP_THIRD_BUY
+        slAnchor := not na(thirdBuyPullbackLow) ? thirdBuyPullbackLow : low
+
+        setupText := "3B / LPS Long"
+
+        slTip := "[Third Buy / LPS SL]\nInvalidation below the Zhongshu breakout retest low plus ATR buffer."
+
+        tp1Tip := "[Third Buy / LPS TP1]\nInitial objective after successful breakout and retest."
+
+        tp2Tip := "[Third Buy / LPS TP2]\nExtended trend continuation objective."
+
+    else if activeEntrySetup == SETUP_ZS_BREAKOUT
+        slAnchor := not na(zsZG) ? math.min(low, zsZG) : low
+
+        setupText := "BRK Long"
+
+        slTip := "[Direct Zhongshu Breakout SL]\nInvalidation around the former ZG / breakout structure."
+
+        tp1Tip := "[Direct Breakout TP1]\nConfigured R:R target. Earlier but less confirmed than 3B."
+
+        tp2Tip := "[Direct Breakout TP2]\nExtended continuation objective."
+
+    float slPrice = slAnchor - atr14Ref * pSlBufferAtr
+    float risk = close - slPrice
+
+    if risk > syminfo.mintick
+        float fallbackTp1 = close + risk * rrRatio1
+        float tp1 = fallbackTp1
+
+        if not na(structuralTarget) and structuralTarget > close
+            tp1 := structuralTarget
+
+        float tp2 = close + risk * rrRatio2
+
+        activeRiskReady := true
+        activeRiskLong := true
+
+        activeTp1Hit := false
+        activeTradeClosed := false
+
+        activeEntryPrice := close
+
+        activeSlPrice := slPrice
+        activeTp1Price := tp1
+        activeTp2Price := tp2
+
+        activeEntryTime := time
+        activeEntryBar := bar_index
+
+        activeSetupText := setupText
+
+        activeSlTooltip := slTip + "\nEntry: " + str.tostring(close, format.mintick)
+        activeTp1Tooltip := tp1Tip + "\nEntry: " + str.tostring(close, format.mintick)
+        activeTp2Tooltip := tp2Tip + "\nEntry: " + str.tostring(close, format.mintick)
+
+        newRiskSet := true
+
+// ======================================================
+// 26. SHORT RISK
+// ======================================================
+
+if shortEntry and not na(atr14Ref)
+    float slAnchor = high
+    float structuralTarget = na
+
+    string setupText = "Short"
+    string slTip = ""
+    string tp1Tip = ""
+    string tp2Tip = ""
+
+    if activeEntrySetup == SETUP_UTAD
+        slAnchor := not na(utadHigh) ? utadHigh : high
+        structuralTarget := utadTarget
+
+        setupText := "UTAD Short"
+
+        slTip := "[UTAD Short SL]\nInvalidation above the UTAD structural extreme plus ATR buffer."
+
+        tp1Tip := "[UTAD Short TP1]\nFirst structural objective is the opposite Zhongshu boundary when valid."
+
+        tp2Tip := "[UTAD Short TP2]\nExtended markdown objective."
+
+    else if activeEntrySetup == SETUP_SECOND_SELL
+        slAnchor := not na(secondSellHigh) ? secondSellHigh : high
+
+        setupText := "2S Short"
+
+        slTip := "[Chan Second Sell SL]\nInvalidation above the first valid rally high following bearish reversal."
+
+        tp1Tip := "[Chan Second Sell TP1]\nInitial configured R:R objective."
+
+        tp2Tip := "[Chan Second Sell TP2]\nExtended markdown objective."
+
+    else if activeEntrySetup == SETUP_THIRD_SELL
+        slAnchor := not na(thirdSellPullbackHigh) ? thirdSellPullbackHigh : high
+
+        setupText := "3S / LPSY Short"
+
+        slTip := "[Third Sell / LPSY SL]\nInvalidation above the Zhongshu breakdown retest high plus ATR buffer."
+
+        tp1Tip := "[Third Sell / LPSY TP1]\nInitial objective following confirmed breakdown and retest."
+
+        tp2Tip := "[Third Sell / LPSY TP2]\nExtended markdown objective."
+
+    else if activeEntrySetup == SETUP_ZS_BREAKDOWN
+        slAnchor := not na(zsZD) ? math.max(high, zsZD) : high
+
+        setupText := "BRK Short"
+
+        slTip := "[Direct Zhongshu Breakdown SL]\nInvalidation around former ZD / breakdown structure."
+
+        tp1Tip := "[Direct Breakdown TP1]\nConfigured R:R objective."
+
+        tp2Tip := "[Direct Breakdown TP2]\nExtended markdown objective."
+
+    float slPrice = slAnchor + atr14Ref * pSlBufferAtr
+    float risk = slPrice - close
+
+    if risk > syminfo.mintick
+        float fallbackTp1 = close - risk * rrRatio1
+        float tp1 = fallbackTp1
+
+        if not na(structuralTarget) and structuralTarget < close
+            tp1 := structuralTarget
+
+        float tp2 = close - risk * rrRatio2
+
+        activeRiskReady := true
+        activeRiskLong := false
+
+        activeTp1Hit := false
+        activeTradeClosed := false
+
+        activeEntryPrice := close
+
+        activeSlPrice := slPrice
+        activeTp1Price := tp1
+        activeTp2Price := tp2
+
+        activeEntryTime := time
+        activeEntryBar := bar_index
+
+        activeSetupText := setupText
+
+        activeSlTooltip := slTip + "\nEntry: " + str.tostring(close, format.mintick)
+        activeTp1Tooltip := tp1Tip + "\nEntry: " + str.tostring(close, format.mintick)
+        activeTp2Tooltip := tp2Tip + "\nEntry: " + str.tostring(close, format.mintick)
+
+        newRiskSet := true
+
+// ======================================================
+// 27. RISK LIFECYCLE
+// ======================================================
+
+bool riskLifecycleEligible = activeRiskReady and not activeTradeClosed and not na(activeEntryBar) and bar_index > activeEntryBar
+
+bool longSlHit = riskLifecycleEligible and activeRiskLong and low <= activeSlPrice
+
+bool longTp1Hit = riskLifecycleEligible and activeRiskLong and high >= activeTp1Price
+
+bool longTp2Hit = riskLifecycleEligible and activeRiskLong and high >= activeTp2Price
+
+bool shortSlHit = riskLifecycleEligible and not activeRiskLong and high >= activeSlPrice
+
+bool shortTp1Hit = riskLifecycleEligible and not activeRiskLong and low <= activeTp1Price
+
+bool shortTp2Hit = riskLifecycleEligible and not activeRiskLong and low <= activeTp2Price
+
+if longTp1Hit or shortTp1Hit
+    activeTp1Hit := true
+
+if longSlHit or longTp2Hit or shortSlHit or shortTp2Hit
+    activeTradeClosed := true
+
+if activeTradeClosed and hideRiskAfterTradeClosed
+    activeRiskReady := false
+
+bool riskDisplayExpired = activeRiskReady and not na(activeEntryBar) and bar_index - activeEntryBar > riskMaxDisplayBars
+
+if riskDisplayExpired
+    activeRiskReady := false
+
+// ======================================================
+// 28. HELPERS
+// ======================================================
+
+f_regime_text(int regime) =>
+    string result = "Unknown"
+
+    if regime == REGIME_BULL_TREND
+        result := "Bull Trend"
+
+    else if regime == REGIME_BEAR_TREND
+        result := "Bear Trend"
+
+    else if regime == REGIME_BULL_ZS
+        result := "Bullish Zhongshu"
+
+    else if regime == REGIME_BEAR_ZS
+        result := "Bearish Zhongshu"
+
+    else if regime == REGIME_NEUTRAL_ZS
+        result := "Neutral Zhongshu"
+
+    else if regime == REGIME_TRANSITION
+        result := "Transition"
+
+    result
+
+f_wyc_text(int state) =>
+    string result = "Neutral"
+
+    if state == WYC_ACCUM_WATCH
+        result := "Accum Watch"
+
+    else if state == WYC_DISTRIB_WATCH
+        result := "Distrib Watch"
+
+    else if state == WYC_ACCUMULATION
+        result := regimeBeforeZhongshu == REGIME_BULL_TREND ? "Re-Accumulation" : "Accumulation"
+
+    else if state == WYC_DISTRIBUTION
+        result := regimeBeforeZhongshu == REGIME_BEAR_TREND ? "Re-Distribution" : "Distribution"
+
+    result
+
+f_structure_text() =>
+    string result = "Mixed"
+
+    if bullStrokeStructure
+        result := "HH / HL"
+
+    else if bearStrokeStructure
+        result := "LH / LL"
+
+    result
+
+f_price(float value) =>
+    str.tostring(value, format.mintick)
+
+// ======================================================
+// 29. VISUAL POSITION ENGINE
+// ======================================================
+
+float visualUnit = not na(atr14Ref) ? math.max(atr14Ref * 0.22, candleRange * 0.18) : syminfo.mintick * 10.0
+
+float bullEventBelowY = low - visualUnit
+
+float bullEntryBelowY = low - visualUnit * 2.15
+
+float bearEventAboveY = high + visualUnit
+
+float bearEntryAboveY = high + visualUnit * 2.15
+
+float bullBreakAboveY = high + visualUnit
+
+float bearBreakBelowY = low - visualUnit
+
+float zhongshuLabelY = not na(zsZG) ? zsZG + visualUnit * 1.40 : high + visualUnit
+
+// ======================================================
+// 30. ZHONGSHU PLOTS
+// ======================================================
+
+float zsHighPlot = showZhongshu and zsActive ? zsZG : na
+
+float zsLowPlot = showZhongshu and zsActive ? zsZD : na
+
+plot(
+    zsHighPlot,
+    title="Zhongshu ZG",
+    color=color.new(cZsHigh, 25),
+    linewidth=2,
+    style=plot.style_linebr,
+    force_overlay=true
+)
+
+plot(
+    zsLowPlot,
+    title="Zhongshu ZD",
+    color=color.new(cZsLow, 25),
+    linewidth=2,
+    style=plot.style_linebr,
+    force_overlay=true
+)
+
+// ======================================================
+// 31. STROKE RENDERING
+// ======================================================
+
+var int lastRenderedStrokeCount = 0
+
+if showStrokes and array.size(strokePrices) >= 2 and array.size(strokePrices) != lastRenderedStrokeCount
+    int n = array.size(strokePrices)
+
+    float pA = array.get(strokePrices, n - 2)
+    float pB = array.get(strokePrices, n - 1)
+
+    int bA = array.get(strokeBars, n - 2)
+    int bB = array.get(strokeBars, n - 1)
+
+    line.new(
+        x1=bA,
+        y1=pA,
+        x2=bB,
+        y2=pB,
+        xloc=xloc.bar_index,
+        color=color.new(color.gray, 50),
+        width=1,
+        force_overlay=true
+    )
+
+    lastRenderedStrokeCount := n
+
+// ======================================================
+// 32. ZHONGSHU LABEL
+// ======================================================
+
+if showChanLabels and newZhongshuCreated and barstate.isconfirmed
+    label.new(
+        x=bar_index,
+        y=zhongshuLabelY,
+        text="Zhongshu",
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=color.new(color.blue, 30),
+        textcolor=color.white,
+        style=label.style_label_down,
+        size=size.small,
+        tooltip="[Chan Zhongshu]\nCore overlapping structural price zone.\nZG = upper boundary.\nZD = lower boundary.",
+        force_overlay=true
+    )
+
+// ======================================================
+// 33. POTENTIAL 1B / 1S
+// ======================================================
+
+if showPotentialFirstPoint and potentialFirstBuy
+    label.new(
+        x=bar_index,
+        y=bullEventBelowY,
+        text="1B?",
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=color.new(cBull, 65),
+        textcolor=color.black,
+        style=label.style_label_up,
+        size=size.tiny,
+        tooltip="[Potential First Buy]\nStructural reversal candidate used only to initialise the Second Buy lifecycle.",
+        force_overlay=true
+    )
+
+if showPotentialFirstPoint and potentialFirstSell
+    label.new(
+        x=bar_index,
+        y=bearEventAboveY,
+        text="1S?",
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=color.new(cBear, 65),
+        textcolor=color.white,
+        style=label.style_label_down,
+        size=size.tiny,
+        tooltip="[Potential First Sell]\nStructural reversal candidate used only to initialise the Second Sell lifecycle.",
+        force_overlay=true
+    )
+
+// ======================================================
+// 34. WYCKOFF EVENT LABELS
+// ======================================================
+
+bool debugMode = dashboardMode == "Debug"
+
+if showWyckoffLabels and barstate.isconfirmed
+    if debugMode and scLike
+        label.new(
+            x=bar_index,
+            y=bullEventBelowY,
+            text="SC-like",
+            xloc=xloc.bar_index,
+            yloc=yloc.price,
+            color=color.new(cBull, 60),
+            textcolor=color.black,
+            style=label.style_label_up,
+            size=size.tiny,
+            tooltip="[SC-like]\nPotential selling climax near Zhongshu lower boundary.",
+            force_overlay=true
+        )
+
+    if debugMode and bcLike
+        label.new(
+            x=bar_index,
+            y=bearEventAboveY,
+            text="BC-like",
+            xloc=xloc.bar_index,
+            yloc=yloc.price,
+            color=color.new(cBear, 60),
+            textcolor=color.white,
+            style=label.style_label_down,
+            size=size.tiny,
+            tooltip="[BC-like]\nPotential buying climax near Zhongshu upper boundary.",
+            force_overlay=true
+        )
+
+    if debugMode and accumulationST
+        label.new(
+            x=bar_index,
+            y=bullEventBelowY,
+            text="ST",
+            xloc=xloc.bar_index,
+            yloc=yloc.price,
+            color=color.teal,
+            textcolor=color.white,
+            style=label.style_label_up,
+            size=size.tiny,
+            tooltip="[Accumulation ST]\nSupply test near the earlier climax with reduced effort.",
+            force_overlay=true
+        )
+
+    if debugMode and distributionST
+        label.new(
+            x=bar_index,
+            y=bearEventAboveY,
+            text="ST",
+            xloc=xloc.bar_index,
+            yloc=yloc.price,
+            color=color.maroon,
+            textcolor=color.white,
+            style=label.style_label_down,
+            size=size.tiny,
+            tooltip="[Distribution ST]\nDemand test near the earlier climax with reduced effort.",
+            force_overlay=true
+        )
+
+    if springEvent
+        label.new(
+            x=bar_index,
+            y=bullEventBelowY,
+            text="Spring",
+            xloc=xloc.bar_index,
+            yloc=yloc.price,
+            color=cBull,
+            textcolor=color.black,
+            style=label.style_label_up,
+            size=size.small,
+            tooltip="[Spring]\nTemporary break below ZD followed by reclaim.\nThis is a Setup event. Final Entry waits for bullish Micro BOS.",
+            force_overlay=true
+        )
+
+    if utadEvent
+        label.new(
+            x=bar_index,
+            y=bearEventAboveY,
+            text="UTAD",
+            xloc=xloc.bar_index,
+            yloc=yloc.price,
+            color=cBear,
+            textcolor=color.white,
+            style=label.style_label_down,
+            size=size.small,
+            tooltip="[UTAD]\nTemporary break above ZG followed by rejection.\nThis is a Setup event. Final Entry waits for bearish Micro BOS.",
+            force_overlay=true
+        )
+
+// ======================================================
+// 35. BREAKOUT EVENT LABELS
+// ======================================================
+
+if showBreakoutLabels and freshBullishZsBreak and not zsBreakoutLongEntry
+    label.new(
+        x=bar_index,
+        y=bullBreakAboveY,
+        text="BRK↑",
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=color.new(cBull, 55),
+        textcolor=color.black,
+        style=label.style_label_down,
+        size=size.tiny,
+        tooltip="[Bullish Zhongshu Breakout]\nPrice closed structurally above ZG.\nStructure event only. Waiting for direct Entry or 3B/LPS retest.",
+        force_overlay=true
+    )
+
+if showBreakoutLabels and freshBearishZsBreak and not zsBreakdownShortEntry
+    label.new(
+        x=bar_index,
+        y=bearBreakBelowY,
+        text="BRK↓",
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=color.new(cBear, 55),
+        textcolor=color.white,
+        style=label.style_label_up,
+        size=size.tiny,
+        tooltip="[Bearish Zhongshu Breakdown]\nPrice closed structurally below ZD.\nStructure event only. Waiting for direct Entry or 3S/LPSY retest.",
+        force_overlay=true
+    )
+
+// ======================================================
+// 36. V1.8.5 UNIFIED FINAL ENTRY LABEL
+//
+// IMPORTANT:
+// One final Entry → one Entry label.
+// No separate Micro BOS / confirmation label.
+// ======================================================
+
+if showEntryLabels and longEntry and newRiskSet
+    string entryText = "▲ LONG"
+    string setupDescription = ""
+
+    if activeEntrySetup == SETUP_SPRING
+        entryText := "▲ LONG · SPR"
+        setupDescription := "Wyckoff Spring"
+
+    else if activeEntrySetup == SETUP_SECOND_BUY
+        entryText := "▲ LONG · 2B"
+        setupDescription := "Chan Second Buy"
+
+    else if activeEntrySetup == SETUP_THIRD_BUY
+        entryText := "▲ LONG · 3B"
+        setupDescription := "Chan Third Buy / Wyckoff LPS"
+
+    else if activeEntrySetup == SETUP_ZS_BREAKOUT
+        entryText := "▲ LONG · BRK"
+        setupDescription := "Direct Zhongshu Breakout"
+
+    string entryTip = "[FINAL ENTRY]\nDirection: LONG\nSetup: " + setupDescription + "\nTrigger: Bullish Micro BOS\nEntry: " + f_price(activeEntryPrice) + "\nSL: " + f_price(activeSlPrice) + "\nTP1: " + f_price(activeTp1Price) + "\nTP2: " + f_price(activeTp2Price) + "\nRegime: " + f_regime_text(chanRegime) + "\n\nSignal is confirmed on this bar close."
+
+    label.new(
+        x=bar_index,
+        y=bullEntryBelowY,
+        text=entryText,
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=cBull,
+        textcolor=color.black,
+        style=label.style_label_up,
+        size=size.normal,
+        tooltip=entryTip,
+        force_overlay=true
+    )
+
+if showEntryLabels and shortEntry and newRiskSet
+    string entryText = "▼ SHORT"
+    string setupDescription = ""
+
+    if activeEntrySetup == SETUP_UTAD
+        entryText := "▼ SHORT · UTAD"
+        setupDescription := "Wyckoff UTAD"
+
+    else if activeEntrySetup == SETUP_SECOND_SELL
+        entryText := "▼ SHORT · 2S"
+        setupDescription := "Chan Second Sell"
+
+    else if activeEntrySetup == SETUP_THIRD_SELL
+        entryText := "▼ SHORT · 3S"
+        setupDescription := "Chan Third Sell / Wyckoff LPSY"
+
+    else if activeEntrySetup == SETUP_ZS_BREAKDOWN
+        entryText := "▼ SHORT · BRK"
+        setupDescription := "Direct Zhongshu Breakdown"
+
+    string entryTip = "[FINAL ENTRY]\nDirection: SHORT\nSetup: " + setupDescription + "\nTrigger: Bearish Micro BOS\nEntry: " + f_price(activeEntryPrice) + "\nSL: " + f_price(activeSlPrice) + "\nTP1: " + f_price(activeTp1Price) + "\nTP2: " + f_price(activeTp2Price) + "\nRegime: " + f_regime_text(chanRegime) + "\n\nSignal is confirmed on this bar close."
+
+    label.new(
+        x=bar_index,
+        y=bearEntryAboveY,
+        text=entryText,
+        xloc=xloc.bar_index,
+        yloc=yloc.price,
+        color=cBear,
+        textcolor=color.white,
+        style=label.style_label_down,
+        size=size.normal,
+        tooltip=entryTip,
+        force_overlay=true
+    )
+
+// ======================================================
+// 37. RIGHT EDGE RISK PANEL
+// ======================================================
+
+var line activeSlLine = na
+
+var line activeTp1Line = na
+
+var line activeTp2Line = na
+
+var label activeSlLabel = na
+
+var label activeTp1Label = na
+
+var label activeTp2Label = na
+
+if newRiskSet
+    if not na(activeSlLine)
+        line.delete(activeSlLine)
+        activeSlLine := na
+
+    if not na(activeTp1Line)
+        line.delete(activeTp1Line)
+        activeTp1Line := na
+
+    if not na(activeTp2Line)
+        line.delete(activeTp2Line)
+        activeTp2Line := na
+
+    if not na(activeSlLabel)
+        label.delete(activeSlLabel)
+        activeSlLabel := na
+
+    if not na(activeTp1Label)
+        label.delete(activeTp1Label)
+        activeTp1Label := na
+
+    if not na(activeTp2Label)
+        label.delete(activeTp2Label)
+        activeTp2Label := na
+
+if barstate.islast and not activeRiskReady
+    if not na(activeSlLine)
+        line.delete(activeSlLine)
+        activeSlLine := na
+
+    if not na(activeTp1Line)
+        line.delete(activeTp1Line)
+        activeTp1Line := na
+
+    if not na(activeTp2Line)
+        line.delete(activeTp2Line)
+        activeTp2Line := na
+
+    if not na(activeSlLabel)
+        label.delete(activeSlLabel)
+        activeSlLabel := na
+
+    if not na(activeTp1Label)
+        label.delete(activeTp1Label)
+        activeTp1Label := na
+
+    if not na(activeTp2Label)
+        label.delete(activeTp2Label)
+        activeTp2Label := na
+
+if barstate.islast and showRisk and activeRiskReady
+    int rightTime = chart.right_visible_bar_time
+
+    int barMs = 1
+
+    if not na(time[1])
+        barMs := math.max(time - time[1], 1)
+
+    int leftTime = rightTime - barMs * riskSegmentBars
+
+    string slText = "SL " + f_price(activeSlPrice)
+
+    string tp1Text = "TP1 " + f_price(activeTp1Price)
+
+    string tp2Text = "TP2 " + f_price(activeTp2Price)
+
+    if na(activeSlLine)
+        activeSlLine := line.new(
+            x1=leftTime,
+            y1=activeSlPrice,
+            x2=rightTime,
+            y2=activeSlPrice,
+            xloc=xloc.bar_time,
+            color=cSl,
+            width=2,
+            force_overlay=true
+        )
+
+    else
+        line.set_x1(activeSlLine, leftTime)
+        line.set_y1(activeSlLine, activeSlPrice)
+        line.set_x2(activeSlLine, rightTime)
+        line.set_y2(activeSlLine, activeSlPrice)
+
+    if na(activeTp2Line)
+        activeTp2Line := line.new(
+            x1=leftTime,
+            y1=activeTp2Price,
+            x2=rightTime,
+            y2=activeTp2Price,
+            xloc=xloc.bar_time,
+            color=cTp2,
+            width=2,
+            force_overlay=true
+        )
+
+    else
+        line.set_x1(activeTp2Line, leftTime)
+        line.set_y1(activeTp2Line, activeTp2Price)
+        line.set_x2(activeTp2Line, rightTime)
+        line.set_y2(activeTp2Line, activeTp2Price)
+
+    if not activeTp1Hit or not hideTp1AfterHit
+        if na(activeTp1Line)
+            activeTp1Line := line.new(
+                x1=leftTime,
+                y1=activeTp1Price,
+                x2=rightTime,
+                y2=activeTp1Price,
+                xloc=xloc.bar_time,
+                color=cTp1,
+                width=1,
+                style=line.style_dashed,
+                force_overlay=true
+            )
+
+        else
+            line.set_x1(activeTp1Line, leftTime)
+            line.set_y1(activeTp1Line, activeTp1Price)
+            line.set_x2(activeTp1Line, rightTime)
+            line.set_y2(activeTp1Line, activeTp1Price)
+
+    else
+        if not na(activeTp1Line)
+            line.delete(activeTp1Line)
+            activeTp1Line := na
+
+    if na(activeSlLabel)
+        activeSlLabel := label.new(
+            x=rightTime,
+            y=activeSlPrice,
+            text=slText,
+            xloc=xloc.bar_time,
+            yloc=yloc.price,
+            color=cSl,
+            textcolor=color.white,
+            style=label.style_label_left,
+            size=size.small,
+            tooltip=activeSlTooltip,
+            force_overlay=true
+        )
+
+    else
+        label.set_x(activeSlLabel, rightTime)
+        label.set_y(activeSlLabel, activeSlPrice)
+        label.set_text(activeSlLabel, slText)
+        label.set_tooltip(activeSlLabel, activeSlTooltip)
+
+    if na(activeTp2Label)
+        activeTp2Label := label.new(
+            x=rightTime,
+            y=activeTp2Price,
+            text=tp2Text,
+            xloc=xloc.bar_time,
+            yloc=yloc.price,
+            color=cTp2,
+            textcolor=color.white,
+            style=label.style_label_left,
+            size=size.small,
+            tooltip=activeTp2Tooltip,
+            force_overlay=true
+        )
+
+    else
+        label.set_x(activeTp2Label, rightTime)
+        label.set_y(activeTp2Label, activeTp2Price)
+        label.set_text(activeTp2Label, tp2Text)
+        label.set_tooltip(activeTp2Label, activeTp2Tooltip)
+
+    if not activeTp1Hit or not hideTp1AfterHit
+        if na(activeTp1Label)
+            activeTp1Label := label.new(
+                x=rightTime,
+                y=activeTp1Price,
+                text=tp1Text,
+                xloc=xloc.bar_time,
+                yloc=yloc.price,
+                color=cTp1,
+                textcolor=color.black,
+                style=label.style_label_left,
+                size=size.small,
+                tooltip=activeTp1Tooltip,
+                force_overlay=true
+            )
+
+        else
+            label.set_x(activeTp1Label, rightTime)
+            label.set_y(activeTp1Label, activeTp1Price)
+            label.set_text(activeTp1Label, tp1Text)
+            label.set_tooltip(activeTp1Label, activeTp1Tooltip)
+
+    else
+        if not na(activeTp1Label)
+            label.delete(activeTp1Label)
+            activeTp1Label := na
+
+if barstate.islast and not showRisk
+    if not na(activeSlLine)
+        line.delete(activeSlLine)
+        activeSlLine := na
+
+    if not na(activeTp1Line)
+        line.delete(activeTp1Line)
+        activeTp1Line := na
+
+    if not na(activeTp2Line)
+        line.delete(activeTp2Line)
+        activeTp2Line := na
+
+    if not na(activeSlLabel)
+        label.delete(activeSlLabel)
+        activeSlLabel := na
+
+    if not na(activeTp1Label)
+        label.delete(activeTp1Label)
+        activeTp1Label := na
+
+    if not na(activeTp2Label)
+        label.delete(activeTp2Label)
+        activeTp2Label := na
+
+// ======================================================
+// 38. DASHBOARD
+// ======================================================
+
+var table dashboard = table.new(
+    position.top_right,
+    2,
+    11,
+    bgcolor=color.new(color.black, 25),
+    border_color=color.gray,
+    border_width=1
+)
+
+if barstate.islast
+    if showDashboard
+        string volRegimeText = "Normal"
+
+        if atrRatio > 1.30
+            volRegimeText := "High"
+
+        else if atrRatio < 0.80
+            volRegimeText := "Low"
+
+        string zsText = zsActive and not na(zsZD) and not na(zsZG) ? "ZD " + f_price(zsZD) + " / ZG " + f_price(zsZG) : "-"
+
+        string wycText = insideZhongshuContext ? f_wyc_text(wycState) : "N/A"
+
+        string setupText = "Waiting"
+
+        if springPending
+            setupText := "Spring Pending"
+
+        else if utadPending
+            setupText := "UTAD Pending"
+
+        else if secondBuyPending
+            setupText := "2B Pending"
+
+        else if secondSellPending
+            setupText := "2S Pending"
+
+        else if thirdBuyPending
+            setupText := "3B Retest"
+
+        else if thirdSellPending
+            setupText := "3S Retest"
+
+        else if isChinaA and chanRegime == REGIME_BEAR_TREND
+            setupText := "Avoid Long"
+
+        string triggerText = "Waiting"
+
+        if bullMicroBos
+            triggerText := "Bull Micro BOS"
+
+        else if bearMicroBos
+            triggerText := "Bear Micro BOS"
+
+        table.cell(dashboard, 0, 0, "Market", text_color=color.white)
+
+        table.cell(dashboard, 1, 0, marketType, text_color=color.yellow)
+
+        table.cell(dashboard, 0, 1, "Regime", text_color=color.white)
+
+        table.cell(dashboard, 1, 1, f_regime_text(chanRegime), text_color=color.aqua)
+
+        table.cell(dashboard, 0, 2, "Zhongshu", text_color=color.white)
+
+        table.cell(dashboard, 1, 2, zsText, text_color=color.white)
+
+        table.cell(dashboard, 0, 3, "Wyckoff", text_color=color.white)
+
+        table.cell(dashboard, 1, 3, wycText, text_color=color.white)
+
+        table.cell(dashboard, 0, 4, "Setup", text_color=color.white)
+
+        table.cell(dashboard, 1, 4, setupText, text_color=color.white)
+
+        table.cell(dashboard, 0, 5, "Trigger", text_color=color.white)
+
+        table.cell(dashboard, 1, 5, triggerText, text_color=color.white)
+
+        if debugMode
+            table.cell(dashboard, 0, 6, "Volatility", text_color=color.white)
+
+            table.cell(dashboard, 1, 6, volRegimeText, text_color=color.white)
+
+            table.cell(dashboard, 0, 7, "Stroke Structure", text_color=color.white)
+
+            table.cell(dashboard, 1, 7, f_structure_text(), text_color=color.white)
+
+            table.cell(dashboard, 0, 8, "Stroke ATR", text_color=color.white)
+
+            table.cell(dashboard, 1, 8, str.tostring(pStrokeAtr, "#.00") + " ATR", text_color=color.white)
+
+            table.cell(dashboard, 0, 9, "ZS Tolerance", text_color=color.white)
+
+            table.cell(dashboard, 1, 9, str.tostring(pZsToleranceAtr, "#.00") + " ATR", text_color=color.white)
+
+            table.cell(dashboard, 0, 10, "Volume Mode", text_color=color.white)
+
+            table.cell(dashboard, 1, 10, pVolumeHardConfirm ? "Hard Confirm" : "Soft Confirm", text_color=color.white)
+
+        else
+            table.clear(dashboard, 0, 6, 1, 10)
+
+    else
+        table.clear(dashboard, 0, 0, 1, 10)
+
+// ======================================================
+// 39. ALERTS
+// ======================================================
+
+alertcondition(
+    potentialFirstBuy,
+    title="[CWP] Potential 1B",
+    message="Potential structural First Buy candidate on {{ticker}}."
+)
+
+alertcondition(
+    potentialFirstSell,
+    title="[CWP] Potential 1S",
+    message="Potential structural First Sell candidate on {{ticker}}."
+)
+
+alertcondition(
+    secondBuyEntry,
+    title="[CWP] Second Buy",
+    message="Chan Second Buy confirmed by bullish Micro BOS on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    secondSellEntry,
+    title="[CWP] Second Sell",
+    message="Chan Second Sell confirmed by bearish Micro BOS on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    springEvent,
+    title="[CWP] Spring",
+    message="Spring detected inside active Zhongshu on {{ticker}}."
+)
+
+alertcondition(
+    utadEvent,
+    title="[CWP] UTAD",
+    message="UTAD detected inside active Zhongshu on {{ticker}}."
+)
+
+alertcondition(
+    springEntry,
+    title="[CWP] Spring Long",
+    message="Spring + bullish Micro BOS confirmed long on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    utadEntry,
+    title="[CWP] UTAD Short",
+    message="UTAD + bearish Micro BOS confirmed short on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    freshBullishZsBreak,
+    title="[CWP] Zhongshu Breakout",
+    message="Price structurally broke above Zhongshu ZG on {{ticker}}."
+)
+
+alertcondition(
+    freshBearishZsBreak,
+    title="[CWP] Zhongshu Breakdown",
+    message="Price structurally broke below Zhongshu ZD on {{ticker}}."
+)
+
+alertcondition(
+    thirdBuyEntry,
+    title="[CWP] Third Buy",
+    message="Chan Third Buy / LPS confirmed by bullish Micro BOS on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    thirdSellEntry,
+    title="[CWP] Third Sell",
+    message="Chan Third Sell / LPSY confirmed by bearish Micro BOS on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    zsBreakoutLongEntry,
+    title="[CWP] Direct Zhongshu Breakout Long",
+    message="Direct Zhongshu breakout long confirmed on {{ticker}} @ {{close}}"
+)
+
+alertcondition(
+    zsBreakdownShortEntry,
+    title="[CWP] Direct Zhongshu Breakdown Short",
+    message="Direct Zhongshu breakdown short confirmed on {{ticker}} @ {{close}}"
+)

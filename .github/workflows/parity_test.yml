@@ -1,0 +1,32 @@
+name: Pine Python Parity
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "engine/**"
+      - "parity/**"
+      - "tests/**"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: Run parity fixture when populated
+        shell: bash
+        run: |
+          if [ "$(wc -l < parity/fixtures/pine_export.csv)" -gt 1 ]; then
+            python -m parity.parity_test --pine parity/fixtures/pine_export.csv --python parity/fixtures/expected_signals.csv
+          else
+            echo "Parity fixture is empty; unit tests completed."
+          fi
