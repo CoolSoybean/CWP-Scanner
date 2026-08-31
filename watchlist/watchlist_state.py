@@ -7,13 +7,14 @@ import pandas as pd
 
 
 ACTIVE_STATUSES = {"WATCH", "READY", "ENTRY"}
+CSV_ENCODING = "utf-8-sig"
 
 
 def load_watchlist_state(path: str | Path = "state/watchlist.csv") -> pd.DataFrame:
     state_path = Path(path)
     if not state_path.exists():
         return pd.DataFrame()
-    return pd.read_csv(state_path, dtype={"symbol": str})
+    return pd.read_csv(state_path, dtype={"symbol": str}, encoding=CSV_ENCODING)
 
 
 def classify_change(previous_status: str | None, current_status: str) -> str:
@@ -65,7 +66,11 @@ def compare_scan_with_state(scan_df: pd.DataFrame, previous_state: pd.DataFrame)
             item["status"] = "NONE"
             item["change_type"] = "DROPPED"
             changes.append(item)
-    return pd.DataFrame(changes)
+    if changes:
+        return pd.DataFrame(changes)
+    return pd.DataFrame(
+        columns=[*current.columns, "previous_status", "current_status", "change_type"]
+    )
 
 
 def update_watchlist(
@@ -111,6 +116,8 @@ def append_signal_history(
     changes_df: pd.DataFrame,
     path: str | Path = "state/signal_history.csv",
 ) -> None:
+    if changes_df.empty or "change_type" not in changes_df.columns:
+        return
     material = changes_df[changes_df["change_type"] != "UNCHANGED"].copy()
     if material.empty:
         return
@@ -118,11 +125,16 @@ def append_signal_history(
     history_path.parent.mkdir(parents=True, exist_ok=True)
     material.insert(0, "recorded_at", pd.Timestamp.utcnow().isoformat())
     write_header = not history_path.exists()
-    material.to_csv(history_path, mode="a", header=write_header, index=False)
+    material.to_csv(
+        history_path,
+        mode="a",
+        header=write_header,
+        index=False,
+        encoding=CSV_ENCODING,
+    )
 
 
 def save_watchlist_state(state_df: pd.DataFrame, path: str | Path = "state/watchlist.csv") -> None:
     state_path = Path(path)
     state_path.parent.mkdir(parents=True, exist_ok=True)
-    state_df.to_csv(state_path, index=False)
-
+    state_df.to_csv(state_path, index=False, encoding=CSV_ENCODING)

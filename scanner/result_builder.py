@@ -8,6 +8,9 @@ from engine.models import ScanResult
 from scanner.ranking import sort_results
 
 
+CSV_ENCODING = "utf-8-sig"
+
+
 def build_results(results: list[ScanResult]) -> pd.DataFrame:
     if not results:
         return pd.DataFrame()
@@ -27,11 +30,10 @@ def save_scan_outputs(result_df: pd.DataFrame, market: str, root: str | Path = "
     root_path = Path(root)
     latest_path = root_path / "output" / "latest" / f"{market}.csv"
     latest_path.parent.mkdir(parents=True, exist_ok=True)
-    result_df.to_csv(latest_path, index=False)
+    result_df.to_csv(latest_path, index=False, encoding=CSV_ENCODING)
 
     classes = classify_results(result_df)
     alert_rows = pd.concat([classes["ENTRY"], classes["READY"]], ignore_index=True)
     alerts_path = root_path / "output" / "alerts" / f"{market}_current.csv"
     alerts_path.parent.mkdir(parents=True, exist_ok=True)
-    alert_rows.to_csv(alerts_path, index=False)
-
+    alert_rows.to_csv(alerts_path, index=False, encoding=CSV_ENCODING)

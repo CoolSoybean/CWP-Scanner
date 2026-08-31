@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from datetime import timedelta
+from io import StringIO
+import logging
 from pathlib import Path
 
 import pandas as pd
+import requests
 
 from data.base import load_cache, merge_market_data, normalize_ohlcv, save_cache
 
@@ -11,10 +14,33 @@ from data.base import load_cache, merge_market_data, normalize_ohlcv, save_cache
 DEFAULT_CONSTITUENTS_PATH = Path("cache/constituents/sp500.csv")
 DEFAULT_CACHE_PATH = Path("cache/sp500_daily.parquet")
 WIKIPEDIA_SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+CSV_ENCODING = "utf-8-sig"
+LOGGER = logging.getLogger("cwp-scanner.data-us")
+WIKIPEDIA_HEADERS = {
+    "User-Agent": "CWP-Scanner/0.2 (+https://github.com/CoolSoybean/CWP-Scanner)",
+    "Accept-Language": "en-GB,en;q=0.9",
+}
 
 
 def normalize_us_symbol(symbol: str) -> str:
     return str(symbol).strip().upper().replace(".", "-")
+
+
+def _read_constituents_cache(path: Path) -> pd.DataFrame:
+    return pd.read_csv(path, dtype={"symbol": str}, encoding=CSV_ENCODING)
+
+
+def _download_sp500_constituents() -> pd.DataFrame:
+    response = requests.get(
+        WIKIPEDIA_SP500_URL,
+        headers=WIKIPEDIA_HEADERS,
+        timeout=30,
+    )
+    response.raise_for_status()
+    tables = pd.read_html(StringIO(response.text), attrs={"id": "constituents"})
+    if not tables:
+        raise ValueError("S&P 500 constituent table was not found")
+    return tables[0]
 
 
 def get_sp500_constituents(
@@ -26,10 +52,22 @@ def get_sp500_constituents(
         pd.Timestamp.now().timestamp() - path.stat().st_mtime < timedelta(days=7).total_seconds()
     )
     if cache_is_fresh and not force_refresh:
-        return pd.read_csv(path, dtype={"symbol": str})
+        return _read_constituents_cache(path)
 
-    tables = pd.read_html(WIKIPEDIA_SP500_URL)
-    raw = tables[0]
+    try:
+        raw = _download_sp500_constituents()
+    except Exception as exc:
+        if path.exists():
+            LOGGER.warning(
+                "Unable to refresh S&P 500 constituents; using cached file %s: %s",
+                path,
+                exc,
+            )
+            return _read_constituents_cache(path)
+        raise RuntimeError(
+            "Unable to download S&P 500 constituents and no cached file is available"
+        ) from exc
+
     result = pd.DataFrame(
         {
             "symbol": raw["Symbol"].map(normalize_us_symbol),
@@ -39,7 +77,7 @@ def get_sp500_constituents(
         }
     ).drop_duplicates("symbol")
     path.parent.mkdir(parents=True, exist_ok=True)
-    result.to_csv(path, index=False)
+    result.to_csv(path, index=False, encoding=CSV_ENCODING)
     return result
 
 

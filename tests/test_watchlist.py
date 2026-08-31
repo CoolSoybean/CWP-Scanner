@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import pandas as pd
 
-from watchlist.watchlist_state import classify_change, compare_scan_with_state, update_watchlist
+from watchlist.watchlist_state import (
+    append_signal_history,
+    classify_change,
+    compare_scan_with_state,
+    update_watchlist,
+)
 
 
 def test_classify_change():
@@ -24,3 +29,11 @@ def test_compare_and_update_state():
     assert state.iloc[0]["days_tracked"] == 3
     assert state.iloc[0]["highest_status_rank"] == 3
 
+
+def test_empty_changes_have_stable_schema_and_do_not_write_history(tmp_path):
+    changes = compare_scan_with_state(pd.DataFrame(), pd.DataFrame())
+    assert "change_type" in changes.columns
+
+    history_path = tmp_path / "signal_history.csv"
+    append_signal_history(changes, history_path)
+    assert not history_path.exists()

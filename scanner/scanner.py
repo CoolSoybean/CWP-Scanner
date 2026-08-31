@@ -94,6 +94,7 @@ def run_scan(
     scanner_config = settings.get("scanner", {})
     min_bars = int(scanner_config.get("min_bars", 180))
     max_tracking = int(scanner_config.get("watchlist_max_trading_days", 15))
+    min_scan_coverage = float(scanner_config.get("min_scan_coverage", 0.80))
 
     previous_cwd = Path.cwd()
     os.chdir(root_path)
@@ -109,6 +110,13 @@ def run_scan(
 
         results = scan_universe(constituents, market_data, market, min_bars=min_bars)
         result_df = build_results(results)
+        coverage = len(result_df) / max(len(symbols), 1)
+        if not symbols or result_df.empty or coverage < min_scan_coverage:
+            raise RuntimeError(
+                f"{market.upper()} scan coverage is too low: "
+                f"{len(result_df)}/{len(symbols)} ({coverage:.1%}); "
+                "state and notifications were not updated. Inspect logs/scan_errors.log."
+            )
         save_scan_outputs(result_df, market, root=root_path)
 
         state_path = root_path / "state" / "watchlist.csv"
@@ -126,7 +134,7 @@ def run_scan(
         )
         changes = compare_scan_with_state(result_df, market_previous)
         changes_path = root_path / "output" / "alerts" / f"{market}_changes.csv"
-        changes.to_csv(changes_path, index=False)
+        changes.to_csv(changes_path, index=False, encoding="utf-8-sig")
         new_market_state = update_watchlist(
             result_df,
             market_previous,

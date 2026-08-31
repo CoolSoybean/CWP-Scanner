@@ -76,8 +76,8 @@ python -m scanner.scanner --market sp500 --notify
 
 | 市场 | 成分股 | 日线 | 调整口径 |
 |---|---|---|---|
-| S&P 500 | Wikipedia公开成分表 | Yahoo Finance / `yfinance` | `auto_adjust=True` |
-| 沪深300 | 中证指数接口 / `AKShare` | `AKShare stock_zh_a_hist` | 前复权 `qfq` |
+| S&P 500 | Wikipedia公开成分表（带缓存回退） | Yahoo Finance / `yfinance` | `auto_adjust=True` |
+| 沪深300 | 中证指数接口 / `AKShare` | `AKShare stock_zh_a_hist`，失败时批量回退 Yahoo Finance | 优先前复权 `qfq`；回退为 `auto_adjust=True` |
 
 免费源适合个人研究扫描，不应默认用于商业分发、正式估值或自动下单。使用前需自行核查数据许可、稳定性、复权差异和延迟。
 

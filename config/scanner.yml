@@ -1,5 +1,6 @@
 scanner:
   min_bars: 180
+  min_scan_coverage: 0.80
   cache_refresh_days: 10
   max_workers: 4
   watchlist_max_trading_days: 15
