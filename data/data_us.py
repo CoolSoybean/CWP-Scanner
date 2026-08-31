@@ -1,20 +1,53 @@
 from __future__ import annotations
 
+import logging
 from datetime import timedelta
+from io import StringIO
 from pathlib import Path
 
 import pandas as pd
+import requests
 
 from data.base import load_cache, merge_market_data, normalize_ohlcv, save_cache
 
-
 DEFAULT_CONSTITUENTS_PATH = Path("cache/constituents/sp500.csv")
 DEFAULT_CACHE_PATH = Path("cache/sp500_daily.parquet")
-WIKIPEDIA_SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php"
+WIKIPEDIA_SP500_PAGE = "List of S&P 500 companies"
+WIKIPEDIA_USER_AGENT = (
+    "CWP-Scanner/0.3.0 (https://github.com/CoolSoybean/CWP-Scanner)"
+)
+
+
+LOGGER = logging.getLogger("cwp-scanner")
 
 
 def normalize_us_symbol(symbol: str) -> str:
     return str(symbol).strip().upper().replace(".", "-")
+
+
+def _fetch_sp500_constituent_table() -> pd.DataFrame:
+    response = requests.get(
+        WIKIPEDIA_API_URL,
+        params={
+            "action": "parse",
+            "page": WIKIPEDIA_SP500_PAGE,
+            "prop": "text",
+            "format": "json",
+            "formatversion": "2",
+        },
+        headers={"User-Agent": WIKIPEDIA_USER_AGENT},
+        timeout=30,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    html = payload["parse"]["text"]
+    tables = pd.read_html(StringIO(html))
+    required = {"Symbol", "Security", "GICS Sector", "GICS Sub-Industry"}
+    raw = next((table for table in tables if required.issubset(table.columns)), None)
+    if raw is None:
+        raise ValueError("Wikipedia response did not contain the S&P 500 constituent table")
+    return raw
 
 
 def get_sp500_constituents(
@@ -28,8 +61,21 @@ def get_sp500_constituents(
     if cache_is_fresh and not force_refresh:
         return pd.read_csv(path, dtype={"symbol": str})
 
-    tables = pd.read_html(WIKIPEDIA_SP500_URL)
-    raw = tables[0]
+    try:
+        raw = _fetch_sp500_constituent_table()
+    except (requests.RequestException, KeyError, TypeError, ValueError, IndexError) as exc:
+        if path.exists():
+            LOGGER.warning(
+                "Could not refresh S&P 500 constituents; using cached file %s: %s",
+                path,
+                exc,
+            )
+            return pd.read_csv(path, dtype={"symbol": str})
+        raise RuntimeError(
+            "Could not retrieve S&P 500 constituents from the Wikipedia API "
+            "and no cached constituent file is available"
+        ) from exc
+
     result = pd.DataFrame(
         {
             "symbol": raw["Symbol"].map(normalize_us_symbol),

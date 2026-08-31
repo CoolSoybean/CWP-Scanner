@@ -8,6 +8,10 @@
 data_cn.py / data_us.py
   -> constituents + adjusted daily OHLCV + Parquet cache
 
+China data uses Baostock with `adjustflag=2`; its cache is kept separate from
+the former AKShare cache so histories with different adjustment policies are
+never merged.
+
 cwp_engine.py
   -> sequential replay + structure state + ScanResult
 

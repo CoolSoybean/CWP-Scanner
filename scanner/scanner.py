@@ -103,6 +103,8 @@ def run_scan(
         symbols = requested_symbols(constituents)
         if download:
             market_data = adapter.update_cache(symbols, bars=bars)
+        elif hasattr(adapter, "load_market_data"):
+            market_data = adapter.load_market_data()
         else:
             cache_path = root_path / "cache" / f"{market}_daily.parquet"
             market_data = load_cache(cache_path)

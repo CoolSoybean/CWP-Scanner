@@ -189,11 +189,13 @@ Current data policy:
 
 - US OHLCV: `yfinance`, `auto_adjust=True`.
 - S&P 500 constituents: public Wikipedia table, cached for seven days.
-- China OHLCV: AKShare `stock_zh_a_hist`, `adjust="qfq"`.
-- HS300 constituents: AKShare CSI constituent endpoint, cached for seven days.
+- China OHLCV: Baostock `query_history_k_data_plus`, `adjustflag="2"`.
+- HS300 constituents: Baostock `query_hs300_stocks`, cached for seven days.
 - First bootstrap: approximately 800 daily bars.
-- Subsequent runs: download an overlap window, merge, deduplicate and keep the
-  latest configured bar count.
+- Subsequent US runs: download an overlap window, merge, deduplicate and keep
+  the latest configured bar count.
+- Subsequent China runs: replace the complete configured qfq window so a
+  corporate-action adjustment cannot mix two adjustment bases.
 
 Never silently mix adjusted and unadjusted histories. A corporate-action gap
 must be adjusted consistently; a genuine overnight market gap must remain.
@@ -362,4 +364,3 @@ A task is complete only when:
 - Email transport exists but daily orchestration currently uses Telegram.
 - The system does not place orders and must not be extended to do so without a
   separate risk, compliance and execution design.
-

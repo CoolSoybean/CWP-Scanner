@@ -5,8 +5,8 @@ markets:
     currency: CNY
     long_only: true
     bars: 800
-    cache_file: cache/hs300_daily.parquet
-    constituents_file: cache/constituents/hs300.csv
+    cache_file: cache/hs300_baostock_daily.parquet
+    constituents_file: cache/constituents/hs300_baostock.csv
   sp500:
     market_type: US Equities
     timezone: America/New_York
@@ -15,4 +15,3 @@ markets:
     bars: 800
     cache_file: cache/sp500_daily.parquet
     constituents_file: cache/constituents/sp500.csv
-

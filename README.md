@@ -13,6 +13,10 @@
 
 ## 当前版本边界
 
+当前包版本：`0.3.0`；策略引擎标识仍为 `1.8.5-source-port`。该版本将沪深300
+数据源由 AKShare 切换为 Baostock，并将 S&P 500 成分股读取方式改为
+Wikipedia MediaWiki API；策略信号定义和引擎执行顺序没有改变。
+
 `engine/cwp_engine.py` 已按提供的 Pine V1.8.5 源码第2–27节重新实现为 **V1.8.5 source port**，覆盖：
 
 - TradingView Wilder ATR及波动率缩放；
@@ -63,6 +67,7 @@ python -m scanner.scanner --market hs300 --bars 800
 
 ```bash
 python -m scanner.scanner --market sp500 --no-download
+python -m scanner.scanner --market hs300 --no-download
 ```
 
 生成通知文本但不发送：
@@ -85,16 +90,43 @@ python -m scanner.scanner --market sp500 --notify
 
 | 市场 | 成分股 | 日线 | 调整口径 |
 |---|---|---|---|
-| S&P 500 | Wikipedia公开成分表 | Yahoo Finance / `yfinance` | `auto_adjust=True` |
-| 沪深300 | 中证指数接口 / `AKShare` | `AKShare stock_zh_a_hist` | 前复权 `qfq` |
+| S&P 500 | Wikipedia MediaWiki API | Yahoo Finance / `yfinance` | `auto_adjust=True` |
+| 沪深300 | Baostock `query_hs300_stocks` | `query_history_k_data_plus` 日线 | 前复权 `adjustflag=2` |
 
 免费源适合个人研究扫描，不应默认用于商业分发、正式估值或自动下单。使用前需自行核查数据许可、稳定性、复权差异和延迟。
+
+### 沪深300 / Baostock
+
+- 股票代码按交易所转换，例如 `600519 -> sh.600519`、`000001 -> sz.000001`；
+- 日线字段为 `date, open, high, low, close, volume, tradestatus`；
+- 只保留 `tradestatus=1` 的正常交易记录，不对停牌日填充价格；
+- Baostock 使用单一登录会话串行查询，不要在同一运行环境中并行登录或调用；
+- 每次下载会完整替换每只股票配置的历史窗口，避免公司行动后把不同前复权基准拼接在一起；
+- 单只下载失败时记录错误并保留该股票已有的 Baostock 缓存；
+- 本地首次300只、每只约800根日线的完整测试耗时约15分钟，实际耗时取决于网络和服务状态。
+
+Baostock 使用独立缓存。旧 AKShare 文件不会被新适配器读取或合并：
+
+```text
+当前使用：cache/hs300_baostock_daily.parquet
+当前使用：cache/constituents/hs300_baostock.csv
+旧版忽略：cache/hs300_daily.parquet
+旧版忽略：cache/constituents/hs300.csv
+```
+
+### S&P 500 / MediaWiki API
+
+成分股通过 MediaWiki `action=parse` API 获取，并发送项目专用 `User-Agent`。API
+请求或页面解析失败时，如果已有成分股缓存，则回退到最后一次有效缓存。股票代码会按
+Yahoo格式转换，例如 `BRK.B -> BRK-B`。
 
 ## 输出文件
 
 ```text
 cache/sp500_daily.parquet          美股行情缓存
-cache/hs300_daily.parquet          A股行情缓存
+cache/hs300_baostock_daily.parquet A股Baostock行情缓存
+cache/constituents/sp500.csv       标普500成分股缓存
+cache/constituents/hs300_baostock.csv 沪深300成分股缓存
 output/latest/sp500.csv            最新完整扫描结果
 output/latest/hs300.csv
 output/alerts/*_current.csv         当前ENTRY/READY
@@ -163,6 +195,16 @@ GitHub Actions会把以下内容推回仓库：
 - 通知去重状态。
 
 完整当次输出及错误日志另作为短期 Artifact 保存。
+
+自动执行时间以 UTC 配置：
+
+```text
+沪深300：周一至周五 08:30 UTC（北京时间 16:30）
+标普500：周一至周五 22:30 UTC
+```
+
+GitHub Actions 定时任务可能延迟数分钟，且工作日遇到市场休市时仍会触发。两个扫描
+workflow 当前任务上限均为30分钟。
 
 ## 上线前检查
 

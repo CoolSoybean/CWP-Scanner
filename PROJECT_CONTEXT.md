@@ -12,7 +12,7 @@ The project was designed to run at zero or very low infrastructure cost using
 GitHub Actions, free research-grade market-data sources, Parquet caches and
 small CSV/JSON state files.
 
-Current package version: `0.2.1`  
+Current package version: `0.3.0`
 Engine identifier: `1.8.5-source-port`  
 Python runtime: `3.11+`
 
@@ -62,7 +62,7 @@ scanner/scanner.py
           |
           +--> data/data_us.py --> S&P 500 + adjusted US OHLCV
           |
-          +--> data/data_cn.py --> HS300 + qfq China OHLCV
+          +--> data/data_cn.py --> HS300 + Baostock qfq China OHLCV
           |
           v
 data/base.py --> canonical OHLCV + Parquet cache
@@ -93,7 +93,7 @@ files, Telegram, GitHub or watchlists.
 | `engine/cwp_engine.py` | ATR, sequential state machine, risk and trace |
 | `data/base.py` | Canonical OHLCV, validation, long-format cache conversion |
 | `data/data_us.py` | S&P constituents, yfinance retrieval and cache update |
-| `data/data_cn.py` | HS300 constituents, AKShare retrieval and cache update |
+| `data/data_cn.py` | HS300 constituents, Baostock retrieval and cache update |
 | `scanner/scanner.py` | CLI and universe orchestration |
 | `scanner/ranking.py` | Status/setup ordering |
 | `scanner/result_builder.py` | Latest and current-alert CSV outputs |
@@ -335,12 +335,14 @@ This is appropriate for personal research, not a guaranteed commercial feed.
 
 ### 8.2 China / HS300
 
-- constituents: AKShare CSI index constituent endpoint for `000300`;
+- constituents: Baostock `query_hs300_stocks`;
 - refresh interval: seven days;
 - symbols normalised to six digits;
-- OHLCV: AKShare `stock_zh_a_hist`;
-- price adjustment: `qfq`;
-- update: one symbol at a time with a small request pause;
+- OHLCV: Baostock `query_history_k_data_plus`, daily frequency;
+- price adjustment: `adjustflag=2` (forward adjusted / qfq);
+- suspended rows are excluded using `tradestatus=1`;
+- update: one symbol at a time with a small request pause; the complete
+  configured history window is replaced to keep the qfq basis consistent;
 - failures preserve existing cache when available and are surfaced later by
   scanner validation/logging.
 
@@ -350,7 +352,7 @@ Two combined Parquet files are used instead of hundreds of binary files:
 
 ```text
 cache/sp500_daily.parquet
-cache/hs300_daily.parquet
+cache/hs300_baostock_daily.parquet
 ```
 
 Long schema:
