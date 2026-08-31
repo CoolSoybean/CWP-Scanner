@@ -1,0 +1,62 @@
+name: Scan S&P 500
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 22:30 UTC covers the regular US close plus a data-publication buffer.
+    # During US daylight saving this is later than necessary but remains same-day.
+    - cron: "30 22 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cwp-sp500
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Test
+        run: pytest -q
+
+      - name: Scan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m scanner.scanner --market sp500 --bars 800 --notify
+
+      - name: Upload run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sp500-scan-${{ github.run_id }}
+          path: |
+            output/
+            logs/
+          retention-days: 14
+
+      - name: Commit state and cache
+        if: success()
+        run: |
+          git config user.name "CWP Scanner Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add cache/ output/ state/
+          git diff --cached --quiet || git commit -m "data: update S&P 500 scan"
+          git pull --rebase
+          git push
+

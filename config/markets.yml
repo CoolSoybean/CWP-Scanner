@@ -1,0 +1,18 @@
+markets:
+  hs300:
+    market_type: China A-Shares
+    timezone: Asia/Shanghai
+    currency: CNY
+    long_only: true
+    bars: 800
+    cache_file: cache/hs300_daily.parquet
+    constituents_file: cache/constituents/hs300.csv
+  sp500:
+    market_type: US Equities
+    timezone: America/New_York
+    currency: USD
+    long_only: true
+    bars: 800
+    cache_file: cache/sp500_daily.parquet
+    constituents_file: cache/constituents/sp500.csv
+
