@@ -1,40 +1,42 @@
 CWP Daily Scan | SP500
-2026-09-01
+2026-09-02
 
-ENTRY: 33 | READY: 147 | WATCH: 301
+ENTRY: 36 | READY: 142 | WATCH: 312
 
 NEW ENTRY
-SYY  UTAD  Bearish Zhongshu
-CBRE  3S  Bull Trend
-FRT  3S  Bearish Zhongshu
-LVS  3S  Bearish Zhongshu
-PAYX  3B  Bull Trend
-SBAC  3B  Bull Trend
-AIZ  2S  Neutral Zhongshu
-CFG  2S  Bearish Zhongshu
-CTVA  2B  Bear Trend
-EIX  2S  Bearish Zhongshu
-ETN  2S  Bull Trend
-FSLR  2S  Bull Trend
-GE  2S  Bull Trend
-IR  2S  Bull Trend
-JCI  2S  Bull Trend
-… and 18 more
+EXE  3B  Bull Trend
+JBL  3S  Bull Trend
+SYK  3S  Bear Trend
+WST  3S  Bearish Zhongshu
+BAX  2S  Bearish Zhongshu
+BG  2B  Bullish Zhongshu
+CIEN  2S  Bearish Zhongshu
+DE  2B  Bear Trend
+FAST  2S  Bull Trend
+HON  2S  Bear Trend
+LMT  2S  Bearish Zhongshu
+LYV  2S  Bearish Zhongshu
+MO  2B  Bear Trend
+MTD  2S  Bearish Zhongshu
+NOC  2S  Bearish Zhongshu
+… and 19 more
 
 NEW READY
-ABBV  3B  Neutral Zhongshu
-ABT  3B  Bull Trend
-ACN  3B  Bull Trend
-AEE  3S  Bear Trend
-AJG  3B  Bull Trend
-ALB  3B  Bullish Zhongshu
-ALLE  3S  Bearish Zhongshu
-AMGN  3B  Bull Trend
-ATO  3S  Bearish Zhongshu
-AVGO  3S  Bearish Zhongshu
-BKR  3B  Bull Trend
-BLK  3B  Bull Trend
-BR  3B  Bull Trend
-CASY  3S  Bear Trend
-CB  3S  Bearish Zhongshu
-… and 132 more
+APD  UTAD  Bull Trend
+APTV  3S  Bear Trend
+BF-B  3S  Bearish Zhongshu
+KVUE  3S  Bull Trend
+PKG  3S  Bearish Zhongshu
+VLTO  3S  Bearish Zhongshu
+AMZN  2S  Bull Trend
+MET  2S  Bullish Zhongshu
+
+DROPPED
+SHW  BRK_SHORT  Bearish Zhongshu
+FICO  3S  Bear Trend
+EG  2B  Bear Trend
+BSX  NONE  Bullish Zhongshu
+CBOE  NONE  Bull Trend
+DHR  NONE  Bull Trend
+TPL  NONE  Bearish Zhongshu
+TRGP  NONE  Bull Trend
