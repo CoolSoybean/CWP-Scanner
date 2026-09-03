@@ -306,7 +306,8 @@ approved description is `V1.8.5 source port`.
 - Keep `permissions: contents: write` only on scan workflows that commit state.
 - Keep parity/PR workflows read-only.
 - Never write tokens or chat IDs into code, YAML defaults, logs or artifacts.
-- Required secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`.
+- Required secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`; the latter may
+  contain one chat ID or a comma-separated list of chat IDs.
 - Commit only intended cache, output and state paths.
 - Preserve notification deduplication state across runs.
 - Upload output/log artifacts even when a run fails where practical.

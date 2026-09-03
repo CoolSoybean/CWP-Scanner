@@ -12,7 +12,7 @@ The project was designed to run at zero or very low infrastructure cost using
 GitHub Actions, free research-grade market-data sources, Parquet caches and
 small CSV/JSON state files.
 
-Current package version: `0.3.0`
+Current package version: `0.3.1`
 Engine identifier: `1.8.5-source-port`  
 Python runtime: `3.11+`
 
@@ -436,6 +436,11 @@ Required Telegram environment variables:
 TELEGRAM_BOT_TOKEN
 TELEGRAM_CHAT_ID
 ```
+
+`TELEGRAM_CHAT_ID` accepts either one chat ID or a comma-separated list. IDs
+are trimmed and deduplicated before the same message is sent sequentially to
+each recipient. Delivery continues after an individual failure, then reports
+only the aggregate failure count so chat IDs are not exposed in logs.
 
 The SMTP adapter exists for a later phase but is disabled in current scanner
 orchestration.

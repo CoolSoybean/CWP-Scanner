@@ -15,7 +15,7 @@ DEFAULT_CACHE_PATH = Path("cache/sp500_daily.parquet")
 WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php"
 WIKIPEDIA_SP500_PAGE = "List of S&P 500 companies"
 WIKIPEDIA_USER_AGENT = (
-    "CWP-Scanner/0.3.0 (https://github.com/CoolSoybean/CWP-Scanner)"
+    "CWP-Scanner/0.3.1 (https://github.com/CoolSoybean/CWP-Scanner)"
 )
 
 

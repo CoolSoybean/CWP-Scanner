@@ -13,9 +13,10 @@
 
 ## 当前版本边界
 
-当前包版本：`0.3.0`；策略引擎标识仍为 `1.8.5-source-port`。该版本将沪深300
+当前包版本：`0.3.1`；策略引擎标识仍为 `1.8.5-source-port`。`0.3.0` 将沪深300
 数据源由 AKShare 切换为 Baostock，并将 S&P 500 成分股读取方式改为
-Wikipedia MediaWiki API；策略信号定义和引擎执行顺序没有改变。
+Wikipedia MediaWiki API；`0.3.1` 让现有 `TELEGRAM_CHAT_ID` 支持多个接收方。
+策略信号定义和引擎执行顺序没有改变。
 
 `engine/cwp_engine.py` 已按提供的 Pine V1.8.5 源码第2–27节重新实现为 **V1.8.5 source port**，覆盖：
 
@@ -80,9 +81,14 @@ python -m scanner.scanner --market sp500 --notify --dry-run-notifications
 
 ```bash
 export TELEGRAM_BOT_TOKEN="..."
-export TELEGRAM_CHAT_ID="..."
+export TELEGRAM_CHAT_ID="123456789,-1001234567890"
 python -m scanner.scanner --market sp500 --notify
 ```
+
+`TELEGRAM_CHAT_ID` 支持单个 ID，也支持用英文逗号分隔多个用户或群组 ID。程序会
+去除空格、空值和重复项，再将同一消息依次发送给每个接收方。每个用户需要先向 Bot
+发送 `/start`；群组通常使用负数 ID，并需要先将 Bot 加入群组。不要将 Token 或真实
+chat ID 写入代码、workflow、日志或 Artifact。
 
 首次建立观察名单时只发送汇总，不逐只推送所有现存 READY/ENTRY；从第二次扫描开始才发送状态变化提醒，避免初始化消息轰炸。
 
@@ -183,7 +189,7 @@ Repository Secrets：
 
 ```text
 TELEGRAM_BOT_TOKEN
-TELEGRAM_CHAT_ID
+TELEGRAM_CHAT_ID  # 单个ID，或英文逗号分隔的多个ID
 ```
 
 GitHub Actions会把以下内容推回仓库：
