@@ -6,6 +6,14 @@ scanner:
   output_none: false
   engine_mode: v1.8.5-source-port
 
+hs300_download:
+  overlap_calendar_days: 45
+  adjustment_tolerance: 0.000001
+  retry_count: 2
+  retry_backoff_seconds: 1.0
+  socket_timeout_seconds: 30.0
+  progress_interval: 25
+
 notifications:
   telegram_enabled: true
   email_enabled: false

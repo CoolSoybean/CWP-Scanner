@@ -13,9 +13,10 @@
 
 ## 当前版本边界
 
-当前包版本：`0.3.1`；策略引擎标识仍为 `1.8.5-source-port`。`0.3.0` 将沪深300
+当前包版本：`0.4.0`；策略引擎标识仍为 `1.8.5-source-port`。`0.3.0` 将沪深300
 数据源由 AKShare 切换为 Baostock，并将 S&P 500 成分股读取方式改为
-Wikipedia MediaWiki API；`0.3.1` 让现有 `TELEGRAM_CHAT_ID` 支持多个接收方。
+Wikipedia MediaWiki API；`0.3.1` 让现有 `TELEGRAM_CHAT_ID` 支持多个接收方；`0.4.0`
+为沪深300增加短窗口增量下载、前复权基准变化检测、失败重试、运行进度和元数据。
 策略信号定义和引擎执行顺序没有改变。
 
 `engine/cwp_engine.py` 已按提供的 Pine V1.8.5 源码第2–27节重新实现为 **V1.8.5 source port**，覆盖：
@@ -71,6 +72,12 @@ python -m scanner.scanner --market sp500 --no-download
 python -m scanner.scanner --market hs300 --no-download
 ```
 
+强制完整刷新沪深300前复权历史：
+
+```bash
+python -m scanner.scanner --market hs300 --bars 800 --force-full-download
+```
+
 生成通知文本但不发送：
 
 ```bash
@@ -107,8 +114,11 @@ chat ID 写入代码、workflow、日志或 Artifact。
 - 日线字段为 `date, open, high, low, close, volume, tradestatus`；
 - 只保留 `tradestatus=1` 的正常交易记录，不对停牌日填充价格；
 - Baostock 使用单一登录会话串行查询，不要在同一运行环境中并行登录或调用；
-- 每次下载会完整替换每只股票配置的历史窗口，避免公司行动后把不同前复权基准拼接在一起；
-- 单只下载失败时记录错误并保留该股票已有的 Baostock 缓存；
+- 日常下载只请求最近45个自然日，并与缓存重叠日期的OHLC比较；
+- 重叠价格发生变化、没有可靠重叠或缓存缺失时，自动完整刷新该股票的历史窗口，
+  避免公司行动后把不同前复权基准拼接在一起；
+- 单次 socket 等待默认30秒，查询默认重试两次；最终失败时记录错误、保留已有缓存并继续；
+- 周五定时任务执行一次全量刷新，手动运行也可选择强制全量；
 - 本地首次300只、每只约800根日线的完整测试耗时约15分钟，实际耗时取决于网络和服务状态。
 
 Baostock 使用独立缓存。旧 AKShare 文件不会被新适配器读取或合并：
@@ -138,6 +148,7 @@ output/latest/hs300.csv
 output/alerts/*_current.csv         当前ENTRY/READY
 output/alerts/*_changes.csv         相对上次扫描的状态变化
 output/reports/*_summary.md         每日摘要
+output/reports/hs300_run_metadata.json 下载与扫描运行统计
 state/watchlist.csv                 跨日观察名单
 state/signal_history.csv            状态变化历史
 state/notifications.json            通知去重状态
@@ -205,12 +216,13 @@ GitHub Actions会把以下内容推回仓库：
 自动执行时间以 UTC 配置：
 
 ```text
-沪深300：周一至周五 08:30 UTC（北京时间 16:30）
+沪深300：周一至周五 08:30 UTC（北京时间 16:30，周五执行全量刷新）
 标普500：周一至周五 22:30 UTC
 ```
 
 GitHub Actions 定时任务可能延迟数分钟，且工作日遇到市场休市时仍会触发。两个扫描
-workflow 当前任务上限均为30分钟。
+workflow 当前任务上限均为30分钟。手动触发 HS300 workflow 时可通过
+`force_full_download` 选择完整刷新。
 
 ## 上线前检查
 

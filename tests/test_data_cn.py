@@ -7,6 +7,7 @@ import pandas as pd
 
 from data.base import save_cache
 from data.data_cn import (
+    adjustment_basis_changed,
     fetch_cn_daily,
     get_hs300_constituents,
     to_baostock_code,
@@ -113,3 +114,173 @@ def test_update_cn_cache_replaces_full_qfq_window(monkeypatch, tmp_path):
 
     assert result["600519"].index.strftime("%Y-%m-%d").tolist() == ["2026-08-31"]
     assert captured["start_date"] < "2024-01-01"
+
+
+def _price_frame(dates, closes):
+    return pd.DataFrame(
+        {
+            "open": closes,
+            "high": [value + 1 for value in closes],
+            "low": [value - 1 for value in closes],
+            "close": closes,
+            "volume": [1000] * len(closes),
+        },
+        index=pd.DatetimeIndex(dates, name="date"),
+    )
+
+
+def test_adjustment_basis_changed_uses_price_overlap_only():
+    cached = _price_frame(["2026-08-28", "2026-08-31"], [10.0, 11.0])
+    recent = cached.copy()
+    recent["volume"] = [2000, 3000]
+
+    assert not adjustment_basis_changed(cached, recent)
+
+    recent.loc[pd.Timestamp("2026-08-28"), "close"] = 9.5
+    assert adjustment_basis_changed(cached, recent)
+
+
+def test_update_cn_cache_merges_increment_when_qfq_basis_matches(monkeypatch, tmp_path):
+    calls = []
+
+    def query_history_k_data_plus(**kwargs):
+        calls.append(kwargs)
+        return FakeResult(
+            ["date", "open", "high", "low", "close", "volume", "tradestatus"],
+            [
+                ["2026-08-31", "10", "11", "9", "10", "2000", "1"],
+                ["2026-09-01", "11", "12", "10", "11", "2100", "1"],
+            ],
+        )
+
+    fake = SimpleNamespace(
+        login=lambda: FakeResult([], []),
+        logout=lambda: FakeResult([], []),
+        query_history_k_data_plus=query_history_k_data_plus,
+    )
+    monkeypatch.setitem(sys.modules, "baostock", fake)
+    cache_path = tmp_path / "hs300.parquet"
+    save_cache({"600519": _price_frame(["2026-08-31"], [10.0])}, cache_path)
+    stats = {}
+
+    result = update_cn_cache(
+        ["600519"],
+        cache_path=cache_path,
+        request_pause=0,
+        retry_backoff_seconds=0,
+        stats=stats,
+    )
+
+    assert len(calls) == 1
+    assert calls[0]["start_date"] == "2026-07-17"
+    assert result["600519"].index.strftime("%Y-%m-%d").tolist() == [
+        "2026-08-31",
+        "2026-09-01",
+    ]
+    assert stats["incremental_success"] == 1
+    assert stats["full_refresh"] == 0
+
+
+def test_update_cn_cache_refreshes_full_window_on_qfq_change(monkeypatch, tmp_path):
+    calls = []
+
+    def query_history_k_data_plus(**kwargs):
+        calls.append(kwargs)
+        if len(calls) == 1:
+            rows = [["2026-08-31", "8", "9", "7", "8", "2000", "1"]]
+        else:
+            rows = [
+                ["2026-08-30", "7", "8", "6", "7", "1900", "1"],
+                ["2026-08-31", "8", "9", "7", "8", "2000", "1"],
+            ]
+        return FakeResult(
+            ["date", "open", "high", "low", "close", "volume", "tradestatus"], rows
+        )
+
+    fake = SimpleNamespace(
+        login=lambda: FakeResult([], []),
+        logout=lambda: FakeResult([], []),
+        query_history_k_data_plus=query_history_k_data_plus,
+    )
+    monkeypatch.setitem(sys.modules, "baostock", fake)
+    cache_path = tmp_path / "hs300.parquet"
+    save_cache({"600519": _price_frame(["2026-08-31"], [10.0])}, cache_path)
+    stats = {}
+
+    result = update_cn_cache(
+        ["600519"],
+        cache_path=cache_path,
+        request_pause=0,
+        retry_backoff_seconds=0,
+        stats=stats,
+    )
+
+    assert len(calls) == 2
+    assert calls[1]["start_date"] < "2024-01-01"
+    assert result["600519"]["close"].tolist() == [7.0, 8.0]
+    assert stats["full_refresh"] == 1
+
+
+def test_update_cn_cache_retries_then_preserves_cached_data(monkeypatch, tmp_path):
+    attempts = 0
+
+    def query_history_k_data_plus(**kwargs):
+        nonlocal attempts
+        attempts += 1
+        return FakeResult([], [], error_code="1", error_msg="temporary failure")
+
+    fake = SimpleNamespace(
+        login=lambda: FakeResult([], []),
+        logout=lambda: FakeResult([], []),
+        query_history_k_data_plus=query_history_k_data_plus,
+    )
+    monkeypatch.setitem(sys.modules, "baostock", fake)
+    cache_path = tmp_path / "hs300.parquet"
+    cached = _price_frame(["2026-08-31"], [10.0])
+    save_cache({"600519": cached}, cache_path)
+    stats = {}
+
+    result = update_cn_cache(
+        ["600519"],
+        cache_path=cache_path,
+        request_pause=0,
+        retry_count=2,
+        retry_backoff_seconds=0,
+        stats=stats,
+    )
+
+    assert attempts == 3
+    pd.testing.assert_frame_equal(result["600519"], cached, check_freq=False)
+    assert stats["cache_fallback"] == 1
+
+
+def test_update_cn_cache_force_full_skips_incremental_query(monkeypatch, tmp_path):
+    calls = []
+
+    def query_history_k_data_plus(**kwargs):
+        calls.append(kwargs)
+        return FakeResult(
+            ["date", "open", "high", "low", "close", "volume", "tradestatus"],
+            [["2026-09-01", "20", "21", "19", "20", "2000", "1"]],
+        )
+
+    fake = SimpleNamespace(
+        login=lambda: FakeResult([], []),
+        logout=lambda: FakeResult([], []),
+        query_history_k_data_plus=query_history_k_data_plus,
+    )
+    monkeypatch.setitem(sys.modules, "baostock", fake)
+    cache_path = tmp_path / "hs300.parquet"
+    save_cache({"600519": _price_frame(["2026-08-31"], [10.0])}, cache_path)
+
+    result = update_cn_cache(
+        ["600519"],
+        cache_path=cache_path,
+        request_pause=0,
+        force_full=True,
+        retry_backoff_seconds=0,
+    )
+
+    assert len(calls) == 1
+    assert calls[0]["start_date"] < "2024-01-01"
+    assert result["600519"]["close"].tolist() == [20.0]

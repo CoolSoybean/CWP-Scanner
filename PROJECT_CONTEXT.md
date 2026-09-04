@@ -12,7 +12,7 @@ The project was designed to run at zero or very low infrastructure cost using
 GitHub Actions, free research-grade market-data sources, Parquet caches and
 small CSV/JSON state files.
 
-Current package version: `0.3.1`
+Current package version: `0.4.0`
 Engine identifier: `1.8.5-source-port`  
 Python runtime: `3.11+`
 
@@ -341,10 +341,13 @@ This is appropriate for personal research, not a guaranteed commercial feed.
 - OHLCV: Baostock `query_history_k_data_plus`, daily frequency;
 - price adjustment: `adjustflag=2` (forward adjusted / qfq);
 - suspended rows are excluded using `tradestatus=1`;
-- update: one symbol at a time with a small request pause; the complete
-  configured history window is replaced to keep the qfq basis consistent;
-- failures preserve existing cache when available and are surfaced later by
-  scanner validation/logging.
+- update: one symbol at a time with a small request pause; normal runs query a
+  45-calendar-day overlap and compare cached/new qfq OHLC values;
+- a missing overlap, price-basis change, missing cache or explicit full-refresh
+  request replaces the complete configured window so qfq bases are never mixed;
+- the Baostock session socket has a 30-second timeout; failed queries are
+  retried twice before the existing symbol cache is retained and the failure
+  is surfaced through scanner logging.
 
 ### 8.3 Cache design
 
@@ -454,6 +457,7 @@ orchestration.
 cron: 30 8 * * 1-5 UTC
 commented intent: 16:30 China Standard Time
 timeout: 30 minutes
+normal runs: overlap update; Friday schedule: full qfq refresh
 ```
 
 ### S&P 500
@@ -492,6 +496,7 @@ output/latest/*.csv
 output/alerts/*_current.csv
 output/alerts/*_changes.csv
 output/reports/*_summary.md
+output/reports/hs300_run_metadata.json
 state/watchlist.csv
 state/signal_history.csv
 state/notifications.json

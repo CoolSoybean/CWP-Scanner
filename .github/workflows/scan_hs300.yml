@@ -2,6 +2,12 @@ name: Scan HS300
 
 on:
   workflow_dispatch:
+    inputs:
+      force_full_download:
+        description: Refresh the complete qfq history for every HS300 constituent
+        required: false
+        type: boolean
+        default: false
   schedule:
     # 08:30 UTC is 16:30 China Standard Time, after the A-share close.
     - cron: "30 8 * * 1-5"
@@ -37,7 +43,13 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python -m scanner.scanner --market hs300 --bars 800 --notify
+        run: |
+          args=(--market hs300 --bars 800 --notify)
+          if [[ "${{ inputs.force_full_download }}" == "true" ]] || \
+             [[ "${{ github.event_name }}" == "schedule" && "$(date -u +%u)" == "5" ]]; then
+            args+=(--force-full-download)
+          fi
+          python -m scanner.scanner "${args[@]}"
 
       - name: Upload run report
         if: always()

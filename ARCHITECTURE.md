@@ -10,7 +10,10 @@ data_cn.py / data_us.py
 
 China data uses Baostock with `adjustflag=2`; its cache is kept separate from
 the former AKShare cache so histories with different adjustment policies are
-never merged.
+never merged. Normal HS300 runs fetch a short overlap, compare cached and new
+qfq OHLC values, and merge only when the adjustment basis is unchanged. A
+basis change, missing overlap/cache, Friday schedule or explicit CLI option
+causes a complete per-symbol refresh.
 
 cwp_engine.py
   -> sequential replay + structure state + ScanResult
@@ -35,6 +38,7 @@ GitHub Actions
       -> adapter.get_constituents()
       -> adapter.update_cache()
         -> fetch_*_daily()
+        -> compare qfq overlap / retry / selective full refresh
         -> normalize_ohlcv()
         -> merge_market_data()
         -> save_cache()

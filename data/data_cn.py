@@ -3,12 +3,12 @@ from __future__ import annotations
 import logging
 from datetime import timedelta
 from pathlib import Path
-from time import sleep
+from time import perf_counter, sleep
 from typing import Any
 
 import pandas as pd
 
-from data.base import load_cache, normalize_ohlcv, save_cache
+from data.base import load_cache, merge_market_data, normalize_ohlcv, save_cache
 
 DEFAULT_CONSTITUENTS_PATH = Path("cache/constituents/hs300_baostock.csv")
 DEFAULT_CACHE_PATH = Path("cache/hs300_baostock_daily.parquet")
@@ -41,9 +41,21 @@ def _result_frame(result: Any) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=result.fields)
 
 
-def _login(bs: Any) -> None:
+def _login(bs: Any, socket_timeout_seconds: float = 30.0) -> None:
     login_result = bs.login()
     _check_result(login_result, "login")
+    if socket_timeout_seconds:
+        try:
+            from baostock.common import context
+
+            connection = getattr(context, "default_socket", None)
+            if connection is not None:
+                connection.settimeout(socket_timeout_seconds)
+        except (ImportError, AttributeError):
+            # Lightweight test doubles do not expose Baostock's internal
+            # context. Production Baostock does, so its shared session socket
+            # receives a finite connect/read timeout.
+            LOGGER.debug("Could not configure Baostock socket timeout")
 
 
 def get_hs300_constituents(
@@ -123,6 +135,57 @@ def _query_cn_daily(
     return normalize_ohlcv(raw).tail(bars)
 
 
+def adjustment_basis_changed(
+    cached: pd.DataFrame,
+    fresh_overlap: pd.DataFrame,
+    tolerance: float = 1e-6,
+) -> bool:
+    """Return whether overlapping qfq prices use a different adjustment basis.
+
+    Volume is intentionally excluded: vendor volume corrections do not imply
+    that historical forward-adjusted prices need to be replaced.
+    """
+    common_dates = cached.index.intersection(fresh_overlap.index)
+    if common_dates.empty:
+        return True
+    price_columns = ["open", "high", "low", "close"]
+    old = cached.loc[common_dates, price_columns].astype(float)
+    new = fresh_overlap.loc[common_dates, price_columns].astype(float)
+    scale = old.abs().clip(lower=1.0)
+    relative_difference = (new - old).abs() / scale
+    return bool((relative_difference > tolerance).any().any())
+
+
+def _query_cn_daily_with_retry(
+    bs: Any,
+    symbol: str,
+    bars: int,
+    start: str | None = None,
+    end: str | None = None,
+    retry_count: int = 2,
+    retry_backoff_seconds: float = 1.0,
+) -> pd.DataFrame:
+    attempts = max(1, retry_count + 1)
+    for attempt in range(1, attempts + 1):
+        try:
+            return _query_cn_daily(bs, symbol=symbol, bars=bars, start=start, end=end)
+        except Exception as exc:
+            if attempt >= attempts:
+                raise
+            delay = retry_backoff_seconds * (2 ** (attempt - 1))
+            LOGGER.warning(
+                "Baostock query failed for %s (attempt %s/%s): %s; retrying in %.1fs",
+                symbol,
+                attempt,
+                attempts,
+                exc,
+                delay,
+            )
+            if delay:
+                sleep(delay)
+    raise AssertionError("unreachable")
+
+
 def fetch_cn_daily(
     symbol: str,
     bars: int = 800,
@@ -143,30 +206,104 @@ def update_cn_cache(
     bars: int = 800,
     cache_path: str | Path = DEFAULT_CACHE_PATH,
     request_pause: float = 0.02,
+    force_full: bool = False,
+    overlap_calendar_days: int = 45,
+    adjustment_tolerance: float = 1e-6,
+    retry_count: int = 2,
+    retry_backoff_seconds: float = 1.0,
+    socket_timeout_seconds: float = 30.0,
+    progress_interval: int = 25,
+    stats: dict[str, Any] | None = None,
 ) -> dict[str, pd.DataFrame]:
     import baostock as bs
 
     cache = load_cache(cache_path)
     updated = dict(cache)
-    _login(bs)
+    started = perf_counter()
+    counters: dict[str, Any] = {
+        "constituent_count": len(symbols),
+        "incremental_success": 0,
+        "full_refresh": 0,
+        "cache_fallback": 0,
+        "failed": 0,
+    }
+    _login(bs, socket_timeout_seconds=socket_timeout_seconds)
     try:
-        for symbol in symbols:
+        for position, symbol in enumerate(symbols, start=1):
             try:
-                # Forward-adjusted history can be restated after a corporate
-                # action. Replace the full window rather than mixing adjustment
-                # bases across incremental downloads.
-                fresh = _query_cn_daily(bs, symbol=symbol, bars=bars)
-                if not fresh.empty:
+                cached = cache.get(symbol)
+                needs_full = force_full or cached is None or cached.empty
+                if needs_full:
+                    fresh = _query_cn_daily_with_retry(
+                        bs,
+                        symbol=symbol,
+                        bars=bars,
+                        retry_count=retry_count,
+                        retry_backoff_seconds=retry_backoff_seconds,
+                    )
+                    if fresh.empty:
+                        raise ValueError("Baostock returned no daily rows")
                     updated[symbol] = fresh
+                    counters["full_refresh"] += 1
+                else:
+                    overlap_start = (
+                        cached.index.max() - pd.Timedelta(days=overlap_calendar_days)
+                    ).strftime("%Y-%m-%d")
+                    recent = _query_cn_daily_with_retry(
+                        bs,
+                        symbol=symbol,
+                        bars=bars,
+                        start=overlap_start,
+                        retry_count=retry_count,
+                        retry_backoff_seconds=retry_backoff_seconds,
+                    )
+                    if recent.empty:
+                        raise ValueError("Baostock returned no recent daily rows")
+                    if adjustment_basis_changed(cached, recent, adjustment_tolerance):
+                        LOGGER.info("Qfq basis change detected for %s; refreshing full window", symbol)
+                        fresh = _query_cn_daily_with_retry(
+                            bs,
+                            symbol=symbol,
+                            bars=bars,
+                            retry_count=retry_count,
+                            retry_backoff_seconds=retry_backoff_seconds,
+                        )
+                        if fresh.empty:
+                            raise ValueError("Baostock returned no rows for full refresh")
+                        updated[symbol] = fresh
+                        counters["full_refresh"] += 1
+                    else:
+                        updated[symbol] = merge_market_data(cached, recent, max_bars=bars)
+                        counters["incremental_success"] += 1
             except Exception as exc:  # noqa: BLE001 - isolate third-party failures per symbol
                 LOGGER.error("Baostock download failed for %s: %s", symbol, exc)
+                if symbol in cache:
+                    updated[symbol] = cache[symbol]
+                    counters["cache_fallback"] += 1
+                else:
+                    counters["failed"] += 1
             if request_pause:
                 sleep(request_pause)
+            if progress_interval and (position % progress_interval == 0 or position == len(symbols)):
+                LOGGER.info(
+                    "HS300 download progress: %s/%s, incremental=%s, full_refresh=%s, "
+                    "fallback=%s, failed=%s, elapsed=%.1fs",
+                    position,
+                    len(symbols),
+                    counters["incremental_success"],
+                    counters["full_refresh"],
+                    counters["cache_fallback"],
+                    counters["failed"],
+                    perf_counter() - started,
+                )
     finally:
         bs.logout()
 
     updated = {symbol: updated[symbol] for symbol in symbols if symbol in updated}
     save_cache(updated, cache_path)
+    counters["download_seconds"] = round(perf_counter() - started, 3)
+    if stats is not None:
+        stats.update(counters)
     return updated
 
 
@@ -178,8 +315,12 @@ def get_constituents(force_refresh: bool = False) -> pd.DataFrame:
     return get_hs300_constituents(force_refresh=force_refresh)
 
 
-def update_cache(symbols: list[str], bars: int = 800) -> dict[str, pd.DataFrame]:
-    return update_cn_cache(symbols, bars=bars)
+def update_cache(
+    symbols: list[str],
+    bars: int = 800,
+    **kwargs: Any,
+) -> dict[str, pd.DataFrame]:
+    return update_cn_cache(symbols, bars=bars, **kwargs)
 
 
 def load_market_data() -> dict[str, pd.DataFrame]:

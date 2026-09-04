@@ -2,9 +2,12 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import json
 import logging
 import os
+from datetime import UTC, datetime
 from pathlib import Path
+from time import perf_counter
 
 import pandas as pd
 import yaml
@@ -23,7 +26,6 @@ from watchlist.watchlist_state import (
     save_watchlist_state,
     update_watchlist,
 )
-
 
 LOGGER = logging.getLogger("cwp-scanner")
 
@@ -75,7 +77,7 @@ def scan_universe(
                     min_bars=min_bars,
                 )
             )
-        except Exception as exc:  # a single symbol must not stop the market scan
+        except Exception as exc:  # noqa: BLE001 - isolate failures per symbol
             handle_scan_error(symbol, exc)
     return results
 
@@ -87,6 +89,7 @@ def run_scan(
     force_constituents: bool = False,
     notify: bool = False,
     dry_run_notifications: bool = False,
+    force_full_download: bool = False,
     root: str | Path = ".",
 ) -> pd.DataFrame:
     root_path = Path(root).resolve()
@@ -94,6 +97,9 @@ def run_scan(
     scanner_config = settings.get("scanner", {})
     min_bars = int(scanner_config.get("min_bars", 180))
     max_tracking = int(scanner_config.get("watchlist_max_trading_days", 15))
+    run_started_at = datetime.now(UTC)
+    run_started = perf_counter()
+    update_stats: dict = {}
 
     previous_cwd = Path.cwd()
     os.chdir(root_path)
@@ -102,14 +108,39 @@ def run_scan(
         constituents = adapter.get_constituents(force_refresh=force_constituents)
         symbols = requested_symbols(constituents)
         if download:
-            market_data = adapter.update_cache(symbols, bars=bars)
+            if market.lower() == "hs300":
+                download_config = settings.get("hs300_download", {})
+                market_data = adapter.update_cache(
+                    symbols,
+                    bars=bars,
+                    force_full=force_full_download,
+                    overlap_calendar_days=int(
+                        download_config.get("overlap_calendar_days", 45)
+                    ),
+                    adjustment_tolerance=float(
+                        download_config.get("adjustment_tolerance", 1e-6)
+                    ),
+                    retry_count=int(download_config.get("retry_count", 2)),
+                    retry_backoff_seconds=float(
+                        download_config.get("retry_backoff_seconds", 1.0)
+                    ),
+                    socket_timeout_seconds=float(
+                        download_config.get("socket_timeout_seconds", 30.0)
+                    ),
+                    progress_interval=int(download_config.get("progress_interval", 25)),
+                    stats=update_stats,
+                )
+            else:
+                market_data = adapter.update_cache(symbols, bars=bars)
         elif hasattr(adapter, "load_market_data"):
             market_data = adapter.load_market_data()
         else:
             cache_path = root_path / "cache" / f"{market}_daily.parquet"
             market_data = load_cache(cache_path)
 
+        scan_started = perf_counter()
         results = scan_universe(constituents, market_data, market, min_bars=min_bars)
+        scan_seconds = perf_counter() - scan_started
         result_df = build_results(results)
         save_scan_outputs(result_df, market, root=root_path)
 
@@ -152,6 +183,32 @@ def run_scan(
                 )
             if not dry_run_notifications:
                 send_telegram(summary)
+        if market.lower() == "hs300":
+            newest_dates = [frame.index.max() for frame in market_data.values() if not frame.empty]
+            metadata = {
+                "market": "HS300",
+                "started_at": run_started_at.isoformat(),
+                "finished_at": datetime.now(UTC).isoformat(),
+                **update_stats,
+                "valid_symbol_count": len(result_df),
+                "newest_market_date": (
+                    max(newest_dates).strftime("%Y-%m-%d") if newest_dates else None
+                ),
+                "scan_seconds": round(scan_seconds, 3),
+                "total_seconds": round(perf_counter() - run_started, 3),
+                "force_full_download": force_full_download,
+            }
+            metadata_path = root_path / "output" / "reports" / "hs300_run_metadata.json"
+            metadata_path.write_text(
+                json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            LOGGER.info(
+                "HS300 scan timing: download=%.1fs, engine=%.1fs, total=%.1fs",
+                float(update_stats.get("download_seconds", 0.0)),
+                scan_seconds,
+                perf_counter() - run_started,
+            )
         return result_df
     finally:
         os.chdir(previous_cwd)
@@ -164,6 +221,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--root", default=".")
     parser.add_argument("--no-download", action="store_true", help="Use existing Parquet cache")
     parser.add_argument("--force-constituents", action="store_true")
+    parser.add_argument(
+        "--force-full-download",
+        action="store_true",
+        help="Refresh the complete HS300 qfq history instead of using overlap updates",
+    )
     parser.add_argument("--notify", action="store_true")
     parser.add_argument("--dry-run-notifications", action="store_true")
     return parser
@@ -183,6 +245,7 @@ def main() -> None:
         bars=args.bars,
         download=not args.no_download,
         force_constituents=args.force_constituents,
+        force_full_download=args.force_full_download,
         notify=args.notify,
         dry_run_notifications=args.dry_run_notifications,
         root=args.root,
