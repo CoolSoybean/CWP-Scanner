@@ -63,14 +63,14 @@ symbol,market,signal_date,close,status,status_rank,setup,regime,wyckoff,trigger,
 000166,HS300,2026-09-04,4.59,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,4.43,4.53,,,,,申万宏源,nan,,1.8.5-source-port
 000333,HS300,2026-09-04,87.57,READY,2,2S,Bullish Zhongshu,Neutral,Bull Micro BOS,SHORT,82.39,87.4,,,,,美的集团,nan,,1.8.5-source-port
 000338,HS300,2026-09-04,26.85,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,27.99,28.11,,,,,潍柴动力,nan,,1.8.5-source-port
-000408,HS300,2026-09-04,75.62,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,77.48,80.22,,,,,藏格矿业,nan,,1.8.5-source-port
+000408,HS300,2026-09-04,75.62,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,76.47,79.18,,,,,藏格矿业,nan,,1.8.5-source-port
 000538,HS300,2026-09-04,51.02,READY,2,2S,Bullish Zhongshu,Neutral,Waiting,SHORT,49.36,49.57,,,,,云南白药,nan,,1.8.5-source-port
 000708,HS300,2026-09-04,13.59,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,13.82,13.85,,,,,中信特钢,nan,,1.8.5-source-port
 000988,HS300,2026-09-04,95.6,READY,2,2B,Bearish Zhongshu,Neutral,Bear Micro BOS,LONG,100.02,114.58,,,,,华工科技,nan,,1.8.5-source-port
 001280,HS300,2026-09-04,65.91,READY,2,2B,Bearish Zhongshu,Neutral,Bear Micro BOS,LONG,66.4,66.98,,,,,中国铀业,nan,,1.8.5-source-port
 001965,HS300,2026-09-04,9.8,READY,2,2S,Bullish Zhongshu,Neutral,Waiting,SHORT,9.25,9.9,,,,,招商公路,nan,,1.8.5-source-port
 001979,HS300,2026-09-04,6.97,READY,2,2S,Bullish Zhongshu,Neutral,Waiting,SHORT,6.7,6.73,,,,,招商蛇口,nan,,1.8.5-source-port
-002027,HS300,2026-09-04,4.88,READY,2,2S,Neutral Zhongshu,Neutral,Waiting,SHORT,4.85,4.91,,,,,分众传媒,nan,,1.8.5-source-port
+002027,HS300,2026-09-04,4.88,READY,2,2S,Bullish Zhongshu,Neutral,Waiting,SHORT,4.8,4.86,,,,,分众传媒,nan,,1.8.5-source-port
 002049,HS300,2026-09-04,62.08,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,60.2,68.48,,,,,紫光国微,nan,,1.8.5-source-port
 002050,HS300,2026-09-04,35.46,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,35.13,36.72,,,,,三花智控,nan,,1.8.5-source-port
 002230,HS300,2026-09-04,39.5,READY,2,2S,Neutral Zhongshu,Neutral,Waiting,SHORT,38.67,40.81,,,,,科大讯飞,nan,,1.8.5-source-port
@@ -250,7 +250,7 @@ symbol,market,signal_date,close,status,status_rank,setup,regime,wyckoff,trigger,
 601985,HS300,2026-09-04,9.08,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,8.78,8.95,,,,,中国核电,nan,,1.8.5-source-port
 601998,HS300,2026-09-04,8.89,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,7.39,7.75,,,,,中信银行,nan,,1.8.5-source-port
 603019,HS300,2026-09-04,82.69,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,81.07,86.3,,,,,中科曙光,nan,,1.8.5-source-port
-603259,HS300,2026-09-04,153.83,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,121.41,129.15,,,,,药明康德,nan,,1.8.5-source-port
+603259,HS300,2026-09-04,153.83,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,121.01,128.73,,,,,药明康德,nan,,1.8.5-source-port
 603296,HS300,2026-09-04,75.98,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,76.66,79.98,,,,,华勤技术,nan,,1.8.5-source-port
 603369,HS300,2026-09-04,30.9,WATCH,1,NONE,Bull Trend,Re-Distribution,Bull Micro BOS,,25.45,25.61,,,,,今世缘,nan,,1.8.5-source-port
 603799,HS300,2026-09-04,38.07,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,45.56,47.17,,,,,华友钴业,nan,,1.8.5-source-port
