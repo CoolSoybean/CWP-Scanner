@@ -1,19 +1,16 @@
 CWP Daily Scan | HS300
-2026-09-07
+2026-09-08
 
-ENTRY: 2 | READY: 113 | WATCH: 145
+ENTRY: 3 | READY: 105 | WATCH: 150
 
 NEW ENTRY
-600482  BRK  Bullish Zhongshu
-601727  BRK  Bullish Zhongshu
+600372  3B  Bullish Zhongshu
+000625  BRK  Bullish Zhongshu
 
 NEW READY
-600023  3S  Bearish Zhongshu
-601117  3S  Bearish Zhongshu
-000807  2S  Bear Trend
+000100  3S  Bearish Zhongshu
+600233  2S  Bull Trend
 
 DROPPED
-000895  NONE  Bear Trend
-601668  NONE  Bear Trend
-605499  NONE  Bear Trend
-688521  NONE  Bear Trend
+601117  NONE  Bear Trend
+688041  NONE  Bear Trend
