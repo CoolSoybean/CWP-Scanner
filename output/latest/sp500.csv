@@ -327,7 +327,7 @@ HRL,SP500,2026-09-04,21.540000915527344,WATCH,1,NONE,Bear Trend,Neutral,Waiting,
 HSIC,SP500,2026-09-04,89.80999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,87.47,89.34,,,,,Henry Schein,Health Care,,1.8.5-source-port
 HST,SP500,2026-09-04,22.049999237060547,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,22.64,23.42,,,,,Host Hotels & Resorts,Real Estate,,1.8.5-source-port
 HSY,SP500,2026-09-04,173.14999389648438,WATCH,1,NONE,Bearish Zhongshu,Re-Distribution,Bear Micro BOS,,177.41,183.03,,,,,Hershey Company (The),Consumer Staples,,1.8.5-source-port
-HUBB,SP500,2026-09-04,460.7200012207031,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,481.67,491.17,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port
+HUBB,SP500,2026-09-08,464.75,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,481.67,491.17,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port
 HWM,SP500,2026-09-04,259.2699890136719,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,276.26,280.36,,,,,Howmet Aerospace,Industrials,,1.8.5-source-port
 IBKR,SP500,2026-09-04,92.62000274658203,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,89.5,90.92,,,,,Interactive Brokers,Financials,,1.8.5-source-port
 IBM,SP500,2026-09-04,234.88999938964844,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,229.1,238.72,,,,,IBM,Information Technology,,1.8.5-source-port
