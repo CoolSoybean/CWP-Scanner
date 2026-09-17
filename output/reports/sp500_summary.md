@@ -1,40 +1,34 @@
 CWP Daily Scan | SP500
-2026-09-16
+2026-09-17
 
-ENTRY: 20 | READY: 168 | WATCH: 310
+ENTRY: 26 | READY: 170 | WATCH: 302
 
 NEW ENTRY
-APO  3S  Bear Trend
-CNP  3S  Bear Trend
-LNT  3S  Bear Trend
-PEG  3S  Bear Trend
-BAC  2S  Bearish Zhongshu
-BBY  2B  Bullish Zhongshu
-DVA  2B  Bear Trend
-EQIX  2S  Bearish Zhongshu
-MPWR  2S  Bearish Zhongshu
-MS  2S  Bear Trend
-PH  2S  Bearish Zhongshu
-RJF  2S  Bearish Zhongshu
-TRGP  2S  Bull Trend
-BNY  BRK_SHORT  Bearish Zhongshu
-CEG  BRK_SHORT  Bull Trend
-… and 5 more
+CVNA  3S  Bearish Zhongshu
+AMZN  2S  Bull Trend
+APH  2S  Bear Trend
+DLTR  2S  Bearish Zhongshu
+FERG  2S  Bear Trend
+GE  2S  Bearish Zhongshu
+RTX  2S  Bull Trend
+AEP  BRK_SHORT  Bear Trend
+APA  BRK  Bull Trend
+CMG  BRK_SHORT  Bearish Zhongshu
+EOG  BRK  Bullish Zhongshu
+EVRG  BRK_SHORT  Bear Trend
+GPC  BRK_SHORT  Bull Trend
+HWM  BRK_SHORT  Bear Trend
+JKHY  BRK_SHORT  Bull Trend
+… and 6 more
 
 NEW READY
-AMAT  3S  Bear Trend
-AVGO  3S  Bear Trend
-COIN  3B  Bullish Zhongshu
-EBAY  3B  Bear Trend
-GEV  3S  Bear Trend
-HUBB  3S  Bear Trend
-JKHY  3B  Bull Trend
-KLAC  3S  Bear Trend
-LHX  3S  Bear Trend
-LMT  3S  Bear Trend
-NFLX  3B  Bull Trend
-ON  3S  Bear Trend
-SNPS  3S  Bearish Zhongshu
-SRE  3S  Bear Trend
-TRV  3B  Bear Trend
-… and 4 more
+HST  3S  Bear Trend
+KEY  3S  Bear Trend
+MO  3S  Bearish Zhongshu
+RF  3S  Bear Trend
+RMD  3B  Bull Trend
+XEL  3S  Bear Trend
+CPAY  2S  Bull Trend
+FDX  2S  Bull Trend
+NTAP  2S  Bullish Zhongshu
+PWR  2S  Neutral Zhongshu
