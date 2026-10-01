@@ -3079,3 +3079,4 @@ recorded_at,symbol,market,signal_date,close,status,status_rank,setup,regime,wyck
 2026-10-01T01:24:06.477285+00:00,ROL,SP500,2026-09-29,30.5,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,35.83,37.73,,,,,"Rollins, Inc.",Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
 2026-10-01T01:24:06.477285+00:00,TECH,SP500,2026-09-29,72.37999725341797,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,72.08,72.48,,,,,Bio-Techne,Health Care,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
 2026-10-01T01:24:06.477285+00:00,WAT,SP500,2026-09-29,443.260009765625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,406.87,421.74,,,,,Waters Corporation,Health Care,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-01T15:39:07.174247+00:00,600026,HS300,2026-09-30,20.56,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,18.38,19.85,,,,,中远海能,nan,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
