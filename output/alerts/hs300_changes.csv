@@ -152,7 +152,7 @@ symbol,market,signal_date,close,status,status_rank,setup,regime,wyckoff,trigger,
 600019,HS300,2026-09-30,5.93,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,5.65,5.76,,,,,宝钢股份,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
 600023,HS300,2026-09-30,5.22,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,4.87,4.97,,,,,浙能电力,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
 600025,HS300,2026-09-30,9.89,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,9.66,9.73,,,,,华能水电,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-600026,HS300,2026-09-30,20.56,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,18.38,19.85,,,,,中远海能,nan,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+600026,HS300,2026-09-30,20.56,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,18.38,19.85,,,,,中远海能,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
 600028,HS300,2026-09-30,5.28,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,4.99,5.23,,,,,中国石化,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
 600031,HS300,2026-09-30,17.49,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,19.72,19.8,,,,,三一重工,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
 600061,HS300,2026-09-30,6.19,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,6.42,6.45,,,,,国投资本,nan,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
