@@ -324,7 +324,7 @@ HLT,SP500,2026-10-12,327.5400085449219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bul
 HOOD,SP500,2026-10-12,109.22000122070312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,110.66,112.45,,,,,Robinhood Markets,Financials,,1.8.5-source-port
 HPE,SP500,2026-10-12,70.33000183105469,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,51.3,54.88,,,,,Hewlett Packard Enterprise,Information Technology,,1.8.5-source-port
 HSIC,SP500,2026-10-12,84.2300033569336,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,87.47,87.98,,,,,Henry Schein,Health Care,,1.8.5-source-port
-HUBB,SP500,2026-10-09,474.1099853515625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,464.61,467.08,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port
+HUBB,SP500,2026-10-12,474.04998779296875,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,464.61,467.08,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port
 HUM,SP500,2026-10-12,433.5,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,390.46,393.48,,,,,Humana,Health Care,,1.8.5-source-port
 IBKR,SP500,2026-10-12,87.88999938964844,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,89.5,90.92,,,,,Interactive Brokers,Financials,,1.8.5-source-port
 IBM,SP500,2026-10-12,227.02000427246094,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,229.1,238.72,,,,,IBM,Information Technology,,1.8.5-source-port

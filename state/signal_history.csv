@@ -3821,3 +3821,5 @@ recorded_at,symbol,market,signal_date,close,status,status_rank,setup,regime,wyck
 2026-10-13T16:21:12.612004+00:00,300394,HS300,2026-10-13,246.7,NONE,0,NONE,Bear Trend,Neutral,Waiting,,242.16,276.48,,,,,天孚通信,nan,,1.8.5-source-port,READY,NONE,DROPPED
 2026-10-13T16:21:12.612004+00:00,600276,HS300,2026-10-13,45.51,NONE,0,NONE,Bear Trend,Neutral,Waiting,,45.26,46.14,,,,,恒瑞医药,nan,,1.8.5-source-port,READY,NONE,DROPPED
 2026-10-13T16:21:12.612004+00:00,601668,HS300,2026-10-13,4.42,NONE,0,NONE,Bear Trend,Neutral,Waiting,,4.34,4.35,,,,,中国建筑,nan,,1.8.5-source-port,ENTRY,NONE,DROPPED
+2026-10-14T01:19:38.125100+00:00,EW,SP500,2026-10-12,86.38999938964844,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,88.79,89.66,,,,,Edwards Lifesciences,Health Care,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-14T01:19:38.125100+00:00,VZ,SP500,2026-10-12,42.779998779296875,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,48.82,49.01,,,,,Verizon,Communication Services,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
