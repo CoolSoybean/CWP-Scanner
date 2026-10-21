@@ -1,40 +1,40 @@
 CWP Daily Scan | SP500
-2026-10-20
+2026-10-21
 
-ENTRY: 30 | READY: 178 | WATCH: 289
+ENTRY: 25 | READY: 179 | WATCH: 293
 
 NEW ENTRY
-CF  3B  Bullish Zhongshu
-LITE  3S  Bearish Zhongshu
-Q  3S  Bull Trend
-TSLA  3S  Bull Trend
-ACN  2B  Bear Trend
-AIG  2B  Bullish Zhongshu
-AJG  2B  Bear Trend
-AMT  2B  Bullish Zhongshu
-AON  2B  Bear Trend
-CASY  2B  Bear Trend
-CBOE  2B  Bullish Zhongshu
-DOV  2B  Bullish Zhongshu
-ES  2B  Bear Trend
-HOOD  2S  Bearish Zhongshu
-PRU  2B  Bear Trend
-… and 10 more
-
-NEW READY
-EOG  3B  Bear Trend
-EXC  3B  Bear Trend
-SRE  3B  Bear Trend
+AMCR  3B  Bullish Zhongshu
+AOS  3B  Bullish Zhongshu
+HRL  3B  Bullish Zhongshu
+PPG  3B  Bullish Zhongshu
+ADSK  2B  Bullish Zhongshu
 AXP  2B  Bear Trend
-CBRE  2B  Bear Trend
-CINF  2B  Bear Trend
+COO  2B  Bullish Zhongshu
 DECK  2B  Bullish Zhongshu
-DLTR  2B  Bull Trend
+DVN  2B  Bullish Zhongshu
+FANG  2B  Bear Trend
 FDX  2B  Bear Trend
 GPN  2B  Bear Trend
-OKE  2S  Bear Trend
-PCG  2B  Bullish Zhongshu
-PEG  2B  Bear Trend
-SYF  2B  Bear Trend
-TTD  2B  Bear Trend
+IBM  2B  Bear Trend
+INTU  2B  Bear Trend
+MCO  2B  Bullish Zhongshu
+… and 8 more
+
+NEW READY
+AEE  3S  Bear Trend
+BSX  3B  Bear Trend
+CHTR  3S  Bear Trend
+CMS  3S  Bear Trend
+LOW  3S  Bear Trend
+SO  3S  Bear Trend
+XYL  3S  Bear Trend
+CDNS  2B  Bull Trend
+CMI  2B  Bear Trend
+ETR  2B  Bear Trend
+GIS  2S  Bear Trend
+KMI  2B  Bear Trend
+RCL  2B  Bullish Zhongshu
+TT  2B  Bull Trend
+VST  2B  Bull Trend
 … and 1 more
