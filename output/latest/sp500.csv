@@ -329,7 +329,7 @@ GD,SP500,2026-10-26,357.0400085449219,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,3
 GDDY,SP500,2026-10-26,109.81999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,95.8,99.95,,,,,GoDaddy,Information Technology,,1.8.5-source-port
 GE,SP500,2026-10-26,288.42999267578125,WATCH,1,NONE,Bear Trend,Accumulation,Waiting,,306.8,321.17,,,,,GE Aerospace,Industrials,,1.8.5-source-port
 GEHC,SP500,2026-10-26,71.9800033569336,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,63.37,67.1,,,,,GE HealthCare,Health Care,,1.8.5-source-port
-GEV,SP500,2026-10-26,855.1199951171875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,932.19,935.16,,,,,GE Vernova,Industrials,,1.8.5-source-port
+GEV,SP500,2026-10-26,854.6199951171875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,932.19,934.61,,,,,GE Vernova,Industrials,,1.8.5-source-port
 GIS,SP500,2026-10-26,33.70000076293945,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,32.42,34.15,,,,,General Mills,Consumer Staples,,1.8.5-source-port
 GLW,SP500,2026-10-26,127.73999786376953,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,157.91,165.14,,,,,Corning Inc.,Information Technology,,1.8.5-source-port
 GNRC,SP500,2026-10-26,189.22999572753906,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,187.55,193.31,,,,,Generac,Industrials,,1.8.5-source-port
@@ -348,7 +348,7 @@ HRL,SP500,2026-10-26,20.950000762939453,WATCH,1,NONE,Bullish Zhongshu,Neutral,Wa
 HSIC,SP500,2026-10-26,84.51000213623047,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,87.47,87.98,,,,,Henry Schein,Health Care,,1.8.5-source-port
 HST,SP500,2026-10-26,25.059999465942383,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,22.28,22.54,,,,,Host Hotels & Resorts,Real Estate,,1.8.5-source-port
 HSY,SP500,2026-10-26,168.22999572753906,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,166.69,170.12,,,,,Hershey Company (The),Consumer Staples,,1.8.5-source-port
-HUBB,SP500,2026-10-23,448.1000061035156,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,464.61,467.08,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port
+HUBB,SP500,2026-10-26,459.3999938964844,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,464.61,467.08,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port
 HWM,SP500,2026-10-26,194.36000061035156,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,224.88,233.42,,,,,Howmet Aerospace,Industrials,,1.8.5-source-port
 IBM,SP500,2026-10-26,253.44000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,229.1,233.5,,,,,IBM,Information Technology,,1.8.5-source-port
 ICE,SP500,2026-10-26,160.0500030517578,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,156.95,158.55,,,,,Intercontinental Exchange,Financials,,1.8.5-source-port

@@ -5221,3 +5221,18 @@ recorded_at,symbol,market,signal_date,close,status,status_rank,setup,regime,wyck
 2026-10-27T14:53:25.219105+00:00,603369,HS300,2026-10-27,31.38,NONE,0,NONE,Bear Trend,Neutral,Bull Micro BOS,,28.59,28.65,,,,,今世缘,nan,,1.8.5-source-port,ENTRY,NONE,DROPPED
 2026-10-27T14:53:25.219105+00:00,603893,HS300,2026-10-27,193.0,NONE,0,NONE,Bear Trend,Neutral,Waiting,,193.85,210.94,,,,,瑞芯微,nan,,1.8.5-source-port,WATCH,NONE,DROPPED
 2026-10-27T14:53:25.219105+00:00,688521,HS300,2026-10-27,112.35,NONE,0,NONE,Bear Trend,Neutral,Bear Micro BOS,,170.21,198.6,,,,,芯原股份,nan,,1.8.5-source-port,READY,NONE,DROPPED
+2026-10-28T01:32:19.823747+00:00,AMZN,SP500,2026-10-26,249.08999633789062,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,248.6,250.88,,,,,Amazon,Consumer Discretionary,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,CDW,SP500,2026-10-26,163.22999572753906,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,143.67,153.77,,,,,CDW Corporation,Information Technology,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,CEG,SP500,2026-10-26,252.47999572753906,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,269.53,270.11,,,,,Constellation Energy,Utilities,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,DASH,SP500,2026-10-26,168.44000244140625,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,191.74,194.24,,,,,DoorDash,Consumer Discretionary,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,DE,SP500,2026-10-26,641.25,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,665.45,705.88,,,,,Deere & Company,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,HON,SP500,2026-10-26,219.27999877929688,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,205.2,211.51,,,,,Honeywell Technologies,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,HWM,SP500,2026-10-26,194.36000061035156,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,224.88,233.42,,,,,Howmet Aerospace,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,KR,SP500,2026-10-26,66.7699966430664,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,57.75,59.2,,,,,Kroger,Consumer Staples,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,LIN,SP500,2026-10-26,507.55999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,473.05,480.56,,,,,Linde plc,Materials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,MPC,SP500,2026-10-26,470.6400146484375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,380.0,431.08,,,,,Marathon Petroleum,Energy,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,OMC,SP500,2026-10-26,79.83000183105469,WATCH,1,NONE,Bearish Zhongshu,Distrib Watch,Waiting,,79.65,82.26,,,,,Omnicom Group,Communication Services,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,PPL,SP500,2026-10-26,34.91999816894531,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,34.41,35.27,,,,,PPL Corporation,Utilities,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,STE,SP500,2026-10-26,230.1199951171875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,214.54,221.45,,,,,Steris,Health Care,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,T,SP500,2026-10-26,20.850000381469727,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,24.94,25.32,,,,,AT&T,Communication Services,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+2026-10-28T01:32:19.823747+00:00,UNP,SP500,2026-10-26,296.9700012207031,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,274.22,278.6,,,,,Union Pacific Corporation,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
