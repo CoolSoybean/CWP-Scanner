@@ -1,36 +1,37 @@
 CWP Daily Scan | SP500
-2026-10-29
+2026-10-30
 
-ENTRY: 12 | READY: 174 | WATCH: 311
+ENTRY: 48 | READY: 151 | WATCH: 297
 
 NEW ENTRY
-CDNS  3B  Bullish Zhongshu
-MGM  3S  Bear Trend
-OKE  3B  Bullish Zhongshu
-PFG  3B  Bear Trend
-UHS  3S  Bull Trend
-VTRS  3B  Bull Trend
-CHRW  2S  Bear Trend
-PTC  2B  Bullish Zhongshu
-DLR  BRK  Bear Trend
-FFIV  BRK_SHORT  Bearish Zhongshu
-LII  BRK_SHORT  Bearish Zhongshu
-PCAR  BRK_SHORT  Bear Trend
+QCOM  3B  Bullish Zhongshu
+TEL  3B  Bullish Zhongshu
+AEE  2B  Bullish Zhongshu
+AON  2B  Bear Trend
+APD  2B  Bear Trend
+BLDR  2B  Bear Trend
+CRH  2B  Bear Trend
+DGX  2B  Bear Trend
+DTE  2B  Bear Trend
+ECL  2B  Bull Trend
+GEN  2B  Bullish Zhongshu
+GILD  2B  Bull Trend
+GWW  2B  Bull Trend
+HBAN  2B  Bear Trend
+IP  2B  Bullish Zhongshu
+… and 33 more
 
 NEW READY
-BA  3S  Bear Trend
-CARR  3B  Bull Trend
-CBRE  3S  Bear Trend
-CVS  3S  Bear Trend
-OMC  3S  Bearish Zhongshu
-QCOM  3B  Bullish Zhongshu
-T  3S  Bear Trend
-TAP  3S  Bearish Zhongshu
-TEL  3B  Bear Trend
-TFC  3S  Bear Trend
-TTWO  3S  Bearish Zhongshu
-VTR  3S  Bear Trend
-WTW  3S  Bear Trend
-ALGN  2B  Bear Trend
-AMP  2S  Neutral Zhongshu
-… and 7 more
+FITB  3B  Bullish Zhongshu
+NTRS  3B  Bear Trend
+CDW  2B  Bullish Zhongshu
+CSCO  2S  Bearish Zhongshu
+FDS  2B  Bullish Zhongshu
+HUBB  2S  Bearish Zhongshu
+KDP  2B  Bullish Zhongshu
+MRSH  2B  Bullish Zhongshu
+PGR  2B  Bullish Zhongshu
+ZBH  2B  Bear Trend
+
+DROPPED
+PSKY  NONE  Bear Trend
