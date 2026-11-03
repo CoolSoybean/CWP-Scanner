@@ -1,45 +1,46 @@
 CWP Daily Scan | HS300
-2026-11-02
+2026-11-03
 
-ENTRY: 9 | READY: 84 | WATCH: 96
+ENTRY: 19 | READY: 64 | WATCH: 94
 
 NEW ENTRY
-000999  2B  Bull Trend
-002027  2B  Bull Trend
-300015  2B  Bear Trend
-601021  2B  Bear Trend
-601818  2B  Bull Trend
-603288  2B  Bear Trend
-600015  BRK  Bear Trend
-601169  BRK  Bull Trend
-601888  BRK  Bear Trend
+000333  3B  Bullish Zhongshu
+302132  2B  Bull Trend
+600009  2B  Bullish Zhongshu
+600031  2B  Bear Trend
+600066  2B  Bear Trend
+600415  2B  Bear Trend
+600760  2B  Bear Trend
+601800  2B  Bull Trend
+601816  2B  Bull Trend
+688009  2B  Bullish Zhongshu
+000157  BRK  Bear Trend
+000963  BRK  Bear Trend
+300059  BRK  Bullish Zhongshu
+600029  BRK  Bear Trend
+600233  BRK  Bear Trend
+… and 3 more
 
 NEW READY
-000100  3S  Bear Trend
-000333  3B  Bullish Zhongshu
-000425  3S  Bear Trend
-000568  3B  Bear Trend
-000975  3S  Bearish Zhongshu
-002236  3S  Bear Trend
-600919  3B  Neutral Zhongshu
-601018  3B  Bull Trend
-601995  3S  Bear Trend
-601816  2B  Bullish Zhongshu
+000408  3S  Bear Trend
+601328  3B  Bull Trend
+601766  3B  Bull Trend
+600795  2S  Bullish Zhongshu
 
 DROPPED
-000776  NONE  Bear Trend
-002352  NONE  Bear Trend
-002493  NONE  Bear Trend
-002714  NONE  Bear Trend
-300014  NONE  Bear Trend
-300274  NONE  Bear Trend
-600010  NONE  Bear Trend
-600030  NONE  Bear Trend
-600188  NONE  Bear Trend
-600515  NONE  Bear Trend
-600989  NONE  Bear Trend
-601009  NONE  Bear Trend
-601127  NONE  Bear Trend
-601600  NONE  Bear Trend
-601601  NONE  Bear Trend
-… and 3 more
+000425  NONE  Bear Trend
+000768  NONE  Bear Trend
+002142  NONE  Bear Trend
+002532  NONE  Bear Trend
+300015  NONE  Bear Trend
+600016  NONE  Bear Trend
+600039  NONE  Bear Trend
+600061  NONE  Bear Trend
+600150  NONE  Bear Trend
+600588  NONE  Bear Trend
+601021  NONE  Bear Trend
+601117  NONE  Bear Trend
+601136  NONE  Bear Trend
+601318  NONE  Bear Trend
+601319  NONE  Bear Trend
+… and 5 more
