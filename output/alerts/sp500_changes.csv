@@ -1,498 +1,498 @@
 symbol,market,signal_date,close,status,status_rank,setup,regime,wyckoff,trigger,direction,zs_zd,zs_zg,entry_price,sl,tp1,tp2,name,sector,notes,engine_version,previous_status,current_status,change_type
-DPZ,SP500,2026-11-03,323.0899963378906,ENTRY,3,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,298.4,315.92,323.09,314.67,339.92,348.34,Domino's,Consumer Discretionary,,1.8.5-source-port,ENTRY,ENTRY,UNCHANGED
-LYV,SP500,2026-11-03,178.8699951171875,ENTRY,3,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,168.58,174.43,178.87,173.9,188.81,193.78,Live Nation Entertainment,Communication Services,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
-TYL,SP500,2026-11-03,404.239990234375,ENTRY,3,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,348.52,393.53,404.24,388.78,435.16,450.63,Tyler Technologies,Information Technology,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
-VRSN,SP500,2026-11-03,313.8800048828125,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,281.16,283.97,313.88,287.24,367.17,393.81,Verisign,Information Technology,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
-CMG,SP500,2026-11-03,33.2599983215332,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,31.64,32.55,33.26,32.04,35.7,36.92,Chipotle Mexican Grill,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
-CRM,SP500,2026-11-03,222.1999969482422,ENTRY,3,BRK_SHORT,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,225.04,251.94,222.2,227.71,211.18,205.67,Salesforce,Information Technology,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
-MPWR,SP500,2026-11-03,1328.300048828125,ENTRY,3,BRK,Bear Trend,Accum Watch,Bull Micro BOS,LONG,1195.0,1288.27,1328.3,1257.15,1470.61,1541.77,Monolithic Power Systems,Information Technology,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
-KMB,SP500,2026-11-03,104.45999908447266,READY,2,UTAD,Bull Trend,Distribution,Waiting,SHORT,107.9,111.2,,,,,Kimberly-Clark,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-AAPL,SP500,2026-11-03,331.8999938964844,READY,2,3S,Bull Trend,Neutral,Waiting,SHORT,338.7,341.57,,,,,Apple Inc.,Information Technology,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-AEE,SP500,2026-11-03,110.37000274658203,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,105.74,106.34,,,,,Ameren,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-AFL,SP500,2026-11-03,124.04000091552734,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,113.6,118.09,,,,,Aflac,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-AJG,SP500,2026-11-03,273.45001220703125,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,245.33,255.4,,,,,Arthur J. Gallagher & Co.,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-AMAT,SP500,2026-11-03,381.9200134277344,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,426.13,426.52,,,,,Applied Materials,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-AMZN,SP500,2026-11-03,250.69000244140625,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,248.6,250.88,,,,,Amazon,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-APD,SP500,2026-11-03,312.9700012207031,READY,2,3B,Bullish Zhongshu,Distribution,Waiting,LONG,299.5,301.54,,,,,Air Products,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-APP,SP500,2026-11-03,245.50999450683594,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,266.84,283.66,,,,,AppLovin,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-ARES,SP500,2026-11-03,128.92999267578125,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,113.06,119.58,,,,,Ares Management,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-ATO,SP500,2026-11-03,173.77000427246094,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,166.15,167.81,,,,,Atmos Energy,Utilities,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-AWK,SP500,2026-11-03,146.4199981689453,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,139.03,142.37,,,,,American Water Works,Utilities,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-BA,SP500,2026-11-03,173.30999755859375,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,184.25,193.28,,,,,Boeing,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-BG,SP500,2026-11-03,94.72000122070312,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,109.82,110.0,,,,,Bunge Global,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-BKNG,SP500,2026-11-03,155.6699981689453,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,156.93,166.02,,,,,Booking Holdings,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-BLDR,SP500,2026-11-03,63.61000061035156,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,58.13,61.82,,,,,Builders FirstSource,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-C,SP500,2026-11-03,122.70999908447266,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,123.57,126.45,,,,,Citigroup,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-CAT,SP500,2026-11-03,623.9400024414062,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,702.34,743.23,,,,,Caterpillar Inc.,Industrials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-CCI,SP500,2026-11-03,86.58000183105469,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,76.29,83.26,,,,,Crown Castle,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-CHTR,SP500,2026-11-03,113.79000091552734,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,111.55,112.48,,,,,Charter Communications,Communication Services,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-CINF,SP500,2026-11-03,184.33999633789062,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,169.39,171.29,,,,,Cincinnati Financial,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-CLX,SP500,2026-11-03,93.80000305175781,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,83.22,87.67,,,,,Clorox,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-CNP,SP500,2026-11-03,42.529998779296875,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,39.56,40.36,,,,,CenterPoint Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-COO,SP500,2026-11-03,60.83000183105469,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,53.71,57.69,,,,,Cooper Companies (The),Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-CPRT,SP500,2026-11-03,31.059999465942383,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,28.55,29.28,,,,,Copart,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-CRH,SP500,2026-11-03,93.52999877929688,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,83.28,86.9,,,,,CRH plc,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-CRWD,SP500,2026-11-03,244.67999267578125,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,221.36,227.5,,,,,CrowdStrike,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-CVNA,SP500,2026-11-03,71.27999877929688,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,58.92,65.09,,,,,Carvana,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-CVS,SP500,2026-11-03,91.41000366210938,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,92.35,92.69,,,,,CVS Health,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-D,SP500,2026-11-03,66.77999877929688,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,64.05,65.85,,,,,Dominion Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-DDOG,SP500,2026-11-03,220.52000427246094,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,243.63,284.75,,,,,Datadog,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-DELL,SP500,2026-11-03,408.3999938964844,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,439.5,507.39,,,,,Dell Technologies,Information Technology,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-DUK,SP500,2026-11-03,126.51000213623047,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,119.68,121.62,,,,,Duke Energy,Utilities,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-ECL,SP500,2026-11-03,304.67999267578125,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,283.99,295.95,,,,,Ecolab,Materials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-FDX,SP500,2026-11-03,318.0199890136719,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,303.0,303.84,,,,,FedEx,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-FFIV,SP500,2026-11-03,331.1499938964844,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,440.0,462.0,,,,,"F5, Inc.",Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-FISV,SP500,2026-11-03,58.400001525878906,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,47.0,50.83,,,,,Fiserv,Financials,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-FITB,SP500,2026-11-03,53.93000030517578,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,51.71,53.5,,,,,Fifth Third Bancorp,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-FTNT,SP500,2026-11-03,128.11000061035156,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,166.22,173.89,,,,,Fortinet,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-FTV,SP500,2026-11-03,66.80999755859375,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,57.32,58.54,,,,,Fortive,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-GD,SP500,2026-11-03,374.5,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,352.19,357.46,,,,,General Dynamics,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-GE,SP500,2026-11-03,320.6700134277344,READY,2,3B,Bear Trend,Accumulation,Waiting,LONG,306.8,314.0,,,,,GE Aerospace,Industrials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-GEN,SP500,2026-11-03,29.709999084472656,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,23.88,25.23,,,,,Gen Digital,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-GL,SP500,2026-11-03,158.1999969482422,READY,2,3S,Bear Trend,Accumulation,Waiting,SHORT,167.66,170.0,,,,,Globe Life,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-GPN,SP500,2026-11-03,98.0,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,85.94,86.32,,,,,Global Payments,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-HBAN,SP500,2026-11-03,15.859999656677246,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,15.46,15.54,,,,,Huntington Bancshares,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-HCA,SP500,2026-11-03,462.8599853515625,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,439.83,446.36,,,,,HCA Healthcare,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-HD,SP500,2026-11-03,333.6600036621094,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,316.15,327.92,,,,,Home Depot (The),Consumer Discretionary,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-HOOD,SP500,2026-11-03,85.68000030517578,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,101.71,103.15,,,,,Robinhood Markets,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-HPE,SP500,2026-11-03,53.099998474121094,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,54.72,54.88,,,,,Hewlett Packard Enterprise,Information Technology,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-HSIC,SP500,2026-11-03,82.5,READY,2,3S,Bearish Zhongshu,Distrib Watch,Waiting,SHORT,83.75,87.28,,,,,Henry Schein,Health Care,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-IP,SP500,2026-11-03,35.119998931884766,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,33.48,34.85,,,,,International Paper,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-IRM,SP500,2026-11-03,116.69000244140625,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,110.82,115.66,,,,,Iron Mountain,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-IVZ,SP500,2026-11-03,28.260000228881836,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,28.2,29.44,,,,,Invesco,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-KHC,SP500,2026-11-03,24.520000457763672,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,24.24,24.8,,,,,Kraft Heinz,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-KIM,SP500,2026-11-03,24.989999771118164,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,23.32,23.87,,,,,Kimco Realty,Real Estate,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-KKR,SP500,2026-11-03,95.98999786376953,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,95.11,96.27,,,,,KKR & Co.,Financials,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-KLAC,SP500,2026-11-03,156.1999969482422,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,167.05,171.31,,,,,KLA Corporation,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+ALGN,SP500,2026-11-04,164.89999389648438,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,175.35,176.46,164.9,146.13,202.43,221.2,Align Technology,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+AZO,SP500,2026-11-04,3325.56005859375,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,3084.65,3103.0,3325.56,3059.76,3857.16,4122.96,AutoZone,Consumer Discretionary,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+BF-B,SP500,2026-11-04,30.68000030517578,ENTRY,3,2B,Bull Trend,Re-Distribution,Bull Micro BOS,LONG,26.02,26.63,30.68,27.25,37.53,40.96,Brown–Forman,Consumer Staples,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+BMY,SP500,2026-11-04,64.19000244140625,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,60.0,61.82,64.19,59.5,73.58,78.27,Bristol Myers Squibb,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+BNY,SP500,2026-11-04,152.72000122070312,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,161.2,163.12,152.72,144.89,168.38,176.21,BNY Mellon,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+BR,SP500,2026-11-04,189.2899932861328,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,175.17,175.96,189.29,173.48,220.91,236.72,Broadridge Financial Solutions,Industrials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+BXP,SP500,2026-11-04,65.95999908447266,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,69.21,71.41,65.96,60.14,77.6,83.42,"BXP, Inc.",Real Estate,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+CAH,SP500,2026-11-04,261.92999267578125,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,243.49,249.29,261.93,241.79,302.2,322.34,Cardinal Health,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+CDW,SP500,2026-11-04,168.75,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,144.34,153.77,168.75,142.41,221.43,247.77,CDW Corporation,Information Technology,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+CEG,SP500,2026-11-04,245.72000122070312,ENTRY,3,2S,Bear Trend,Neutral,Bear Micro BOS,SHORT,250.55,268.64,245.72,272.19,192.79,166.32,Constellation Energy,Utilities,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+CL,SP500,2026-11-04,98.76000213623047,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,90.47,91.44,98.76,89.83,116.61,125.54,Colgate-Palmolive,Consumer Staples,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+DAL,SP500,2026-11-04,89.23999786376953,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,82.55,82.59,89.24,77.81,112.11,123.54,Delta Air Lines,Industrials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+DOC,SP500,2026-11-04,20.170000076293945,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,20.37,20.88,20.17,18.2,24.12,26.09,Healthpeak Properties,Real Estate,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+EIX,SP500,2026-11-04,61.47999954223633,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,54.48,54.63,61.48,57.65,69.14,72.97,Edison International,Utilities,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+ELV,SP500,2026-11-04,434.17999267578125,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,411.31,427.17,434.18,403.38,495.77,526.57,Elevance Health,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+EW,SP500,2026-11-04,99.37000274658203,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,87.9,88.41,99.37,87.11,123.88,136.14,Edwards Lifesciences,Health Care,,1.8.5-source-port,NONE,ENTRY,NEW_ENTRY
+EXPE,SP500,2026-11-04,315.8800048828125,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,273.95,275.41,315.88,270.39,406.87,452.36,Expedia Group,Consumer Discretionary,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+GLW,SP500,2026-11-04,118.7699966430664,ENTRY,3,2S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,157.91,165.14,118.77,135.13,86.06,69.7,Corning Inc.,Information Technology,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+LRCX,SP500,2026-11-04,221.42999267578125,ENTRY,3,2S,Bear Trend,Neutral,Bear Micro BOS,SHORT,265.09,311.06,221.43,264.27,135.74,92.9,Lam Research,Information Technology,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+MAA,SP500,2026-11-04,122.1500015258789,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,115.9,122.01,122.15,115.23,135.99,142.9,Mid-America Apartment Communities,Real Estate,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+MKC,SP500,2026-11-04,50.47999954223633,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,51.02,52.85,50.48,45.0,61.44,66.93,McCormick & Company,Consumer Staples,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+NTRS,SP500,2026-11-04,178.02000427246094,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,166.01,171.27,178.02,166.63,200.81,212.2,Northern Trust,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+OXY,SP500,2026-11-04,57.33000183105469,ENTRY,3,2S,Bull Trend,Neutral,Bear Micro BOS,SHORT,62.06,63.77,57.33,64.55,42.88,35.66,Occidental Petroleum,Energy,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+PAYX,SP500,2026-11-04,118.70999908447266,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,121.73,124.74,118.71,105.7,144.73,157.73,Paychex,Industrials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+PFG,SP500,2026-11-04,117.30999755859375,ENTRY,3,2B,Bear Trend,Accum Watch,Bull Micro BOS,LONG,107.83,110.22,117.31,109.82,132.29,139.78,Principal Financial Group,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+RJF,SP500,2026-11-04,168.69000244140625,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,154.97,160.51,168.69,154.2,197.67,212.16,Raymond James Financial,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+SBUX,SP500,2026-11-04,109.69999694824219,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,92.76,96.73,109.7,101.51,126.09,134.28,Starbucks,Consumer Discretionary,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+STE,SP500,2026-11-04,247.91000366210938,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,225.65,234.34,247.91,223.41,296.91,321.42,Steris,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+TTD,SP500,2026-11-04,13.229999542236328,ENTRY,3,2B,Neutral Zhongshu,Neutral,Bull Micro BOS,LONG,13.14,13.31,13.23,12.09,15.51,16.65,Trade Desk (The),Communication Services,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+UAL,SP500,2026-11-04,115.76000213623047,ENTRY,3,2B,Bear Trend,Neutral,Bull Micro BOS,LONG,109.08,110.77,115.76,100.07,147.15,162.84,United Airlines Holdings,Industrials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+UDR,SP500,2026-11-04,37.220001220703125,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,34.65,36.42,37.22,34.45,42.77,45.54,"UDR, Inc.",Real Estate,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+VLO,SP500,2026-11-04,365.3399963378906,ENTRY,3,2S,Bull Trend,Neutral,Bear Micro BOS,SHORT,416.41,419.04,365.34,406.99,282.04,240.39,Valero Energy,Energy,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+WRB,SP500,2026-11-04,76.70999908447266,ENTRY,3,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,69.31,70.57,76.71,70.9,88.33,94.14,W. R. Berkley Corporation,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+WTW,SP500,2026-11-04,337.3699951171875,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,325.66,333.01,337.37,308.98,394.14,422.53,Willis Towers Watson,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+XYZ,SP500,2026-11-04,87.62999725341797,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,77.23,77.62,87.63,73.09,116.71,131.24,"Block, Inc.",Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+ZBH,SP500,2026-11-04,110.1500015258789,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,94.77,95.91,110.15,93.66,143.12,159.61,Zimmer Biomet,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+AMP,SP500,2026-11-04,527.4099731445312,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,486.14,502.49,527.41,498.88,584.47,613.0,Ameriprise Financial,Financials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+BAX,SP500,2026-11-04,26.5,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,25.74,25.99,26.5,25.57,28.35,29.28,Baxter International,Health Care,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+BBY,SP500,2026-11-04,101.36000061035156,ENTRY,3,BRK,Bull Trend,Neutral,Bull Micro BOS,LONG,93.18,96.53,101.36,94.81,114.47,121.02,Best Buy,Consumer Discretionary,,1.8.5-source-port,NONE,ENTRY,NEW_ENTRY
+BKNG,SP500,2026-11-04,170.97000122070312,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,156.93,166.02,170.97,158.35,196.21,208.83,Booking Holdings,Consumer Discretionary,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+CBRE,SP500,2026-11-04,141.11000061035156,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,124.73,136.97,141.11,135.6,152.14,157.65,CBRE Group,Real Estate,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+CF,SP500,2026-11-04,111.68000030517578,ENTRY,3,BRK_SHORT,Bull Trend,Distribution,Bear Micro BOS,SHORT,114.05,118.07,111.68,117.45,100.14,94.38,CF Industries,Materials,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+CPT,SP500,2026-11-04,104.4800033569336,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,99.72,103.48,104.48,101.04,111.37,114.81,Camden Property Trust,Real Estate,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+DASH,SP500,2026-11-04,198.58999633789062,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,178.04,191.02,198.59,185.42,224.93,238.1,DoorDash,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+DRI,SP500,2026-11-04,230.61000061035156,ENTRY,3,BRK,Bull Trend,Neutral,Bull Micro BOS,LONG,210.96,218.93,230.61,217.43,256.97,270.15,Darden Restaurants,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+DTE,SP500,2026-11-04,137.52999877929688,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,135.76,136.42,137.53,132.78,147.03,151.78,DTE Energy,Utilities,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+ETN,SP500,2026-11-04,353.0799865722656,ENTRY,3,BRK_SHORT,Bear Trend,Neutral,Bear Micro BOS,SHORT,384.77,395.63,353.08,389.88,279.47,242.67,Eaton Corporation,Industrials,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+HLT,SP500,2026-11-04,376.5299987792969,ENTRY,3,BRK,Bull Trend,Neutral,Bull Micro BOS,LONG,335.23,364.5,376.53,362.08,405.42,419.87,Hilton Worldwide,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+HSIC,SP500,2026-11-04,88.23999786376953,ENTRY,3,BRK,Bullish Zhongshu,Distribution,Bull Micro BOS,LONG,83.75,87.28,88.24,83.4,97.92,102.76,Henry Schein,Health Care,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+JPM,SP500,2026-11-04,352.1099853515625,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,343.07,344.36,352.11,340.36,375.62,387.37,JPMorgan Chase,Financials,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+KHC,SP500,2026-11-04,25.440000534057617,ENTRY,3,BRK,Bull Trend,Distrib Watch,Bull Micro BOS,LONG,24.24,24.8,25.44,24.61,27.1,27.92,Kraft Heinz,Consumer Staples,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+LVS,SP500,2026-11-04,40.7400016784668,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,35.28,38.59,40.74,38.3,45.62,48.06,Las Vegas Sands,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+LYB,SP500,2026-11-04,62.959999084472656,ENTRY,3,BRK_SHORT,Bull Trend,Neutral,Bear Micro BOS,SHORT,64.67,68.42,62.96,66.56,55.75,52.15,LyondellBasell,Materials,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+MPC,SP500,2026-11-04,392.67999267578125,ENTRY,3,BRK_SHORT,Bull Trend,Neutral,Bear Micro BOS,SHORT,419.28,431.08,392.68,426.53,324.98,291.12,Marathon Petroleum,Energy,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+MS,SP500,2026-11-04,193.97000122070312,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,182.47,191.89,193.97,185.56,210.79,219.19,Morgan Stanley,Financials,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+NRG,SP500,2026-11-04,83.25,ENTRY,3,BRK_SHORT,Bear Trend,Neutral,Bear Micro BOS,SHORT,93.36,98.38,83.25,94.59,60.57,49.24,NRG Energy,Utilities,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+OKE,SP500,2026-11-04,88.5999984741211,ENTRY,3,BRK_SHORT,Bull Trend,Neutral,Bear Micro BOS,SHORT,91.13,94.08,88.6,91.86,82.08,78.82,Oneok,Energy,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+PFE,SP500,2026-11-04,30.790000915527344,ENTRY,3,BRK,Bull Trend,Neutral,Bull Micro BOS,LONG,29.22,30.44,30.79,29.85,32.67,33.61,Pfizer,Health Care,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+PNR,SP500,2026-11-04,72.02999877929688,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,65.1,70.87,72.03,70.07,75.96,77.92,Pentair,Industrials,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+PSX,SP500,2026-11-04,259.6300048828125,ENTRY,3,BRK_SHORT,Bull Trend,Neutral,Bear Micro BOS,SHORT,267.05,277.12,259.63,273.46,231.98,218.15,Phillips 66,Energy,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+SNA,SP500,2026-11-04,368.70001220703125,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,355.36,366.39,368.7,362.96,380.18,385.92,Snap-on,Industrials,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+TGT,SP500,2026-11-04,163.10000610351562,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,153.55,159.56,163.1,155.1,179.1,187.09,Target Corporation,Consumer Staples,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+TPL,SP500,2026-11-04,287.6499938964844,ENTRY,3,BRK_SHORT,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,325.81,338.01,287.65,330.18,202.59,160.06,Texas Pacific Land Corporation,Energy,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+TRMB,SP500,2026-11-04,54.25,ENTRY,3,BRK_SHORT,Bull Trend,Neutral,Bear Micro BOS,SHORT,58.58,59.89,54.25,59.32,44.11,39.04,Trimble Inc.,Information Technology,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+TSCO,SP500,2026-11-04,36.58000183105469,ENTRY,3,BRK,Bullish Zhongshu,Accumulation,Bull Micro BOS,LONG,34.35,35.03,36.58,34.64,40.47,42.41,Tractor Supply,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+VTR,SP500,2026-11-04,89.19999694824219,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,86.92,88.1,89.2,86.69,94.22,96.74,Ventas,Real Estate,,1.8.5-source-port,READY,ENTRY,READY_TO_ENTRY
+VZ,SP500,2026-11-04,46.16999816894531,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,43.0,45.32,46.17,44.95,48.62,49.84,Verizon,Communication Services,,1.8.5-source-port,NONE,ENTRY,NEW_ENTRY
+WMB,SP500,2026-11-04,67.86000061035156,ENTRY,3,BRK_SHORT,Bull Trend,Neutral,Bear Micro BOS,SHORT,69.73,72.9,67.86,72.67,58.24,53.43,Williams Companies,Energy,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+WYNN,SP500,2026-11-04,82.37999725341797,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,73.07,77.89,82.38,77.12,92.89,98.15,Wynn Resorts,Consumer Discretionary,,1.8.5-source-port,WATCH,ENTRY,WATCH_TO_ENTRY
+KMB,SP500,2026-11-04,108.79000091552734,READY,2,UTAD,Bull Trend,Distribution,Waiting,SHORT,107.9,111.2,,,,,Kimberly-Clark,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
+ABBV,SP500,2026-11-04,294.8299865722656,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,278.01,291.4,,,,,AbbVie,Health Care,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
+AEE,SP500,2026-11-04,113.08000183105469,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,105.74,106.34,,,,,Ameren,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+AJG,SP500,2026-11-04,288.3800048828125,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,245.33,255.4,,,,,Arthur J. Gallagher & Co.,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+AMAT,SP500,2026-11-04,369.3999938964844,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,426.13,426.52,,,,,Applied Materials,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+APD,SP500,2026-11-04,318.8699951171875,READY,2,3B,Bullish Zhongshu,Distribution,Waiting,LONG,299.5,301.54,,,,,Air Products,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
+ARES,SP500,2026-11-04,136.85000610351562,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,113.06,119.58,,,,,Ares Management,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+ATO,SP500,2026-11-04,176.4499969482422,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,166.15,167.81,,,,,Atmos Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+AWK,SP500,2026-11-04,149.6300048828125,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,139.03,142.37,,,,,American Water Works,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+BA,SP500,2026-11-04,177.0,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,184.25,193.28,,,,,Boeing,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+BLDR,SP500,2026-11-04,69.5,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,58.13,61.82,,,,,Builders FirstSource,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+CAT,SP500,2026-11-04,591.2999877929688,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,702.34,743.23,,,,,Caterpillar Inc.,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+CCI,SP500,2026-11-04,92.16999816894531,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,76.29,83.26,,,,,Crown Castle,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+CHTR,SP500,2026-11-04,120.25,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,111.55,112.48,,,,,Charter Communications,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+CINF,SP500,2026-11-04,190.47999572753906,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,169.39,171.29,,,,,Cincinnati Financial,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+CLX,SP500,2026-11-04,99.16000366210938,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,83.22,87.67,,,,,Clorox,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
+CMG,SP500,2026-11-04,35.20000076293945,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,31.64,32.55,,,,,Chipotle Mexican Grill,Consumer Discretionary,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
+CNP,SP500,2026-11-04,41.040000915527344,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,39.56,40.36,,,,,CenterPoint Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+CPRT,SP500,2026-11-04,32.619998931884766,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,28.55,29.28,,,,,Copart,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+CRH,SP500,2026-11-04,98.80000305175781,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,83.28,86.9,,,,,CRH plc,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
+CRM,SP500,2026-11-04,227.11000061035156,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,225.04,251.94,,,,,Salesforce,Information Technology,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
+CRWD,SP500,2026-11-04,241.0,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,221.36,227.5,,,,,CrowdStrike,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+CVNA,SP500,2026-11-04,77.55999755859375,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,58.92,65.09,,,,,Carvana,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+CVS,SP500,2026-11-04,79.95999908447266,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,92.35,92.69,,,,,CVS Health,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+D,SP500,2026-11-04,69.75,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,64.05,65.85,,,,,Dominion Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+DDOG,SP500,2026-11-04,188.72000122070312,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,243.63,284.75,,,,,Datadog,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+DELL,SP500,2026-11-04,372.3599853515625,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,439.5,507.39,,,,,Dell Technologies,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+DUK,SP500,2026-11-04,129.58999633789062,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,119.68,121.62,,,,,Duke Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+ECL,SP500,2026-11-04,315.010009765625,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,283.99,295.95,,,,,Ecolab,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
+FDX,SP500,2026-11-04,329.3999938964844,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,303.0,303.84,,,,,FedEx,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+FFIV,SP500,2026-11-04,329.7200012207031,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,440.0,462.0,,,,,"F5, Inc.",Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+FISV,SP500,2026-11-04,62.04999923706055,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,47.0,50.83,,,,,Fiserv,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+FITB,SP500,2026-11-04,54.720001220703125,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,51.71,53.5,,,,,Fifth Third Bancorp,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+FSLR,SP500,2026-11-04,194.50999450683594,READY,2,3B,Bear Trend,Distrib Watch,Waiting,LONG,169.89,187.85,,,,,First Solar,Information Technology,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
+FTNT,SP500,2026-11-04,129.38999938964844,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,166.22,173.89,,,,,Fortinet,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+FTV,SP500,2026-11-04,68.33999633789062,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,57.32,58.54,,,,,Fortive,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+GD,SP500,2026-11-04,364.8699951171875,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,352.19,357.46,,,,,General Dynamics,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+GE,SP500,2026-11-04,329.45001220703125,READY,2,3B,Bear Trend,Accumulation,Bull Micro BOS,LONG,306.8,314.0,,,,,GE Aerospace,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+GEN,SP500,2026-11-04,30.889999389648438,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,23.88,25.23,,,,,Gen Digital,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+GEV,SP500,2026-11-04,832.8300170898438,READY,2,3S,Bear Trend,Accum Watch,Waiting,SHORT,871.16,929.77,,,,,GE Vernova,Industrials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
+GL,SP500,2026-11-04,161.72000122070312,READY,2,3S,Bear Trend,Accumulation,Waiting,SHORT,167.66,170.0,,,,,Globe Life,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+GPN,SP500,2026-11-04,96.08999633789062,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,85.94,86.32,,,,,Global Payments,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+HBAN,SP500,2026-11-04,16.059999465942383,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,15.46,15.54,,,,,Huntington Bancshares,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+HCA,SP500,2026-11-04,510.70001220703125,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,439.83,446.36,,,,,HCA Healthcare,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+HD,SP500,2026-11-04,355.44000244140625,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,316.15,327.92,,,,,Home Depot (The),Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+HOOD,SP500,2026-11-04,87.41000366210938,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,101.71,103.15,,,,,Robinhood Markets,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+HPE,SP500,2026-11-04,50.09000015258789,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,54.72,54.88,,,,,Hewlett Packard Enterprise,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+IP,SP500,2026-11-04,35.650001525878906,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,33.48,34.85,,,,,International Paper,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
+IRM,SP500,2026-11-04,118.66000366210938,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,110.82,115.66,,,,,Iron Mountain,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+KIM,SP500,2026-11-04,25.8799991607666,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,23.32,23.87,,,,,Kimco Realty,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+KKR,SP500,2026-11-04,101.33999633789062,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,95.11,96.27,,,,,KKR & Co.,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+KLAC,SP500,2026-11-04,149.7899932861328,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,167.05,171.31,,,,,KLA Corporation,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
 KVUE,SP500,2026-10-30,19.309999465942383,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,17.44,18.08,,,,,Kenvue,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-L,SP500,2026-11-03,109.97000122070312,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,109.77,110.28,,,,,Loews Corporation,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-LEN,SP500,2026-11-03,86.08999633789062,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,76.63,79.36,,,,,Lennar,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-LII,SP500,2026-11-03,346.489990234375,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,351.34,376.41,,,,,Lennox International,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-LNT,SP500,2026-11-03,72.12000274658203,READY,2,3B,Bullish Zhongshu,Distribution,Waiting,LONG,68.67,69.93,,,,,Alliant Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-LUV,SP500,2026-11-03,43.45000076293945,READY,2,3B,Bull Trend,Accum Watch,Waiting,LONG,39.09,41.21,,,,,Southwest Airlines,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-MAR,SP500,2026-11-03,416.3800048828125,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,381.04,407.34,,,,,Marriott International,Consumer Discretionary,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-MCD,SP500,2026-11-03,263.0400085449219,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,248.0,252.88,,,,,McDonald's,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-MGM,SP500,2026-11-03,31.020000457763672,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,28.72,29.81,,,,,MGM Resorts,Consumer Discretionary,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-MNST,SP500,2026-11-03,47.18000030517578,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,44.92,45.08,,,,,Monster Beverage,Consumer Staples,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-MTD,SP500,2026-11-03,1698.0400390625,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,1606.0,1659.7,,,,,Mettler Toledo,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-NCLH,SP500,2026-11-03,17.420000076293945,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,15.06,15.74,,,,,Norwegian Cruise Line Holdings,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-NEM,SP500,2026-11-03,107.47000122070312,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,109.84,119.24,,,,,Newmont,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-NFLX,SP500,2026-11-03,63.41999816894531,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,66.54,72.1,,,,,Netflix,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-NOW,SP500,2026-11-03,109.16000366210938,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,130.39,142.1,,,,,ServiceNow,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-OMC,SP500,2026-11-03,83.16999816894531,READY,2,3B,Bullish Zhongshu,Distrib Watch,Waiting,LONG,79.65,82.26,,,,,Omnicom Group,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-PCAR,SP500,2026-11-03,102.02999877929688,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,105.44,112.71,,,,,Paccar,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-PH,SP500,2026-11-03,944.989990234375,READY,2,3B,Bear Trend,Re-Distribution,Waiting,LONG,911.41,930.84,,,,,Parker Hannifin,Industrials,,1.8.5-source-port,NONE,READY,NEW_READY
-PHM,SP500,2026-11-03,126.87999725341797,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,114.53,122.68,,,,,PulteGroup,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-PPL,SP500,2026-11-03,35.709999084472656,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,34.41,35.27,,,,,PPL Corporation,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-RDDT,SP500,2026-11-03,96.1500015258789,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,143.47,152.85,,,,,Reddit,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-REG,SP500,2026-11-03,75.16999816894531,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,74.27,75.09,,,,,Regency Centers,Real Estate,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-REGN,SP500,2026-11-03,973.3599853515625,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,802.2,809.49,,,,,Regeneron Pharmaceuticals,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-RL,SP500,2026-11-03,394.3999938964844,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,370.97,393.93,,,,,Ralph Lauren Corporation,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-SCHW,SP500,2026-11-03,89.27999877929688,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,91.38,94.55,,,,,Charles Schwab Corporation,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-SLB,SP500,2026-11-03,52.130001068115234,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,50.47,51.24,,,,,Schlumberger,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
-SNDK,SP500,2026-11-03,1126.52001953125,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,1276.0,1424.48,,,,,Sandisk,Information Technology,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-SO,SP500,2026-11-03,93.75,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,90.28,91.22,,,,,Southern Company,Utilities,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-SPG,SP500,2026-11-03,222.0800018310547,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,200.37,206.2,,,,,Simon Property Group,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-STLD,SP500,2026-11-03,247.66000366210938,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,238.11,248.96,,,,,Steel Dynamics,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-SWK,SP500,2026-11-03,104.62000274658203,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,88.78,92.35,,,,,Stanley Black & Decker,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-T,SP500,2026-11-03,21.389999389648438,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,21.96,23.85,,,,,AT&T,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-TJX,SP500,2026-11-03,137.6300048828125,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,147.8,148.57,,,,,TJX Companies,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-TKO,SP500,2026-11-03,187.1999969482422,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,171.19,179.93,,,,,TKO Group Holdings,Communication Services,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-TMUS,SP500,2026-11-03,154.41000366210938,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,160.81,171.8,,,,,T-Mobile US,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-TPR,SP500,2026-11-03,121.0199966430664,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,112.21,119.61,,,,,"Tapestry, Inc.",Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-TSN,SP500,2026-11-03,56.959999084472656,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,50.71,54.24,,,,,Tyson Foods,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-TT,SP500,2026-11-03,417.44000244140625,READY,2,3S,Bear Trend,Accumulation,Bear Micro BOS,SHORT,447.15,471.91,,,,,Trane Technologies,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-TTWO,SP500,2026-11-03,194.99000549316406,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,204.28,215.66,,,,,Take-Two Interactive,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-UNH,SP500,2026-11-03,404.44000244140625,READY,2,3S,Bull Trend,Neutral,Waiting,SHORT,404.31,406.25,,,,,UnitedHealth Group,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-VRTX,SP500,2026-11-03,530.760009765625,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,502.29,514.9,,,,,Vertex Pharmaceuticals,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-VTR,SP500,2026-11-03,87.04000091552734,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,86.92,88.1,,,,,Ventas,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-WDAY,SP500,2026-11-03,197.94000244140625,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,188.05,195.74,,,,,"Workday, Inc.",Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-WEC,SP500,2026-11-03,115.4000015258789,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,104.57,109.07,,,,,WEC Energy Group,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-WMT,SP500,2026-11-03,124.86000061035156,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,116.63,121.38,,,,,Walmart,Consumer Staples,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-WY,SP500,2026-11-03,20.59000015258789,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,18.92,19.86,,,,,Weyerhaeuser,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-XEL,SP500,2026-11-03,78.76000213623047,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,76.97,77.5,,,,,Xcel Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-ZBRA,SP500,2026-11-03,329.5,READY,2,3S,Bearish Zhongshu,Accum Watch,Waiting,SHORT,377.75,390.8,,,,,Zebra Technologies,Information Technology,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-ZTS,SP500,2026-11-03,82.98999786376953,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,76.51,78.75,,,,,Zoetis,Health Care,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-ABNB,SP500,2026-11-03,166.9600067138672,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,165.83,167.45,,,,,Airbnb,Consumer Discretionary,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-ADP,SP500,2026-11-03,296.010009765625,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,263.36,277.33,,,,,Automatic Data Processing,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-AEP,SP500,2026-11-03,129.86000061035156,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,120.06,121.8,,,,,American Electric Power,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-ALGN,SP500,2026-11-03,151.5800018310547,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,175.35,176.46,,,,,Align Technology,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-AMP,SP500,2026-11-03,504.8800048828125,READY,2,2S,Bullish Zhongshu,Neutral,Bull Micro BOS,SHORT,486.14,502.49,,,,,Ameriprise Financial,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-AXON,SP500,2026-11-03,416.57000732421875,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,434.46,439.03,,,,,Axon Enterprise,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-AZO,SP500,2026-11-03,3200.0,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,3084.65,3103.0,,,,,AutoZone,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-BF-B,SP500,2026-11-03,28.950000762939453,READY,2,2B,Bull Trend,Re-Distribution,Waiting,LONG,26.02,26.63,,,,,Brown–Forman,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-BMY,SP500,2026-11-03,61.709999084472656,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,60.0,61.82,,,,,Bristol Myers Squibb,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-BNY,SP500,2026-11-03,149.30999755859375,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,161.2,163.12,,,,,BNY Mellon,Financials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-BR,SP500,2026-11-03,183.75999450683594,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,175.17,175.96,,,,,Broadridge Financial Solutions,Industrials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-BRO,SP500,2026-11-03,70.91999816894531,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,65.41,67.16,,,,,Brown & Brown,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-BXP,SP500,2026-11-03,62.630001068115234,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,69.21,71.41,,,,,"BXP, Inc.",Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-CAH,SP500,2026-11-03,252.94000244140625,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,243.49,249.29,,,,,Cardinal Health,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-CDW,SP500,2026-11-03,149.77000427246094,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,144.34,153.77,,,,,CDW Corporation,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-CL,SP500,2026-11-03,95.62000274658203,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,90.47,91.44,,,,,Colgate-Palmolive,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-COF,SP500,2026-11-03,208.7100067138672,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,211.32,211.49,,,,,Capital One,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-CSGP,SP500,2026-11-03,31.31999969482422,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,29.27,30.16,,,,,CoStar Group,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-CTSH,SP500,2026-11-03,63.83000183105469,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,61.55,61.97,,,,,Cognizant,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-DAL,SP500,2026-11-03,83.27999877929688,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,82.55,82.59,,,,,Delta Air Lines,Industrials,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-DE,SP500,2026-11-03,665.8300170898438,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,665.45,679.23,,,,,Deere & Company,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-DOC,SP500,2026-11-03,19.559999465942383,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,20.37,20.88,,,,,Healthpeak Properties,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-DOW,SP500,2026-11-03,33.790000915527344,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,29.52,30.51,,,,,Dow Inc.,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-EBAY,SP500,2026-11-03,118.62000274658203,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,104.61,107.04,,,,,eBay Inc.,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-ELV,SP500,2026-11-03,413.75,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,411.31,427.17,,,,,Elevance Health,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-EQT,SP500,2026-11-03,54.25,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,53.12,53.26,,,,,EQT Corporation,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
-EXPE,SP500,2026-11-03,285.7699890136719,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,273.95,275.41,,,,,Expedia Group,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-FICO,SP500,2026-11-03,724.3800048828125,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,682.52,828.95,,,,,Fair Isaac,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-FLEX,SP500,2026-11-03,88.0999984741211,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,111.38,117.68,,,,,Flex Ltd.,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-GDDY,SP500,2026-11-03,113.44999694824219,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,99.82,99.95,,,,,GoDaddy,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-GLW,SP500,2026-11-03,126.13999938964844,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,157.91,165.14,,,,,Corning Inc.,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-GRMN,SP500,2026-11-03,271.44000244140625,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,280.09,284.21,,,,,Garmin,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
-HIG,SP500,2026-11-03,134.9199981689453,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,136.62,137.06,,,,,Hartford (The),Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-IBM,SP500,2026-11-03,250.0399932861328,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,247.67,251.82,,,,,IBM,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-INTU,SP500,2026-11-03,344.7200012207031,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,319.02,358.03,,,,,Intuit,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-INVH,SP500,2026-11-03,26.600000381469727,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,29.73,29.81,,,,,Invitation Homes,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-KEY,SP500,2026-11-03,21.229999542236328,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,21.15,21.27,,,,,KeyCorp,Financials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-KMI,SP500,2026-11-03,32.869998931884766,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,31.48,31.63,,,,,Kinder Morgan,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
-LRCX,SP500,2026-11-03,230.72000122070312,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,265.09,311.06,,,,,Lam Research,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-LYB,SP500,2026-11-03,66.08999633789062,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,64.67,68.42,,,,,LyondellBasell,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
-MAA,SP500,2026-11-03,117.33999633789062,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,115.9,122.01,,,,,Mid-America Apartment Communities,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-MKC,SP500,2026-11-03,47.880001068115234,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,51.02,52.85,,,,,McCormick & Company,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-MRK,SP500,2026-11-03,144.6699981689453,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,142.32,146.68,,,,,Merck & Co.,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-MSI,SP500,2026-11-03,491.0,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,457.37,468.98,,,,,Motorola Solutions,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-NOC,SP500,2026-11-03,550.2999877929688,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,515.25,520.57,,,,,Northrop Grumman,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-NTRS,SP500,2026-11-03,172.60000610351562,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,166.01,171.27,,,,,Northern Trust,Financials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-NWS,SP500,2026-11-03,32.060001373291016,READY,2,2B,Bearish Zhongshu,Distribution,Waiting,LONG,32.49,32.76,,,,,News Corp (Class B),Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-OXY,SP500,2026-11-03,60.43000030517578,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,62.06,63.77,,,,,Occidental Petroleum,Energy,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-PAYX,SP500,2026-11-03,115.6500015258789,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,121.73,124.74,,,,,Paychex,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-PCG,SP500,2026-11-03,13.289999961853027,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,12.9,13.41,,,,,PG&E Corporation,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-PFG,SP500,2026-11-03,112.66000366210938,READY,2,2B,Bear Trend,Accum Watch,Waiting,LONG,107.83,110.22,,,,,Principal Financial Group,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-PWR,SP500,2026-11-03,657.0,READY,2,2S,Bear Trend,Neutral,Bull Micro BOS,SHORT,613.0,649.0,,,,,Quanta Services,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-Q,SP500,2026-11-03,118.88999938964844,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,120.05,124.91,,,,,Qnity Electronics,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-RF,SP500,2026-11-03,28.600000381469727,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,30.1,30.41,,,,,Regions Financial Corporation,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-RJF,SP500,2026-11-03,161.6699981689453,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,154.97,160.51,,,,,Raymond James Financial,Financials,,1.8.5-source-port,ENTRY,READY,ENTRY_TO_READY
-SBUX,SP500,2026-11-03,104.7699966430664,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,92.76,96.73,,,,,Starbucks,Consumer Discretionary,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-SJM,SP500,2026-11-03,127.9800033569336,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,119.97,123.09,,,,,J.M. Smucker Company (The),Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
-SNPS,SP500,2026-11-03,462.8800048828125,READY,2,2S,Bullish Zhongshu,Neutral,Waiting,SHORT,417.6,419.84,,,,,Synopsys,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
-STE,SP500,2026-11-03,231.35000610351562,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,225.65,234.34,,,,,Steris,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-TTD,SP500,2026-11-03,12.859999656677246,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,13.14,13.31,,,,,Trade Desk (The),Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
-UAL,SP500,2026-11-03,107.20999908447266,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,109.08,110.77,,,,,United Airlines Holdings,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-UDR,SP500,2026-11-03,35.93000030517578,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,34.65,36.42,,,,,"UDR, Inc.",Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
-USB,SP500,2026-11-03,59.88999938964844,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,58.81,59.17,,,,,U.S. Bancorp,Financials,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
-VLO,SP500,2026-11-03,387.6499938964844,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,416.41,419.04,,,,,Valero Energy,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
-VRSK,SP500,2026-11-03,197.0,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,174.44,182.91,,,,,Verisk Analytics,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-VST,SP500,2026-11-03,139.58999633789062,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,148.5,154.65,,,,,Vistra Corp.,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
-WM,SP500,2026-11-03,234.6699981689453,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,223.0,228.98,,,,,Waste Management,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
-WRB,SP500,2026-11-03,75.12000274658203,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,69.31,70.57,,,,,W. R. Berkley Corporation,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-WTW,SP500,2026-11-03,327.6600036621094,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,325.66,333.01,,,,,Willis Towers Watson,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-XYZ,SP500,2026-11-03,76.0,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,77.23,77.62,,,,,"Block, Inc.",Financials,,1.8.5-source-port,READY,READY,UNCHANGED
-ZBH,SP500,2026-11-03,97.05999755859375,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,94.77,95.91,,,,,Zimmer Biomet,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
-A,SP500,2026-11-03,175.4600067138672,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,163.32,163.75,,,,,Agilent Technologies,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ABBV,SP500,2026-11-03,286.0,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,278.01,291.4,,,,,AbbVie,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ABT,SP500,2026-11-03,109.4000015258789,WATCH,1,NONE,Bullish Zhongshu,Re-Distribution,Bull Micro BOS,,104.2,105.88,,,,,Abbott Laboratories,Health Care,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-ACGL,SP500,2026-11-03,107.79000091552734,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,97.89,98.39,,,,,Arch Capital Group,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-ACN,SP500,2026-11-03,254.55999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,175.49,176.4,,,,,Accenture,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-ADBE,SP500,2026-11-03,246.13999938964844,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,241.51,245.16,,,,,Adobe Inc.,Information Technology,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-ADI,SP500,2026-11-03,419.7900085449219,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,394.18,396.95,,,,,Analog Devices,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ADM,SP500,2026-11-03,70.5999984741211,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,81.54,83.07,,,,,Archer Daniels Midland,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ADSK,SP500,2026-11-03,252.32000732421875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,229.7,232.64,,,,,Autodesk,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AES,SP500,2026-11-03,14.920000076293945,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,14.8,14.85,,,,,AES Corporation,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AIG,SP500,2026-11-03,80.52999877929688,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,75.06,76.4,,,,,American International Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AIZ,SP500,2026-11-03,296.1300048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,278.96,284.12,,,,,Assurant,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-AKAM,SP500,2026-11-03,86.52999877929688,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,107.11,109.85,,,,,Akamai Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ALB,SP500,2026-11-03,90.19000244140625,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,111.55,117.59,,,,,Albemarle Corporation,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ALL,SP500,2026-11-03,261.5,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,255.17,257.67,,,,,Allstate,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-ALLE,SP500,2026-11-03,189.35000610351562,WATCH,1,NONE,Bullish Zhongshu,Accum Watch,Waiting,,151.33,153.46,,,,,Allegion,Industrials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-AMCR,SP500,2026-11-03,46.959999084472656,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,41.94,43.33,,,,,Amcor,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AMD,SP500,2026-11-03,483.8999938964844,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,502.6,517.35,,,,,Advanced Micro Devices,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-AME,SP500,2026-11-03,248.5800018310547,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,242.06,252.07,,,,,Ametek,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AMGN,SP500,2026-11-03,461.260009765625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,408.02,415.76,,,,,Amgen,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AMT,SP500,2026-11-03,187.2899932861328,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,171.73,172.68,,,,,American Tower,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ANET,SP500,2026-11-03,169.91000366210938,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,200.77,206.13,,,,,Arista Networks,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-AON,SP500,2026-11-03,330.1600036621094,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,354.61,358.71,,,,,Aon plc,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AOS,SP500,2026-11-03,63.84000015258789,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,56.5,57.95,,,,,A. O. Smith,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-APA,SP500,2026-11-03,47.77000045776367,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,42.27,44.45,,,,,APA Corporation,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-APH,SP500,2026-11-03,84.19000244140625,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,80.05,83.87,,,,,Amphenol,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-APO,SP500,2026-11-03,113.55000305175781,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,112.1,114.86,,,,,Apollo Global Management,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-APTV,SP500,2026-11-03,41.34000015258789,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,44.52,44.66,,,,,Aptiv,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ARE,SP500,2026-11-03,42.279998779296875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,50.58,51.05,,,,,Alexandria Real Estate Equities,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AVGO,SP500,2026-11-03,332.1300048828125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,357.8,366.11,,,,,Broadcom,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-AVY,SP500,2026-11-03,185.3800048828125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,172.05,172.17,,,,,Avery Dennison,Materials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-AXP,SP500,2026-11-03,325.5,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,335.22,336.56,,,,,American Express,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-BAC,SP500,2026-11-03,49.65999984741211,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,61.43,63.23,,,,,Bank of America,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BALL,SP500,2026-11-03,63.209999084472656,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,60.94,61.94,,,,,Ball Corporation,Materials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-BAX,SP500,2026-11-03,25.489999771118164,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,25.74,25.99,,,,,Baxter International,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BBY,SP500,2026-11-03,93.87000274658203,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,93.18,96.53,,,,,Best Buy,Consumer Discretionary,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-BDX,SP500,2026-11-03,198.1699981689453,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,175.71,184.37,,,,,Becton Dickinson,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BEN,SP500,2026-11-03,32.36000061035156,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,31.56,31.93,,,,,Franklin Resources,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BIIB,SP500,2026-11-03,248.92999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,218.0,218.59,,,,,Biogen,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BKR,SP500,2026-11-03,52.790000915527344,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,55.44,55.76,,,,,Baker Hughes,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BLK,SP500,2026-11-03,1161.3199462890625,WATCH,1,NONE,Bull Trend,Distrib Watch,Waiting,,1053.14,1092.92,,,,,BlackRock,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-BRK-B,SP500,2026-11-03,557.0700073242188,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,501.41,506.58,,,,,Berkshire Hathaway,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BSX,SP500,2026-11-03,43.5,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,42.72,44.3,,,,,Boston Scientific,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-BX,SP500,2026-11-03,118.19000244140625,WATCH,1,NONE,Bullish Zhongshu,Accum Watch,Waiting,,109.01,115.56,,,,,Blackstone Inc.,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-CARR,SP500,2026-11-03,55.369998931884766,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,54.23,56.39,,,,,Carrier Global,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CASY,SP500,2026-11-03,665.3900146484375,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,652.99,718.24,,,,,Casey's,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CB,SP500,2026-11-03,366.5400085449219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,342.22,344.52,,,,,Chubb Limited,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-CBOE,SP500,2026-11-03,344.2799987792969,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,288.31,297.98,,,,,Cboe Global Markets,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CBRE,SP500,2026-11-03,135.52000427246094,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,124.73,136.97,,,,,CBRE Group,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CCL,SP500,2026-11-03,29.200000762939453,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,25.19,25.48,,,,,Carnival Corporation,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CDNS,SP500,2026-11-03,323.75,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,315.91,331.5,,,,,Cadence Design Systems,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CEG,SP500,2026-11-03,263.3999938964844,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,250.55,268.64,,,,,Constellation Energy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CF,SP500,2026-11-03,116.80999755859375,WATCH,1,NONE,Bull Trend,Distribution,Waiting,,114.05,118.07,,,,,CF Industries,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CFG,SP500,2026-11-03,64.37000274658203,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,70.12,71.0,,,,,Citizens Financial Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CHD,SP500,2026-11-03,109.16000366210938,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,96.27,96.28,,,,,Church & Dwight,Consumer Staples,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
-CHRW,SP500,2026-11-03,133.50999450683594,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,145.02,150.36,,,,,C.H. Robinson,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CI,SP500,2026-11-03,295.44000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,274.04,278.47,,,,,Cigna,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CIEN,SP500,2026-11-03,300.0799865722656,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,339.33,376.74,,,,,Ciena,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CMCSA,SP500,2026-11-03,23.670000076293945,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,21.46,22.32,,,,,Comcast,Communication Services,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-CME,SP500,2026-11-03,304.05999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,258.87,267.82,,,,,CME Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CMI,SP500,2026-11-03,500.69000244140625,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,542.7,548.42,,,,,Cummins,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CMS,SP500,2026-11-03,70.0,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,68.74,68.99,,,,,CMS Energy,Utilities,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-CNC,SP500,2026-11-03,67.4800033569336,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,65.11,66.18,,,,,Centene Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-COHR,SP500,2026-11-03,207.49000549316406,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,275.79,312.68,,,,,Coherent Corp.,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-COIN,SP500,2026-11-03,145.4499969482422,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,184.29,184.93,,,,,Coinbase,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-COP,SP500,2026-11-03,144.39999389648438,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,128.0,129.36,,,,,ConocoPhillips,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-COR,SP500,2026-11-03,340.5,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,320.06,322.33,,,,,Cencora,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-COST,SP500,2026-11-03,1019.260009765625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,937.51,953.25,,,,,Costco,Consumer Staples,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-CPAY,SP500,2026-11-03,406.5799865722656,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,401.52,407.52,,,,,Corpay,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CPT,SP500,2026-11-03,100.68000030517578,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,107.23,109.39,,,,,Camden Property Trust,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CRL,SP500,2026-11-03,351.8699951171875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,295.15,298.4,,,,,Charles River Laboratories,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CSCO,SP500,2026-11-03,102.97000122070312,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,109.23,111.44,,,,,Cisco,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-CSX,SP500,2026-11-03,50.720001220703125,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,47.01,47.73,,,,,CSX Corporation,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
-CTAS,SP500,2026-11-03,223.74000549316406,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,198.87,204.86,,,,,Cintas,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CTVA,SP500,2026-11-03,11.880000114440918,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,82.98,84.02,,,,,Corteva,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-CVX,SP500,2026-11-03,225.27000427246094,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,201.96,208.25,,,,,Chevron Corporation,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DASH,SP500,2026-11-03,183.32000732421875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,178.04,191.02,,,,,DoorDash,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DD,SP500,2026-11-03,153.4600067138672,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,130.19,132.22,,,,,DuPont,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DECK,SP500,2026-11-03,84.08999633789062,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,78.12,82.14,,,,,Deckers Brands,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DG,SP500,2026-11-03,130.52000427246094,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,125.15,134.13,,,,,Dollar General,Consumer Staples,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-DGX,SP500,2026-11-03,247.05999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,231.52,234.64,,,,,Quest Diagnostics,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DHI,SP500,2026-11-03,145.22999572753906,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,133.88,136.92,,,,,D. R. Horton,Consumer Discretionary,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-DHR,SP500,2026-11-03,230.11000061035156,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,217.55,218.57,,,,,Danaher Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DIS,SP500,2026-11-03,114.18000030517578,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,102.99,106.4,,,,,Walt Disney Company (The),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DLR,SP500,2026-11-03,180.25,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,175.47,178.0,,,,,Digital Realty,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DLTR,SP500,2026-11-03,134.07000732421875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,116.02,116.89,,,,,Dollar Tree,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DOV,SP500,2026-11-03,213.57000732421875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,185.26,192.75,,,,,Dover Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DRI,SP500,2026-11-03,219.38999938964844,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,210.96,218.93,,,,,Darden Restaurants,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DTE,SP500,2026-11-03,134.25999450683594,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,135.76,136.42,,,,,DTE Energy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DVA,SP500,2026-11-03,182.1699981689453,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,179.9,182.61,,,,,DaVita,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DVN,SP500,2026-11-03,47.619998931884766,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,48.19,48.56,,,,,Devon Energy,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-DXCM,SP500,2026-11-03,82.97000122070312,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,82.86,85.25,,,,,Dexcom,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ECHO,SP500,2026-11-03,101.94000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,91.5,91.86,,,,,EchoStar,Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ED,SP500,2026-11-03,116.80999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,108.52,108.53,,,,,Consolidated Edison,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EFX,SP500,2026-11-03,187.72000122070312,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,173.78,177.8,,,,,Equifax,Industrials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-EG,SP500,2026-11-03,410.57000732421875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,366.49,377.74,,,,,Everest Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EIX,SP500,2026-11-03,59.619998931884766,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,54.48,54.63,,,,,Edison International,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EL,SP500,2026-11-03,105.38999938964844,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,88.68,88.87,,,,,Estée Lauder Companies (The),Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EME,SP500,2026-11-03,707.4299926757812,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,748.61,776.67,,,,,Emcor,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EMR,SP500,2026-11-03,166.38999938964844,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,156.71,158.98,,,,,Emerson Electric,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EOG,SP500,2026-11-03,155.1699981689453,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,142.76,144.26,,,,,EOG Resources,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EQIX,SP500,2026-11-03,1014.4000244140625,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,1027.94,1038.44,,,,,Equinix,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ERIE,SP500,2026-11-03,269.6700134277344,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,215.32,223.51,,,,,Erie Indemnity,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ES,SP500,2026-11-03,69.02999877929688,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,71.33,71.46,,,,,Eversource Energy,Utilities,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-ESS,SP500,2026-11-03,264.8999938964844,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,270.45,273.86,,,,,Essex Property Trust,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ETN,SP500,2026-11-03,391.70001220703125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,423.0,447.33,,,,,Eaton Corporation,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
-ETR,SP500,2026-11-03,108.91999816894531,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,104.76,105.32,,,,,Entergy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EVRG,SP500,2026-11-03,85.44999694824219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,79.85,80.76,,,,,Evergy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EW,SP500,2026-11-03,95.19000244140625,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,87.9,88.41,,,,,Edwards Lifesciences,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EXC,SP500,2026-11-03,45.5,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,42.63,42.71,,,,,Exelon,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EXE,SP500,2026-11-03,89.93000030517578,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,92.63,92.9,,,,,Expand Energy,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EXPD,SP500,2026-11-03,204.30999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,193.69,194.59,,,,,Expeditors International,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-EXR,SP500,2026-11-03,156.22999572753906,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,133.59,139.54,,,,,Extra Space Storage,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-F,SP500,2026-11-03,12.3100004196167,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,11.91,12.45,,,,,Ford Motor Company,Consumer Discretionary,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-FANG,SP500,2026-11-03,192.33999633789062,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,196.65,199.25,,,,,Diamondback Energy,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FAST,SP500,2026-11-03,52.33000183105469,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,48.53,48.74,,,,,Fastenal,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FCX,SP500,2026-11-03,61.77000045776367,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,69.46,71.22,,,,,Freeport-McMoRan,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FDS,SP500,2026-11-03,332.5899963378906,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,264.49,269.79,,,,,FactSet,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-FERG,SP500,2026-11-03,241.99000549316406,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,223.49,225.3,,,,,Ferguson Enterprises,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FIS,SP500,2026-11-03,38.9900016784668,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,36.05,37.11,,,,,Fidelity National Information Services,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FIX,SP500,2026-11-03,1285.1300048828125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,1570.0,1670.42,,,,,Comfort Systems USA,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FOX,SP500,2026-11-03,59.630001068115234,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,56.21,57.25,,,,,Fox Corporation (Class B),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FOXA,SP500,2026-11-03,67.0999984741211,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,62.97,64.24,,,,,Fox Corporation (Class A),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-FRT,SP500,2026-11-03,111.63999938964844,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,108.1,109.8,,,,,Federal Realty Investment Trust,Real Estate,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-FSLR,SP500,2026-11-03,185.89999389648438,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,169.89,187.85,,,,,First Solar,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GEHC,SP500,2026-11-03,80.66000366210938,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,63.37,67.1,,,,,GE HealthCare,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GEV,SP500,2026-11-03,918.2000122070312,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,932.19,934.61,,,,,GE Vernova,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GILD,SP500,2026-11-03,167.47000122070312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,151.71,152.26,,,,,Gilead Sciences,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GIS,SP500,2026-11-03,34.08000183105469,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,32.42,34.15,,,,,General Mills,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GM,SP500,2026-11-03,88.33999633789062,WATCH,1,NONE,Bullish Zhongshu,Accumulation,Waiting,,82.86,84.59,,,,,General Motors,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GNRC,SP500,2026-11-03,209.27999877929688,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,187.55,193.31,,,,,Generac,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GOOG,SP500,2026-11-03,278.2699890136719,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,339.82,341.98,,,,,Alphabet Inc. (Class C),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GOOGL,SP500,2026-11-03,280.0299987792969,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,340.88,342.5,,,,,Alphabet Inc. (Class A),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GPC,SP500,2026-11-03,124.2699966430664,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,129.4,131.09,,,,,Genuine Parts Company,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GS,SP500,2026-11-03,896.0900268554688,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,868.52,931.0,,,,,Goldman Sachs,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-GWW,SP500,2026-11-03,1397.97998046875,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,1257.76,1296.34,,,,,W. W. Grainger,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HAL,SP500,2026-11-03,34.06999969482422,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,32.88,32.9,,,,,Halliburton,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HAS,SP500,2026-11-03,117.97000122070312,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,87.72,91.59,,,,,Hasbro,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HII,SP500,2026-11-03,316.92999267578125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,286.1,294.82,,,,,Huntington Ingalls Industries,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HLT,SP500,2026-11-03,363.8299865722656,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,335.23,364.5,,,,,Hilton Worldwide,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HON,SP500,2026-11-03,224.0500030517578,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,205.2,211.51,,,,,Honeywell Technologies,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HPQ,SP500,2026-11-03,28.270000457763672,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,30.6,31.37,,,,,HP Inc.,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HRL,SP500,2026-11-03,21.260000228881836,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,19.42,20.07,,,,,Hormel Foods,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HST,SP500,2026-11-03,25.780000686645508,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,22.28,22.54,,,,,Host Hotels & Resorts,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HSY,SP500,2026-11-03,167.5399932861328,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,166.69,170.12,,,,,Hershey Company (The),Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HUBB,SP500,2026-11-03,449.2699890136719,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,464.61,467.08,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HUM,SP500,2026-11-03,417.8699951171875,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,406.64,419.97,,,,,Humana,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-HWM,SP500,2026-11-03,223.1199951171875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,224.88,233.42,,,,,Howmet Aerospace,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-IBKR,SP500,2026-11-03,77.45999908447266,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,88.53,89.11,,,,,Interactive Brokers,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ICE,SP500,2026-11-03,170.92999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,156.95,158.55,,,,,Intercontinental Exchange,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-IDXX,SP500,2026-11-03,672.0399780273438,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,501.17,536.84,,,,,Idexx Laboratories,Health Care,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-IEX,SP500,2026-11-03,237.36000061035156,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,232.54,239.7,,,,,IDEX Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-IFF,SP500,2026-11-03,92.18000030517578,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,83.62,83.83,,,,,International Flavors & Fragrances,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-INCY,SP500,2026-11-03,117.58999633789062,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,121.61,122.87,,,,,Incyte,Health Care,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-INTC,SP500,2026-11-03,60.54999923706055,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,89.19,93.7,,,,,Intel,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-IQV,SP500,2026-11-03,262.5899963378906,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,257.07,265.25,,,,,IQVIA,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-IR,SP500,2026-11-03,84.55999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,76.27,76.46,,,,,Ingersoll Rand,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ISRG,SP500,2026-11-03,440.75,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,397.52,404.44,,,,,Intuitive Surgical,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-IT,SP500,2026-11-03,204.22000122070312,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,186.42,194.53,,,,,Gartner,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ITW,SP500,2026-11-03,286.6400146484375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,267.86,267.95,,,,,Illinois Tool Works,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-J,SP500,2026-11-03,159.85000610351562,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,140.17,140.3,,,,,Jacobs Solutions,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-JBHT,SP500,2026-11-03,224.63999938964844,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,222.94,235.97,,,,,J.B. Hunt,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-JBL,SP500,2026-11-03,271.70001220703125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,309.94,315.29,,,,,Jabil,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-JCI,SP500,2026-11-03,149.91000366210938,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,143.79,146.64,,,,,Johnson Controls,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-JKHY,SP500,2026-11-03,161.66000366210938,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,152.73,153.21,,,,,Jack Henry & Associates,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-JNJ,SP500,2026-11-03,266.1700134277344,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,260.68,262.85,,,,,Johnson & Johnson,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-JPM,SP500,2026-11-03,337.9800109863281,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,343.07,344.36,,,,,JPMorgan Chase,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-KDP,SP500,2026-11-03,34.7400016784668,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,31.6,31.66,,,,,Keurig Dr Pepper,Consumer Staples,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-KEYS,SP500,2026-11-03,305.1099853515625,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,327.04,331.99,,,,,Keysight Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-KO,SP500,2026-11-03,94.80000305175781,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,87.73,89.36,,,,,Coca-Cola Company (The),Consumer Staples,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-KR,SP500,2026-11-03,66.80999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,57.75,59.2,,,,,Kroger,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LDOS,SP500,2026-11-03,134.72000122070312,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,126.35,131.64,,,,,Leidos,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LH,SP500,2026-11-03,353.9200134277344,WATCH,1,NONE,Bull Trend,Accumulation,Waiting,,305.45,311.54,,,,,Labcorp,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LHX,SP500,2026-11-03,277.6700134277344,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,234.01,239.46,,,,,L3Harris,Industrials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-LIN,SP500,2026-11-03,511.54998779296875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,473.05,480.56,,,,,Linde plc,Materials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-LITE,SP500,2026-11-03,680.1599731445312,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,881.23,978.4,,,,,Lumentum,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LLY,SP500,2026-11-03,1409.3800048828125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,1147.0,1159.75,,,,,Lilly (Eli),Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LMT,SP500,2026-11-03,639.0,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,521.87,542.61,,,,,Lockheed Martin,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LOW,SP500,2026-11-03,213.3800048828125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,199.4,200.0,,,,,Lowe's,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LULU,SP500,2026-11-03,106.94999694824219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,95.35,100.67,,,,,Lululemon Athletica,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-LVS,SP500,2026-11-03,38.2599983215332,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,35.28,38.59,,,,,Las Vegas Sands,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MA,SP500,2026-11-03,647.1799926757812,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,580.88,582.93,,,,,Mastercard,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MAS,SP500,2026-11-03,82.18000030517578,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,67.19,70.05,,,,,Masco,Industrials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-MCHP,SP500,2026-11-03,77.9000015258789,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,72.77,75.58,,,,,Microchip Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MCK,SP500,2026-11-03,999.6199951171875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,874.31,899.26,,,,,McKesson Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MCO,SP500,2026-11-03,503.69000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,472.27,476.79,,,,,Moody's Corporation,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MDLZ,SP500,2026-11-03,65.12000274658203,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,62.38,63.83,,,,,Mondelez International,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MDT,SP500,2026-11-03,98.87999725341797,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,90.26,94.72,,,,,Medtronic,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MET,SP500,2026-11-03,100.66999816894531,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,95.39,98.0,,,,,MetLife,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-META,SP500,2026-11-03,621.030029296875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,592.05,593.34,,,,,Meta Platforms,Communication Services,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-MLM,SP500,2026-11-03,543.77001953125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,502.56,507.82,,,,,Martin Marietta Materials,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MMM,SP500,2026-11-03,177.0500030517578,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,160.27,167.95,,,,,3M,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MO,SP500,2026-11-03,76.94000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,69.87,70.53,,,,,Altria,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MOS,SP500,2026-11-03,18.420000076293945,WATCH,1,NONE,Bear Trend,Distribution,Waiting,,24.35,25.2,,,,,Mosaic Company (The),Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MPC,SP500,2026-11-03,427.3399963378906,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,419.28,431.08,,,,,Marathon Petroleum,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MRNA,SP500,2026-11-03,228.44000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,133.33,154.69,,,,,Moderna,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MRSH,SP500,2026-11-03,203.6300048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,186.58,191.04,,,,,Marsh McLennan,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-MRVL,SP500,2026-11-03,171.97000122070312,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,226.52,240.2,,,,,Marvell Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MS,SP500,2026-11-03,186.08999633789062,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,182.47,191.89,,,,,Morgan Stanley,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MSCI,SP500,2026-11-03,639.780029296875,WATCH,1,NONE,Bullish Zhongshu,Accumulation,Bull Micro BOS,,550.52,563.27,,,,,MSCI,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MSFT,SP500,2026-11-03,520.989990234375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,515.7,517.78,,,,,Microsoft,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-MTB,SP500,2026-11-03,222.07000732421875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,231.27,242.84,,,,,M&T Bank,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-MU,SP500,2026-11-03,855.0999755859375,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,1022.9,1042.4,,,,,Micron Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NDAQ,SP500,2026-11-03,106.97000122070312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,94.29,94.85,,,,,"Nasdaq, Inc.",Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NDSN,SP500,2026-11-03,331.05999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,324.82,331.2,,,,,Nordson Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NEE,SP500,2026-11-03,84.33000183105469,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,80.75,82.81,,,,,NextEra Energy,Utilities,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-NI,SP500,2026-11-03,44.619998931884766,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,40.49,40.84,,,,,NiSource,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NKE,SP500,2026-11-03,38.47999954223633,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,35.22,36.24,,,,,"Nike, Inc.",Consumer Discretionary,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-NRG,SP500,2026-11-03,96.26000213623047,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,93.36,98.38,,,,,NRG Energy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NSC,SP500,2026-11-03,340.95001220703125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,332.53,338.23,,,,,Norfolk Southern,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NTAP,SP500,2026-11-03,190.77999877929688,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,202.56,209.06,,,,,NetApp,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-NUE,SP500,2026-11-03,273.5299987792969,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,252.01,254.2,,,,,Nucor,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NVDA,SP500,2026-11-03,206.69000244140625,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,212.85,214.39,,,,,Nvidia,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NVR,SP500,2026-11-03,6024.72021484375,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,6057.84,6118.77,,,,,"NVR, Inc.",Consumer Discretionary,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-NWSA,SP500,2026-11-03,29.459999084472656,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,29.08,29.86,,,,,News Corp (Class A),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-NXPI,SP500,2026-11-03,262.7900085449219,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,224.17,227.24,,,,,NXP Semiconductors,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-O,SP500,2026-11-03,57.5,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,55.02,56.78,,,,,Realty Income,Real Estate,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-ODFL,SP500,2026-11-03,177.67999267578125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,169.65,194.01,,,,,Old Dominion,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-OKE,SP500,2026-11-03,91.94000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,91.13,94.08,,,,,Oneok,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ON,SP500,2026-11-03,72.5999984741211,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,75.69,76.19,,,,,ON Semiconductor,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ORCL,SP500,2026-11-03,126.19000244140625,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,139.0,146.4,,,,,Oracle Corporation,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ORLY,SP500,2026-11-03,89.98999786376953,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,83.01,87.02,,,,,O'Reilly Automotive,Consumer Discretionary,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-OTIS,SP500,2026-11-03,76.81999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,67.64,70.24,,,,,Otis Worldwide,Industrials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-PANW,SP500,2026-11-03,350.20001220703125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,343.01,344.79,,,,,Palo Alto Networks,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PEG,SP500,2026-11-03,72.80999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,69.79,72.45,,,,,Public Service Enterprise Group,Utilities,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-PEP,SP500,2026-11-03,137.27000427246094,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,136.73,139.0,,,,,PepsiCo,Consumer Staples,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-PFE,SP500,2026-11-03,30.0,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,27.48,28.58,,,,,Pfizer,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PG,SP500,2026-11-03,162.05999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,143.79,148.23,,,,,Procter & Gamble,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PGR,SP500,2026-11-03,229.11000061035156,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,212.63,215.99,,,,,Progressive Corporation,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-PKG,SP500,2026-11-03,254.9499969482422,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,224.8,231.78,,,,,Packaging Corporation of America,Materials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-PLD,SP500,2026-11-03,129.0800018310547,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,132.08,136.49,,,,,Prologis,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PLTR,SP500,2026-11-03,175.39999389648438,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,186.6,188.37,,,,,Palantir Technologies,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-PM,SP500,2026-11-03,208.02999877929688,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,185.72,189.7,,,,,Philip Morris International,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PNC,SP500,2026-11-03,229.41000366210938,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,246.61,246.96,,,,,PNC Financial Services,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PNR,SP500,2026-11-03,69.7300033569336,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,65.1,70.87,,,,,Pentair,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PNW,SP500,2026-11-03,107.73999786376953,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,96.42,98.42,,,,,Pinnacle West Capital,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PODD,SP500,2026-11-03,154.86000061035156,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,140.98,141.86,,,,,Insulet Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PPG,SP500,2026-11-03,121.23999786376953,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,103.7,105.8,,,,,PPG Industries,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PRU,SP500,2026-11-03,118.80999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,116.61,116.91,,,,,Prudential Financial,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-PSA,SP500,2026-11-03,333.3900146484375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,289.64,292.89,,,,,Public Storage,Real Estate,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-PSX,SP500,2026-11-03,271.94000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,267.05,277.12,,,,,Phillips 66,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PTC,SP500,2026-11-03,194.05999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,137.23,142.81,,,,,PTC Inc.,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-PYPL,SP500,2026-11-03,58.209999084472656,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,54.34,55.54,,,,,PayPal,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-QCOM,SP500,2026-11-03,164.42999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,175.97,179.21,,,,,Qualcomm,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-RCL,SP500,2026-11-03,313.1700134277344,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,278.64,279.5,,,,,Royal Caribbean Group,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-RMD,SP500,2026-11-03,227.0800018310547,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,220.0,221.79,,,,,ResMed|,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ROK,SP500,2026-11-03,446.3800048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,431.81,435.69,,,,,Rockwell Automation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ROL,SP500,2026-11-03,37.349998474121094,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,31.8,34.3,,,,,"Rollins, Inc.",Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ROP,SP500,2026-11-03,473.5799865722656,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,394.02,405.77,,,,,Roper Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ROST,SP500,2026-11-03,231.60000610351562,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,228.05,237.0,,,,,Ross Stores,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-RSG,SP500,2026-11-03,242.8699951171875,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,220.66,222.66,,,,,Republic Services,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-RTX,SP500,2026-11-03,203.82000732421875,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,193.05,193.53,,,,,RTX Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-RVTY,SP500,2026-11-03,163.47999572753906,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,148.76,149.52,,,,,Revvity,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-SBAC,SP500,2026-11-03,184.69000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,179.52,185.0,,,,,SBA Communications,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-SHW,SP500,2026-11-03,340.8699951171875,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,315.64,336.54,,,,,Sherwin-Williams,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-SMCI,SP500,2026-11-03,31.389999389648438,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,40.13,41.53,,,,,Supermicro,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-SNA,SP500,2026-11-03,362.0400085449219,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,355.36,366.39,,,,,Snap-on,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-SOLV,SP500,2026-11-03,84.76000213623047,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,86.74,87.87,,,,,Solventum,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-SPGI,SP500,2026-11-03,466.0299987792969,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,407.44,416.02,,,,,S&P Global,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-SRE,SP500,2026-11-03,85.36000061035156,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,79.59,82.49,,,,,Sempra,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-STT,SP500,2026-11-03,169.7100067138672,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,175.5,175.65,,,,,State Street Corporation,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-STX,SP500,2026-11-03,606.3800048828125,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,870.38,925.44,,,,,Seagate Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-STZ,SP500,2026-11-03,138.1300048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,128.06,128.2,,,,,Constellation Brands,Consumer Staples,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-SWKS,SP500,2026-11-03,85.4000015258789,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,84.44,89.57,,,,,Skyworks Solutions,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-SYF,SP500,2026-11-03,75.18000030517578,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,73.1,75.87,,,,,Synchrony Financial,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-SYK,SP500,2026-11-03,310.54998779296875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,282.18,286.09,,,,,Stryker Corporation,Health Care,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-SYY,SP500,2026-11-03,74.11000061035156,WATCH,1,NONE,Bear Trend,Distribution,Bear Micro BOS,,82.91,83.15,,,,,Sysco,Consumer Staples,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
-TAP,SP500,2026-11-03,41.869998931884766,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,39.57,39.95,,,,,Molson Coors Beverage Company,Consumer Staples,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-TDG,SP500,2026-11-03,1208.0400390625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,1082.59,1110.33,,,,,TransDigm Group,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TDY,SP500,2026-11-03,663.6300048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,619.08,624.58,,,,,Teledyne Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TECH,SP500,2026-11-03,72.66000366210938,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,72.33,72.48,,,,,Bio-Techne,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TEL,SP500,2026-11-03,219.77000427246094,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,208.61,216.5,,,,,TE Connectivity,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TER,SP500,2026-11-03,269.3500061035156,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,388.85,399.4,,,,,Teradyne,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TFC,SP500,2026-11-03,49.40999984741211,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,49.06,49.27,,,,,Truist Financial,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-TGT,SP500,2026-11-03,154.39999389648438,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,153.55,159.56,,,,,Target Corporation,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TMO,SP500,2026-11-03,698.3400268554688,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,594.36,647.0,,,,,Thermo Fisher Scientific,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TPL,SP500,2026-11-03,332.0,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,325.81,338.01,,,,,Texas Pacific Land Corporation,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TRGP,SP500,2026-11-03,298.55999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,288.84,289.68,,,,,Targa Resources,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TRMB,SP500,2026-11-03,65.61000061035156,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,58.58,59.89,,,,,Trimble Inc.,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TROW,SP500,2026-11-03,106.2300033569336,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,103.7,105.47,,,,,T. Rowe Price,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TRV,SP500,2026-11-03,395.4100036621094,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,370.15,372.13,,,,,Travelers Companies (The),Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TSCO,SP500,2026-11-03,35.099998474121094,WATCH,1,NONE,Bullish Zhongshu,Accumulation,Waiting,,34.35,35.03,,,,,Tractor Supply,Consumer Discretionary,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-TSLA,SP500,2026-11-03,398.5,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,368.03,384.04,,,,,"Tesla, Inc.",Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TXN,SP500,2026-11-03,312.489990234375,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,270.69,272.9,,,,,Texas Instruments,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-TXT,SP500,2026-11-03,87.75,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,75.51,76.81,,,,,Textron,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-UBER,SP500,2026-11-03,66.5999984741211,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,69.24,71.9,,,,,Uber,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-UHS,SP500,2026-11-03,177.1300048828125,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,182.44,186.06,,,,,Universal Health Services,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-ULTA,SP500,2026-11-03,634.8900146484375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,534.05,566.1,,,,,Ulta Beauty,Consumer Discretionary,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
-UNP,SP500,2026-11-03,303.42999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,274.22,278.6,,,,,Union Pacific Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-UPS,SP500,2026-11-03,109.16999816894531,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,92.03,94.76,,,,,United Parcel Service,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-URI,SP500,2026-11-03,1175.1700439453125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,1005.89,1026.55,,,,,United Rentals,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-V,SP500,2026-11-03,420.4200134277344,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,365.52,370.5,,,,,Visa Inc.,Financials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-VEEV,SP500,2026-11-03,303.2099914550781,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,279.02,282.81,,,,,Veeva Systems,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-VICI,SP500,2026-11-03,24.420000076293945,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,26.56,26.82,,,,,Vici Properties,Real Estate,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-VLTO,SP500,2026-11-03,116.31999969482422,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,95.01,96.76,,,,,Veralto,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-VMC,SP500,2026-11-03,284.6000061035156,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,240.69,247.63,,,,,Vulcan Materials Company,Materials,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
-VMRK,SP500,2026-11-03,62.040000915527344,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,60.54,61.94,,,,,Vivmark Residential,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-VRT,SP500,2026-11-03,235.97000122070312,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,248.69,252.1,,,,,Vertiv,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-VTRS,SP500,2026-11-03,18.920000076293945,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,17.86,18.43,,,,,Viatris,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-VZ,SP500,2026-11-03,45.2400016784668,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,43.0,45.32,,,,,Verizon,Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WAB,SP500,2026-11-03,291.7799987792969,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,278.26,284.47,,,,,Wabtec,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WAT,SP500,2026-11-03,459.8999938964844,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,422.83,424.46,,,,,Waters Corporation,Health Care,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
-WDC,SP500,2026-11-03,347.3500061035156,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,422.11,475.66,,,,,Western Digital,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WELL,SP500,2026-11-03,241.1699981689453,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,236.65,237.32,,,,,Welltower,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WFC,SP500,2026-11-03,85.52999877929688,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,84.61,84.73,,,,,Wells Fargo,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WMB,SP500,2026-11-03,72.47000122070312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,69.73,72.9,,,,,Williams Companies,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WSM,SP500,2026-11-03,253.6999969482422,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,225.22,229.91,,,,,"Williams-Sonoma, Inc.",Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WST,SP500,2026-11-03,406.989990234375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,359.49,360.29,,,,,West Pharmaceutical Services,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-WYNN,SP500,2026-11-03,77.68000030517578,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,73.07,77.89,,,,,Wynn Resorts,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-XOM,SP500,2026-11-03,177.4600067138672,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,155.85,158.05,,,,,ExxonMobil,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-XYL,SP500,2026-11-03,96.2699966430664,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,105.48,105.83,,,,,Xylem Inc.,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
-YUM,SP500,2026-11-03,157.00999450683594,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,135.35,140.3,,,,,Yum! Brands,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+L,SP500,2026-11-04,111.66999816894531,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,109.77,110.28,,,,,Loews Corporation,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+LEN,SP500,2026-11-04,92.19000244140625,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,76.63,79.36,,,,,Lennar,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+LNT,SP500,2026-11-04,73.7699966430664,READY,2,3B,Bullish Zhongshu,Distribution,Bull Micro BOS,LONG,68.67,69.93,,,,,Alliant Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+LUV,SP500,2026-11-04,46.41999816894531,READY,2,3B,Bull Trend,Accum Watch,Bull Micro BOS,LONG,39.09,41.21,,,,,Southwest Airlines,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+MAR,SP500,2026-11-04,424.8699951171875,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,381.04,407.34,,,,,Marriott International,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+MCD,SP500,2026-11-04,280.2200012207031,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,248.0,252.88,,,,,McDonald's,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+MGM,SP500,2026-11-04,32.81999969482422,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,28.72,29.81,,,,,MGM Resorts,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+MNST,SP500,2026-11-04,48.75,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,44.92,45.08,,,,,Monster Beverage,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
+MTD,SP500,2026-11-04,1723.239990234375,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,1606.0,1659.7,,,,,Mettler Toledo,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+NCLH,SP500,2026-11-04,18.600000381469727,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,15.06,15.74,,,,,Norwegian Cruise Line Holdings,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+NFLX,SP500,2026-11-04,66.38999938964844,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,66.54,72.1,,,,,Netflix,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+NOW,SP500,2026-11-04,108.80999755859375,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,130.39,142.1,,,,,ServiceNow,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+OMC,SP500,2026-11-04,87.51000213623047,READY,2,3B,Bullish Zhongshu,Distribution,Bull Micro BOS,LONG,79.65,82.26,,,,,Omnicom Group,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+PCAR,SP500,2026-11-04,106.16000366210938,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,105.44,112.71,,,,,Paccar,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+PHM,SP500,2026-11-04,135.97000122070312,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,114.53,122.68,,,,,PulteGroup,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+PPL,SP500,2026-11-04,35.720001220703125,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,34.41,35.27,,,,,PPL Corporation,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+RDDT,SP500,2026-11-04,101.88999938964844,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,143.47,152.85,,,,,Reddit,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+REG,SP500,2026-11-04,76.83999633789062,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,74.27,75.09,,,,,Regency Centers,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+REGN,SP500,2026-11-04,930.6699829101562,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,802.2,809.49,,,,,Regeneron Pharmaceuticals,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+RL,SP500,2026-11-04,412.05999755859375,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,370.97,393.93,,,,,Ralph Lauren Corporation,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+SLB,SP500,2026-11-04,51.560001373291016,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,50.47,51.24,,,,,Schlumberger,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
+SNDK,SP500,2026-11-04,1037.4000244140625,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,1276.0,1424.48,,,,,Sandisk,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+SO,SP500,2026-11-04,93.12000274658203,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,90.28,91.22,,,,,Southern Company,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+SPG,SP500,2026-11-04,228.5,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,200.37,206.2,,,,,Simon Property Group,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+SWK,SP500,2026-11-04,118.33000183105469,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,88.78,92.35,,,,,Stanley Black & Decker,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+T,SP500,2026-11-04,21.829999923706055,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,21.96,23.85,,,,,AT&T,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+TECH,SP500,2026-11-04,72.7300033569336,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,72.63,72.69,,,,,Bio-Techne,Health Care,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
+TJX,SP500,2026-11-04,144.75999450683594,READY,2,3S,Bearish Zhongshu,Neutral,Bull Micro BOS,SHORT,147.8,148.57,,,,,TJX Companies,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+TKO,SP500,2026-11-04,193.47999572753906,READY,2,3B,Bear Trend,Neutral,Bull Micro BOS,LONG,171.19,179.93,,,,,TKO Group Holdings,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+TMUS,SP500,2026-11-04,159.1699981689453,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,160.81,171.8,,,,,T-Mobile US,Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+TPR,SP500,2026-11-04,125.30999755859375,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,112.21,119.61,,,,,"Tapestry, Inc.",Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+TT,SP500,2026-11-04,410.4800109863281,READY,2,3S,Bear Trend,Accumulation,Bear Micro BOS,SHORT,447.15,471.91,,,,,Trane Technologies,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+VRTX,SP500,2026-11-04,549.0399780273438,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,502.29,514.9,,,,,Vertex Pharmaceuticals,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+WDAY,SP500,2026-11-04,201.83999633789062,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,189.75,195.74,,,,,"Workday, Inc.",Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+WEC,SP500,2026-11-04,118.11000061035156,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,104.57,109.07,,,,,WEC Energy Group,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+WMT,SP500,2026-11-04,129.1699981689453,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,116.63,121.38,,,,,Walmart,Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
+WY,SP500,2026-11-04,21.75,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,18.92,19.86,,,,,Weyerhaeuser,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+XEL,SP500,2026-11-04,80.5,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,76.97,77.5,,,,,Xcel Energy,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+ZBRA,SP500,2026-11-04,332.44000244140625,READY,2,3S,Bearish Zhongshu,Re-Accumulation,Bear Micro BOS,SHORT,377.75,390.8,,,,,Zebra Technologies,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+ZTS,SP500,2026-11-04,89.19999694824219,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,76.51,78.75,,,,,Zoetis,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+ABNB,SP500,2026-11-04,176.3699951171875,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,165.83,167.45,,,,,Airbnb,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+ADP,SP500,2026-11-04,303.5400085449219,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,263.36,277.33,,,,,Automatic Data Processing,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+AEP,SP500,2026-11-04,129.24000549316406,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,120.06,121.8,,,,,American Electric Power,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+AXON,SP500,2026-11-04,424.17999267578125,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,434.46,439.03,,,,,Axon Enterprise,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+BRO,SP500,2026-11-04,73.88999938964844,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,65.41,67.16,,,,,Brown & Brown,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+COF,SP500,2026-11-04,206.30999755859375,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,211.32,211.49,,,,,Capital One,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+CSGP,SP500,2026-11-04,32.58000183105469,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,29.27,30.16,,,,,CoStar Group,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+CTSH,SP500,2026-11-04,65.77999877929688,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,61.55,61.97,,,,,Cognizant,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+DE,SP500,2026-11-04,676.5,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,665.45,679.23,,,,,Deere & Company,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+DLR,SP500,2026-11-04,184.8800048828125,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,175.47,178.0,,,,,Digital Realty,Real Estate,,1.8.5-source-port,WATCH,READY,WATCH_TO_READY
+DOW,SP500,2026-11-04,32.70000076293945,READY,2,2B,Bullish Zhongshu,Neutral,Bear Micro BOS,LONG,29.52,30.51,,,,,Dow Inc.,Materials,,1.8.5-source-port,READY,READY,UNCHANGED
+EQT,SP500,2026-11-04,52.52000045776367,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,53.12,53.26,,,,,EQT Corporation,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
+FICO,SP500,2026-11-04,701.030029296875,READY,2,2B,Bearish Zhongshu,Neutral,Waiting,LONG,682.52,828.95,,,,,Fair Isaac,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+FLEX,SP500,2026-11-04,77.23999786376953,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,111.38,117.68,,,,,Flex Ltd.,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+GDDY,SP500,2026-11-04,118.31999969482422,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,99.82,99.95,,,,,GoDaddy,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+GRMN,SP500,2026-11-04,289.1499938964844,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,280.09,284.21,,,,,Garmin,Consumer Discretionary,,1.8.5-source-port,READY,READY,UNCHANGED
+HIG,SP500,2026-11-04,138.11000061035156,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,136.62,137.06,,,,,Hartford (The),Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+IBM,SP500,2026-11-04,254.32000732421875,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,247.67,251.82,,,,,IBM,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+INTU,SP500,2026-11-04,356.6400146484375,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,319.02,358.03,,,,,Intuit,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+INVH,SP500,2026-11-04,27.56999969482422,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,26.4,27.85,,,,,Invitation Homes,Real Estate,,1.8.5-source-port,READY,READY,UNCHANGED
+KEY,SP500,2026-11-04,21.549999237060547,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,21.15,21.27,,,,,KeyCorp,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+KMI,SP500,2026-11-04,31.520000457763672,READY,2,2B,Bearish Zhongshu,Neutral,Bear Micro BOS,LONG,31.48,31.63,,,,,Kinder Morgan,Energy,,1.8.5-source-port,READY,READY,UNCHANGED
+MRK,SP500,2026-11-04,150.36000061035156,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,142.32,146.68,,,,,Merck & Co.,Health Care,,1.8.5-source-port,READY,READY,UNCHANGED
+MSI,SP500,2026-11-04,496.989990234375,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,457.37,468.98,,,,,Motorola Solutions,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+NOC,SP500,2026-11-04,525.3499755859375,READY,2,2B,Bullish Zhongshu,Neutral,Bear Micro BOS,LONG,515.25,520.57,,,,,Northrop Grumman,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+NWS,SP500,2026-11-04,33.38999938964844,READY,2,2B,Bullish Zhongshu,Distribution,Waiting,LONG,32.49,32.76,,,,,News Corp (Class B),Communication Services,,1.8.5-source-port,READY,READY,UNCHANGED
+PCG,SP500,2026-11-04,13.399999618530273,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,12.9,13.41,,,,,PG&E Corporation,Utilities,,1.8.5-source-port,READY,READY,UNCHANGED
+PWR,SP500,2026-11-04,580.4400024414062,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,613.0,649.0,,,,,Quanta Services,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+Q,SP500,2026-11-04,118.77999877929688,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,120.05,124.91,,,,,Qnity Electronics,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+RF,SP500,2026-11-04,29.030000686645508,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,30.1,30.41,,,,,Regions Financial Corporation,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+SJM,SP500,2026-11-04,132.42999267578125,READY,2,2B,Bull Trend,Neutral,Bull Micro BOS,LONG,119.97,123.09,,,,,J.M. Smucker Company (The),Consumer Staples,,1.8.5-source-port,READY,READY,UNCHANGED
+SNPS,SP500,2026-11-04,462.95001220703125,READY,2,2S,Bullish Zhongshu,Neutral,Waiting,SHORT,417.6,419.84,,,,,Synopsys,Information Technology,,1.8.5-source-port,READY,READY,UNCHANGED
+USB,SP500,2026-11-04,61.029998779296875,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,58.81,59.17,,,,,U.S. Bancorp,Financials,,1.8.5-source-port,READY,READY,UNCHANGED
+VRSK,SP500,2026-11-04,197.85000610351562,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,174.44,182.91,,,,,Verisk Analytics,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+WM,SP500,2026-11-04,238.49000549316406,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,223.0,228.98,,,,,Waste Management,Industrials,,1.8.5-source-port,READY,READY,UNCHANGED
+A,SP500,2026-11-04,177.1699981689453,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,171.28,176.79,,,,,Agilent Technologies,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AAPL,SP500,2026-11-04,349.510009765625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,338.7,341.57,,,,,Apple Inc.,Information Technology,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+ABT,SP500,2026-11-04,115.51000213623047,WATCH,1,NONE,Bullish Zhongshu,Re-Distribution,Bull Micro BOS,,104.2,105.88,,,,,Abbott Laboratories,Health Care,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+ACGL,SP500,2026-11-04,110.68000030517578,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,97.89,98.39,,,,,Arch Capital Group,Financials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+ACN,SP500,2026-11-04,264.2699890136719,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,175.49,176.4,,,,,Accenture,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ADBE,SP500,2026-11-04,248.47999572753906,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,241.51,245.16,,,,,Adobe Inc.,Information Technology,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+ADI,SP500,2026-11-04,406.239990234375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,394.18,396.95,,,,,Analog Devices,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ADM,SP500,2026-11-04,70.83999633789062,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,81.54,83.07,,,,,Archer Daniels Midland,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ADSK,SP500,2026-11-04,270.0899963378906,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,229.7,232.64,,,,,Autodesk,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AES,SP500,2026-11-04,14.899999618530273,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,14.8,14.85,,,,,AES Corporation,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AFL,SP500,2026-11-04,125.30000305175781,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,113.6,118.09,,,,,Aflac,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+AIG,SP500,2026-11-04,81.70999908447266,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,75.06,76.4,,,,,American International Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AIZ,SP500,2026-11-04,308.5199890136719,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,278.96,284.12,,,,,Assurant,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AKAM,SP500,2026-11-04,85.93000030517578,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,107.11,109.85,,,,,Akamai Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ALB,SP500,2026-11-04,94.97000122070312,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,111.55,117.59,,,,,Albemarle Corporation,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ALL,SP500,2026-11-04,269.05999755859375,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,255.17,257.67,,,,,Allstate,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ALLE,SP500,2026-11-04,192.69000244140625,WATCH,1,NONE,Bullish Zhongshu,Accum Watch,Waiting,,151.33,153.46,,,,,Allegion,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AMCR,SP500,2026-11-04,48.5,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,41.94,43.33,,,,,Amcor,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AMD,SP500,2026-11-04,488.7799987792969,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,502.6,517.35,,,,,Advanced Micro Devices,Information Technology,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+AME,SP500,2026-11-04,237.08999633789062,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,242.06,252.07,,,,,Ametek,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AMGN,SP500,2026-11-04,478.4800109863281,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,408.02,415.76,,,,,Amgen,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AMT,SP500,2026-11-04,194.86000061035156,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,171.73,172.68,,,,,American Tower,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AMZN,SP500,2026-11-04,266.0299987792969,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,248.6,250.88,,,,,Amazon,Consumer Discretionary,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+ANET,SP500,2026-11-04,178.47999572753906,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,200.77,206.13,,,,,Arista Networks,Information Technology,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+AON,SP500,2026-11-04,344.6700134277344,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,354.61,358.71,,,,,Aon plc,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AOS,SP500,2026-11-04,67.06999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,56.5,57.95,,,,,A. O. Smith,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+APA,SP500,2026-11-04,44.4900016784668,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,42.27,44.45,,,,,APA Corporation,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+APH,SP500,2026-11-04,79.01000213623047,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,80.05,83.87,,,,,Amphenol,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+APO,SP500,2026-11-04,122.76000213623047,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,112.1,114.86,,,,,Apollo Global Management,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+APP,SP500,2026-11-04,271.75,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,266.84,283.66,,,,,AppLovin,Communication Services,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+APTV,SP500,2026-11-04,43.2599983215332,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,44.52,44.66,,,,,Aptiv,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ARE,SP500,2026-11-04,46.0,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,50.58,51.05,,,,,Alexandria Real Estate Equities,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AVGO,SP500,2026-11-04,325.4800109863281,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,357.8,366.11,,,,,Broadcom,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+AVY,SP500,2026-11-04,192.58999633789062,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,172.05,172.17,,,,,Avery Dennison,Materials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+AXP,SP500,2026-11-04,332.5899963378906,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,335.22,336.56,,,,,American Express,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BAC,SP500,2026-11-04,51.630001068115234,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,61.43,63.23,,,,,Bank of America,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BALL,SP500,2026-11-04,67.37999725341797,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,60.94,61.94,,,,,Ball Corporation,Materials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+BDX,SP500,2026-11-04,209.19000244140625,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,175.71,184.37,,,,,Becton Dickinson,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BEN,SP500,2026-11-04,33.869998931884766,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,31.56,31.93,,,,,Franklin Resources,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BG,SP500,2026-11-04,97.01000213623047,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,109.82,110.0,,,,,Bunge Global,Consumer Staples,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+BIIB,SP500,2026-11-04,254.4600067138672,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,218.0,218.59,,,,,Biogen,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BKR,SP500,2026-11-04,49.869998931884766,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,55.44,55.76,,,,,Baker Hughes,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BLK,SP500,2026-11-04,1224.3699951171875,WATCH,1,NONE,Bull Trend,Distrib Watch,Bull Micro BOS,,1053.14,1092.92,,,,,BlackRock,Financials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+BRK-B,SP500,2026-11-04,579.0900268554688,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,501.41,506.58,,,,,Berkshire Hathaway,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BSX,SP500,2026-11-04,45.81999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,42.72,44.3,,,,,Boston Scientific,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+BX,SP500,2026-11-04,125.56999969482422,WATCH,1,NONE,Bullish Zhongshu,Accum Watch,Bull Micro BOS,,109.01,115.56,,,,,Blackstone Inc.,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+C,SP500,2026-11-04,124.73999786376953,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,123.57,126.45,,,,,Citigroup,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+CARR,SP500,2026-11-04,55.65999984741211,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,54.23,56.39,,,,,Carrier Global,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CASY,SP500,2026-11-04,674.8400268554688,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,652.99,718.24,,,,,Casey's,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CB,SP500,2026-11-04,374.1700134277344,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,342.22,344.52,,,,,Chubb Limited,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CBOE,SP500,2026-11-04,345.2099914550781,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,288.31,297.98,,,,,Cboe Global Markets,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CCL,SP500,2026-11-04,31.31999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,25.19,25.48,,,,,Carnival Corporation,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CDNS,SP500,2026-11-04,329.5199890136719,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,315.91,331.5,,,,,Cadence Design Systems,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CFG,SP500,2026-11-04,65.9000015258789,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,70.12,71.0,,,,,Citizens Financial Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CHD,SP500,2026-11-04,112.02999877929688,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,96.27,96.28,,,,,Church & Dwight,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CHRW,SP500,2026-11-04,133.83999633789062,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,145.02,150.36,,,,,C.H. Robinson,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CI,SP500,2026-11-04,305.4100036621094,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,274.04,278.47,,,,,Cigna,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CIEN,SP500,2026-11-04,272.239990234375,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,339.33,376.74,,,,,Ciena,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CMCSA,SP500,2026-11-04,24.850000381469727,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,21.46,22.32,,,,,Comcast,Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CME,SP500,2026-11-04,308.2699890136719,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,258.87,267.82,,,,,CME Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CMI,SP500,2026-11-04,471.8399963378906,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,542.7,548.42,,,,,Cummins,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CMS,SP500,2026-11-04,70.9800033569336,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,68.74,68.99,,,,,CMS Energy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CNC,SP500,2026-11-04,76.01000213623047,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,65.11,66.18,,,,,Centene Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+COHR,SP500,2026-11-04,195.08999633789062,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,275.79,312.68,,,,,Coherent Corp.,Information Technology,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+COIN,SP500,2026-11-04,151.5,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,184.29,184.93,,,,,Coinbase,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+COO,SP500,2026-11-04,64.41999816894531,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,53.71,57.69,,,,,Cooper Companies (The),Health Care,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+COP,SP500,2026-11-04,136.94000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,128.0,129.36,,,,,ConocoPhillips,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+COR,SP500,2026-11-04,354.0,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,320.06,322.33,,,,,Cencora,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+COST,SP500,2026-11-04,1046.469970703125,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,937.51,953.25,,,,,Costco,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CPAY,SP500,2026-11-04,418.6000061035156,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,401.52,407.52,,,,,Corpay,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CRL,SP500,2026-11-04,326.2900085449219,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,295.15,298.4,,,,,Charles River Laboratories,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CSCO,SP500,2026-11-04,103.61000061035156,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,109.23,111.44,,,,,Cisco,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CSX,SP500,2026-11-04,52.04999923706055,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,47.01,47.73,,,,,CSX Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CTAS,SP500,2026-11-04,229.02999877929688,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,198.87,204.86,,,,,Cintas,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CTVA,SP500,2026-11-04,12.260000228881836,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,82.98,84.02,,,,,Corteva,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+CVX,SP500,2026-11-04,216.9600067138672,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,201.96,208.25,,,,,Chevron Corporation,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DD,SP500,2026-11-04,150.72999572753906,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,130.19,132.22,,,,,DuPont,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DECK,SP500,2026-11-04,89.11000061035156,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,78.12,82.14,,,,,Deckers Brands,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DG,SP500,2026-11-04,141.63999938964844,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,125.15,134.13,,,,,Dollar General,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DGX,SP500,2026-11-04,255.67999267578125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,231.52,234.64,,,,,Quest Diagnostics,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DHI,SP500,2026-11-04,156.99000549316406,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,133.88,136.92,,,,,D. R. Horton,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DHR,SP500,2026-11-04,234.92999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,217.55,218.57,,,,,Danaher Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DIS,SP500,2026-11-04,118.94999694824219,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,102.99,106.4,,,,,Walt Disney Company (The),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DLTR,SP500,2026-11-04,147.0,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,116.02,116.89,,,,,Dollar Tree,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DOV,SP500,2026-11-04,212.66000366210938,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,185.26,192.75,,,,,Dover Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DPZ,SP500,2026-11-04,340.69000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,298.4,315.92,,,,,Domino's,Consumer Discretionary,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
+DVA,SP500,2026-11-04,192.66000366210938,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,179.9,182.61,,,,,DaVita,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DVN,SP500,2026-11-04,44.119998931884766,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,48.19,48.56,,,,,Devon Energy,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+DXCM,SP500,2026-11-04,88.4800033569336,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,82.86,85.25,,,,,Dexcom,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EBAY,SP500,2026-11-04,125.1500015258789,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,104.61,107.04,,,,,eBay Inc.,Consumer Discretionary,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+ECHO,SP500,2026-11-04,98.62000274658203,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,91.5,91.86,,,,,EchoStar,Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ED,SP500,2026-11-04,120.30000305175781,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,108.52,108.53,,,,,Consolidated Edison,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EFX,SP500,2026-11-04,192.2100067138672,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,173.78,177.8,,,,,Equifax,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EG,SP500,2026-11-04,421.29998779296875,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,366.49,377.74,,,,,Everest Group,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EL,SP500,2026-11-04,112.04000091552734,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,88.68,88.87,,,,,Estée Lauder Companies (The),Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EME,SP500,2026-11-04,639.25,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,748.61,776.67,,,,,Emcor,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EMR,SP500,2026-11-04,170.44000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,156.71,158.98,,,,,Emerson Electric,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EOG,SP500,2026-11-04,147.05999755859375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,142.76,144.26,,,,,EOG Resources,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EQIX,SP500,2026-11-04,1054.0899658203125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,1027.94,1038.44,,,,,Equinix,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ERIE,SP500,2026-11-04,279.9599914550781,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,215.32,223.51,,,,,Erie Indemnity,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ES,SP500,2026-11-04,70.45999908447266,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,71.33,71.46,,,,,Eversource Energy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ESS,SP500,2026-11-04,271.5199890136719,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,270.45,273.86,,,,,Essex Property Trust,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ETR,SP500,2026-11-04,111.9000015258789,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,104.76,105.32,,,,,Entergy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EVRG,SP500,2026-11-04,86.20999908447266,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,79.85,80.76,,,,,Evergy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EXC,SP500,2026-11-04,46.2400016784668,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,42.63,42.71,,,,,Exelon,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EXE,SP500,2026-11-04,87.30999755859375,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,92.63,92.9,,,,,Expand Energy,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EXPD,SP500,2026-11-04,197.69000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,193.69,194.59,,,,,Expeditors International,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+EXR,SP500,2026-11-04,161.0399932861328,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,133.59,139.54,,,,,Extra Space Storage,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+F,SP500,2026-11-04,12.670000076293945,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,11.91,12.45,,,,,Ford Motor Company,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FANG,SP500,2026-11-04,182.8800048828125,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,196.65,199.25,,,,,Diamondback Energy,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FAST,SP500,2026-11-04,53.209999084472656,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,48.53,48.74,,,,,Fastenal,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FCX,SP500,2026-11-04,62.599998474121094,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,69.46,71.22,,,,,Freeport-McMoRan,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FDS,SP500,2026-11-04,342.19000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,264.49,269.79,,,,,FactSet,Financials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+FERG,SP500,2026-11-04,248.52999877929688,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,223.49,225.3,,,,,Ferguson Enterprises,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FIS,SP500,2026-11-04,29.760000228881836,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,36.05,37.11,,,,,Fidelity National Information Services,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FIX,SP500,2026-11-04,1091.31005859375,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,1570.0,1670.42,,,,,Comfort Systems USA,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FOX,SP500,2026-11-04,61.619998931884766,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,56.21,57.25,,,,,Fox Corporation (Class B),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FOXA,SP500,2026-11-04,69.6500015258789,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,62.97,64.24,,,,,Fox Corporation (Class A),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+FRT,SP500,2026-11-04,114.62999725341797,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,108.1,109.8,,,,,Federal Realty Investment Trust,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GEHC,SP500,2026-11-04,85.80999755859375,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,63.37,67.1,,,,,GE HealthCare,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GILD,SP500,2026-11-04,174.47999572753906,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,151.71,152.26,,,,,Gilead Sciences,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GIS,SP500,2026-11-04,35.849998474121094,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,32.42,34.15,,,,,General Mills,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GM,SP500,2026-11-04,92.43000030517578,WATCH,1,NONE,Bullish Zhongshu,Accumulation,Bull Micro BOS,,82.86,84.59,,,,,General Motors,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GNRC,SP500,2026-11-04,189.32000732421875,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,187.55,193.31,,,,,Generac,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GOOG,SP500,2026-11-04,287.29998779296875,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,339.82,341.98,,,,,Alphabet Inc. (Class C),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GOOGL,SP500,2026-11-04,288.92999267578125,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,340.88,342.5,,,,,Alphabet Inc. (Class A),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GPC,SP500,2026-11-04,126.4000015258789,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,129.4,131.09,,,,,Genuine Parts Company,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GS,SP500,2026-11-04,928.0,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,868.52,931.0,,,,,Goldman Sachs,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+GWW,SP500,2026-11-04,1489.3900146484375,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,1257.76,1296.34,,,,,W. W. Grainger,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HAL,SP500,2026-11-04,33.0,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,32.88,32.9,,,,,Halliburton,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HAS,SP500,2026-11-04,121.58000183105469,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,87.72,91.59,,,,,Hasbro,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HII,SP500,2026-11-04,303.989990234375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,286.1,294.82,,,,,Huntington Ingalls Industries,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HON,SP500,2026-11-04,228.47000122070312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,205.2,211.51,,,,,Honeywell Technologies,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HPQ,SP500,2026-11-04,29.93000030517578,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,30.6,31.37,,,,,HP Inc.,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HRL,SP500,2026-11-04,22.760000228881836,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,19.42,20.07,,,,,Hormel Foods,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HST,SP500,2026-11-04,26.110000610351562,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,22.28,22.54,,,,,Host Hotels & Resorts,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HSY,SP500,2026-11-04,174.5,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,166.69,170.12,,,,,Hershey Company (The),Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HUBB,SP500,2026-11-04,438.260009765625,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,464.61,467.08,,,,,Hubbell Incorporated,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HUM,SP500,2026-11-04,417.4200134277344,WATCH,1,NONE,Neutral Zhongshu,Neutral,Waiting,,406.64,419.97,,,,,Humana,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+HWM,SP500,2026-11-04,213.55999755859375,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,224.88,225.71,,,,,Howmet Aerospace,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IBKR,SP500,2026-11-04,77.87999725341797,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,88.53,89.11,,,,,Interactive Brokers,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ICE,SP500,2026-11-04,174.9199981689453,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,156.95,158.55,,,,,Intercontinental Exchange,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IDXX,SP500,2026-11-04,698.5499877929688,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,501.17,536.84,,,,,Idexx Laboratories,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IEX,SP500,2026-11-04,233.69000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,232.54,239.7,,,,,IDEX Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IFF,SP500,2026-11-04,87.66999816894531,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,83.62,83.83,,,,,International Flavors & Fragrances,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+INCY,SP500,2026-11-04,122.8499984741211,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,121.61,122.87,,,,,Incyte,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+INTC,SP500,2026-11-04,58.27000045776367,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,89.19,93.7,,,,,Intel,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IQV,SP500,2026-11-04,263.7900085449219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,257.07,265.25,,,,,IQVIA,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IR,SP500,2026-11-04,84.18000030517578,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,76.27,76.46,,,,,Ingersoll Rand,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ISRG,SP500,2026-11-04,482.1000061035156,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,397.52,404.44,,,,,Intuitive Surgical,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IT,SP500,2026-11-04,207.19000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,186.42,194.53,,,,,Gartner,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ITW,SP500,2026-11-04,293.45001220703125,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,267.86,267.95,,,,,Illinois Tool Works,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+IVZ,SP500,2026-11-04,29.440000534057617,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,28.2,29.44,,,,,Invesco,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+J,SP500,2026-11-04,160.11000061035156,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,140.17,140.3,,,,,Jacobs Solutions,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+JBHT,SP500,2026-11-04,227.05999755859375,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,222.94,235.97,,,,,J.B. Hunt,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+JBL,SP500,2026-11-04,258.55999755859375,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,309.94,315.29,,,,,Jabil,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+JCI,SP500,2026-11-04,140.52999877929688,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,143.79,146.64,,,,,Johnson Controls,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+JKHY,SP500,2026-11-04,179.16000366210938,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,152.73,153.21,,,,,Jack Henry & Associates,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+JNJ,SP500,2026-11-04,276.32000732421875,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,260.68,262.85,,,,,Johnson & Johnson,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+KDP,SP500,2026-11-04,36.790000915527344,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,31.6,31.66,,,,,Keurig Dr Pepper,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+KEYS,SP500,2026-11-04,285.8599853515625,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,327.04,331.99,,,,,Keysight Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+KO,SP500,2026-11-04,95.80000305175781,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,87.73,89.36,,,,,Coca-Cola Company (The),Consumer Staples,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+KR,SP500,2026-11-04,68.97000122070312,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,57.75,59.2,,,,,Kroger,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LDOS,SP500,2026-11-04,135.67999267578125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,126.35,131.64,,,,,Leidos,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LH,SP500,2026-11-04,367.7900085449219,WATCH,1,NONE,Bull Trend,Accumulation,Waiting,,305.45,311.54,,,,,Labcorp,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LHX,SP500,2026-11-04,259.739990234375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,234.01,239.46,,,,,L3Harris,Industrials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+LII,SP500,2026-11-04,358.9599914550781,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bull Micro BOS,,351.34,376.41,,,,,Lennox International,Industrials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+LIN,SP500,2026-11-04,524.739990234375,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,473.05,480.56,,,,,Linde plc,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LITE,SP500,2026-11-04,626.75,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,881.23,978.4,,,,,Lumentum,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LLY,SP500,2026-11-04,1417.989990234375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,1147.0,1159.75,,,,,Lilly (Eli),Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LMT,SP500,2026-11-04,595.0399780273438,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,521.87,542.61,,,,,Lockheed Martin,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LOW,SP500,2026-11-04,229.3800048828125,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,199.4,200.0,,,,,Lowe's,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LULU,SP500,2026-11-04,112.05999755859375,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,95.35,100.67,,,,,Lululemon Athletica,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+LYV,SP500,2026-11-04,183.17999267578125,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,168.58,174.43,,,,,Live Nation Entertainment,Communication Services,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
+MA,SP500,2026-11-04,672.6799926757812,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,580.88,582.93,,,,,Mastercard,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MAS,SP500,2026-11-04,86.81999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,67.19,70.05,,,,,Masco,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MCHP,SP500,2026-11-04,75.33999633789062,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,72.77,75.58,,,,,Microchip Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MCK,SP500,2026-11-04,1069.43994140625,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,874.31,899.26,,,,,McKesson Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MCO,SP500,2026-11-04,528.3400268554688,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,472.27,476.79,,,,,Moody's Corporation,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MDLZ,SP500,2026-11-04,67.37999725341797,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,62.38,63.83,,,,,Mondelez International,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MDT,SP500,2026-11-04,104.95999908447266,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,90.26,94.72,,,,,Medtronic,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MET,SP500,2026-11-04,102.88999938964844,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,95.39,98.0,,,,,MetLife,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+META,SP500,2026-11-04,630.0,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,592.05,593.34,,,,,Meta Platforms,Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MLM,SP500,2026-11-04,556.5599975585938,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,502.56,507.82,,,,,Martin Marietta Materials,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MMM,SP500,2026-11-04,193.9499969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,160.27,167.95,,,,,3M,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MO,SP500,2026-11-04,78.01000213623047,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,69.87,70.53,,,,,Altria,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MOS,SP500,2026-11-04,21.6200008392334,WATCH,1,NONE,Bear Trend,Distribution,Bull Micro BOS,,24.35,25.2,,,,,Mosaic Company (The),Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MPWR,SP500,2026-11-04,1261.0799560546875,WATCH,1,NONE,Bear Trend,Accumulation,Waiting,,1195.0,1288.27,,,,,Monolithic Power Systems,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
+MRNA,SP500,2026-11-04,258.3800048828125,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,133.33,154.69,,,,,Moderna,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MRSH,SP500,2026-11-04,210.3800048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,186.58,191.04,,,,,Marsh McLennan,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MRVL,SP500,2026-11-04,159.8000030517578,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,226.52,240.2,,,,,Marvell Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MSCI,SP500,2026-11-04,674.2999877929688,WATCH,1,NONE,Bullish Zhongshu,Accumulation,Bull Micro BOS,,550.52,563.27,,,,,MSCI,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MSFT,SP500,2026-11-04,555.7999877929688,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,515.7,517.78,,,,,Microsoft,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MTB,SP500,2026-11-04,224.63999938964844,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,231.27,242.84,,,,,M&T Bank,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+MU,SP500,2026-11-04,795.22998046875,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,1022.9,1042.4,,,,,Micron Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NDAQ,SP500,2026-11-04,109.69999694824219,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,94.29,94.85,,,,,"Nasdaq, Inc.",Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NDSN,SP500,2026-11-04,330.70001220703125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,324.82,331.2,,,,,Nordson Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NEE,SP500,2026-11-04,88.44999694824219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,80.75,82.81,,,,,NextEra Energy,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NEM,SP500,2026-11-04,118.11000061035156,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,109.84,119.24,,,,,Newmont,Materials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+NI,SP500,2026-11-04,45.290000915527344,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,40.49,40.84,,,,,NiSource,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NKE,SP500,2026-11-04,40.4900016784668,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,35.22,36.24,,,,,"Nike, Inc.",Consumer Discretionary,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+NSC,SP500,2026-11-04,344.1400146484375,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,332.53,338.23,,,,,Norfolk Southern,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NTAP,SP500,2026-11-04,187.6699981689453,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,202.56,209.06,,,,,NetApp,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NUE,SP500,2026-11-04,267.9100036621094,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,252.01,254.2,,,,,Nucor,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NVDA,SP500,2026-11-04,200.1300048828125,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,212.85,214.39,,,,,Nvidia,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NVR,SP500,2026-11-04,6376.81982421875,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,6057.84,6118.77,,,,,"NVR, Inc.",Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NWSA,SP500,2026-11-04,30.559999465942383,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,29.08,29.86,,,,,News Corp (Class A),Communication Services,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+NXPI,SP500,2026-11-04,265.010009765625,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,224.17,227.24,,,,,NXP Semiconductors,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+O,SP500,2026-11-04,59.220001220703125,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,55.02,56.78,,,,,Realty Income,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ODFL,SP500,2026-11-04,179.38999938964844,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,169.65,194.01,,,,,Old Dominion,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ON,SP500,2026-11-04,71.23999786376953,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,75.69,76.19,,,,,ON Semiconductor,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ORCL,SP500,2026-11-04,123.7300033569336,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,139.0,146.4,,,,,Oracle Corporation,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ORLY,SP500,2026-11-04,92.33999633789062,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,83.01,87.02,,,,,O'Reilly Automotive,Consumer Discretionary,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+OTIS,SP500,2026-11-04,79.79000091552734,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,67.64,70.24,,,,,Otis Worldwide,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PANW,SP500,2026-11-04,348.0400085449219,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,343.01,344.79,,,,,Palo Alto Networks,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PEG,SP500,2026-11-04,73.22000122070312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,69.79,72.45,,,,,Public Service Enterprise Group,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PEP,SP500,2026-11-04,142.4199981689453,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,136.73,139.0,,,,,PepsiCo,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PG,SP500,2026-11-04,167.32000732421875,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,143.79,148.23,,,,,Procter & Gamble,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PGR,SP500,2026-11-04,234.82000732421875,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,212.63,215.99,,,,,Progressive Corporation,Financials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+PH,SP500,2026-11-04,910.1900024414062,WATCH,1,NONE,Bear Trend,Re-Distribution,Waiting,,911.41,930.84,,,,,Parker Hannifin,Industrials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+PKG,SP500,2026-11-04,259.1700134277344,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,224.8,231.78,,,,,Packaging Corporation of America,Materials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+PLD,SP500,2026-11-04,131.36000061035156,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,132.08,136.49,,,,,Prologis,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PLTR,SP500,2026-11-04,171.6999969482422,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,186.6,188.37,,,,,Palantir Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PM,SP500,2026-11-04,211.27999877929688,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,185.72,189.7,,,,,Philip Morris International,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PNC,SP500,2026-11-04,233.4499969482422,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,246.61,246.96,,,,,PNC Financial Services,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PNW,SP500,2026-11-04,105.56999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,96.42,98.42,,,,,Pinnacle West Capital,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PODD,SP500,2026-11-04,165.02000427246094,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,140.98,141.86,,,,,Insulet Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PPG,SP500,2026-11-04,127.2699966430664,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,103.7,105.8,,,,,PPG Industries,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PRU,SP500,2026-11-04,126.62999725341797,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,116.61,116.91,,,,,Prudential Financial,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PSA,SP500,2026-11-04,342.760009765625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,289.64,292.89,,,,,Public Storage,Real Estate,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+PTC,SP500,2026-11-04,195.17999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,137.23,142.81,,,,,PTC Inc.,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+PYPL,SP500,2026-11-04,60.20000076293945,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,54.34,55.54,,,,,PayPal,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+QCOM,SP500,2026-11-04,173.19000244140625,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,175.97,179.21,,,,,Qualcomm,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+RCL,SP500,2026-11-04,333.1499938964844,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,278.64,279.5,,,,,Royal Caribbean Group,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+RMD,SP500,2026-11-04,240.50999450683594,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,221.59,221.79,,,,,ResMed|,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ROK,SP500,2026-11-04,443.8800048828125,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,431.81,435.69,,,,,Rockwell Automation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ROL,SP500,2026-11-04,38.380001068115234,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,31.8,34.3,,,,,"Rollins, Inc.",Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ROP,SP500,2026-11-04,492.2200012207031,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,394.02,405.77,,,,,Roper Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ROST,SP500,2026-11-04,245.74000549316406,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,228.05,237.0,,,,,Ross Stores,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+RSG,SP500,2026-11-04,245.41000366210938,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,220.66,222.66,,,,,Republic Services,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+RTX,SP500,2026-11-04,198.42999267578125,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,193.05,193.53,,,,,RTX Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+RVTY,SP500,2026-11-04,159.42999267578125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,148.76,149.52,,,,,Revvity,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SBAC,SP500,2026-11-04,195.47999572753906,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,179.52,185.0,,,,,SBA Communications,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SCHW,SP500,2026-11-04,93.37000274658203,WATCH,1,NONE,Neutral Zhongshu,Neutral,Bull Micro BOS,,91.38,94.55,,,,,Charles Schwab Corporation,Financials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+SHW,SP500,2026-11-04,363.5,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,315.64,336.54,,,,,Sherwin-Williams,Materials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SMCI,SP500,2026-11-04,29.600000381469727,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,40.13,41.53,,,,,Supermicro,Information Technology,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+SOLV,SP500,2026-11-04,89.3499984741211,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,86.74,87.87,,,,,Solventum,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SPGI,SP500,2026-11-04,481.69000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,407.44,416.02,,,,,S&P Global,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SRE,SP500,2026-11-04,82.9000015258789,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,79.59,82.49,,,,,Sempra,Utilities,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+STLD,SP500,2026-11-04,240.1199951171875,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,238.11,248.96,,,,,Steel Dynamics,Materials,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+STT,SP500,2026-11-04,173.41000366210938,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,175.5,175.65,,,,,State Street Corporation,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+STX,SP500,2026-11-04,557.0599975585938,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,870.38,925.44,,,,,Seagate Technology,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+STZ,SP500,2026-11-04,145.49000549316406,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,128.06,128.2,,,,,Constellation Brands,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SWKS,SP500,2026-11-04,82.91999816894531,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,84.44,89.57,,,,,Skyworks Solutions,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SYF,SP500,2026-11-04,75.02999877929688,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,73.1,75.87,,,,,Synchrony Financial,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+SYK,SP500,2026-11-04,339.6499938964844,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,282.18,286.09,,,,,Stryker Corporation,Health Care,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+SYY,SP500,2026-11-04,76.94000244140625,WATCH,1,NONE,Bear Trend,Distribution,Waiting,,82.91,83.15,,,,,Sysco,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TAP,SP500,2026-11-04,43.13999938964844,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,39.57,39.95,,,,,Molson Coors Beverage Company,Consumer Staples,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TDG,SP500,2026-11-04,1216.8800048828125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,1082.59,1110.33,,,,,TransDigm Group,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TDY,SP500,2026-11-04,632.010009765625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bear Micro BOS,,619.08,624.58,,,,,Teledyne Technologies,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TEL,SP500,2026-11-04,220.22000122070312,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,208.61,216.5,,,,,TE Connectivity,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TER,SP500,2026-11-04,250.99000549316406,WATCH,1,NONE,Bearish Zhongshu,Neutral,Bear Micro BOS,,388.85,399.4,,,,,Teradyne,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TFC,SP500,2026-11-04,50.869998931884766,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,49.06,49.27,,,,,Truist Financial,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TMO,SP500,2026-11-04,706.1599731445312,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,594.36,647.0,,,,,Thermo Fisher Scientific,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TRGP,SP500,2026-11-04,285.0,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,288.84,289.68,,,,,Targa Resources,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TROW,SP500,2026-11-04,112.56999969482422,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,103.7,105.47,,,,,T. Rowe Price,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TRV,SP500,2026-11-04,409.25,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,370.15,372.13,,,,,Travelers Companies (The),Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TSLA,SP500,2026-11-04,385.19000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,368.03,384.04,,,,,"Tesla, Inc.",Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TSN,SP500,2026-11-04,60.029998779296875,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,50.71,54.24,,,,,Tyson Foods,Consumer Staples,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+TTWO,SP500,2026-11-04,208.89999389648438,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,204.28,215.66,,,,,Take-Two Interactive,Communication Services,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+TXN,SP500,2026-11-04,311.489990234375,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,270.69,272.9,,,,,Texas Instruments,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TXT,SP500,2026-11-04,86.6500015258789,WATCH,1,NONE,Bullish Zhongshu,Neutral,Waiting,,75.51,76.81,,,,,Textron,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+TYL,SP500,2026-11-04,423.20001220703125,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,348.52,393.53,,,,,Tyler Technologies,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
+UBER,SP500,2026-11-04,69.87000274658203,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,69.24,71.9,,,,,Uber,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+UHS,SP500,2026-11-04,196.4600067138672,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,182.44,186.06,,,,,Universal Health Services,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+ULTA,SP500,2026-11-04,660.7000122070312,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,534.05,566.1,,,,,Ulta Beauty,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+UNH,SP500,2026-11-04,409.3800048828125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,404.31,406.25,,,,,UnitedHealth Group,Health Care,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+UNP,SP500,2026-11-04,308.5299987792969,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,274.22,278.6,,,,,Union Pacific Corporation,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+UPS,SP500,2026-11-04,114.30999755859375,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,92.03,94.76,,,,,United Parcel Service,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+URI,SP500,2026-11-04,1123.7900390625,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,1005.89,1026.55,,,,,United Rentals,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+V,SP500,2026-11-04,436.57000732421875,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,365.52,370.5,,,,,Visa Inc.,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+VEEV,SP500,2026-11-04,310.6300048828125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,279.02,282.81,,,,,Veeva Systems,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+VICI,SP500,2026-11-04,25.25,WATCH,1,NONE,Bear Trend,Neutral,Bull Micro BOS,,26.56,26.82,,,,,Vici Properties,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+VLTO,SP500,2026-11-04,117.0199966430664,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,95.01,96.76,,,,,Veralto,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+VMC,SP500,2026-11-04,297.69000244140625,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,240.69,247.63,,,,,Vulcan Materials Company,Materials,,1.8.5-source-port,NONE,WATCH,NEW_WATCH
+VMRK,SP500,2026-11-04,63.720001220703125,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,61.12,61.94,,,,,Vivmark Residential,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+VRSN,SP500,2026-11-04,318.0299987792969,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,281.16,283.97,,,,,Verisign,Information Technology,,1.8.5-source-port,ENTRY,WATCH,ENTRY_TO_WATCH
+VRT,SP500,2026-11-04,205.5500030517578,WATCH,1,NONE,Bearish Zhongshu,Neutral,Waiting,,248.69,252.1,,,,,Vertiv,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+VST,SP500,2026-11-04,120.29000091552734,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,148.5,154.65,,,,,Vistra Corp.,Utilities,,1.8.5-source-port,READY,WATCH,READY_TO_WATCH
+VTRS,SP500,2026-11-04,19.219999313354492,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,17.86,18.43,,,,,Viatris,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WAB,SP500,2026-11-04,294.9700012207031,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,278.26,284.47,,,,,Wabtec,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WAT,SP500,2026-11-04,467.6000061035156,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,422.83,424.46,,,,,Waters Corporation,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WDC,SP500,2026-11-04,323.8299865722656,WATCH,1,NONE,Bear Trend,Neutral,Bear Micro BOS,,422.11,475.66,,,,,Western Digital,Information Technology,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WELL,SP500,2026-11-04,247.99000549316406,WATCH,1,NONE,Bullish Zhongshu,Neutral,Bull Micro BOS,,236.65,237.32,,,,,Welltower,Real Estate,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WFC,SP500,2026-11-04,87.43000030517578,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,84.61,84.73,,,,,Wells Fargo,Financials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WSM,SP500,2026-11-04,270.0799865722656,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,225.22,229.91,,,,,"Williams-Sonoma, Inc.",Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+WST,SP500,2026-11-04,408.7799987792969,WATCH,1,NONE,Bull Trend,Neutral,Waiting,,359.49,360.29,,,,,West Pharmaceutical Services,Health Care,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+XOM,SP500,2026-11-04,169.27000427246094,WATCH,1,NONE,Bull Trend,Neutral,Bear Micro BOS,,155.85,158.05,,,,,ExxonMobil,Energy,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+XYL,SP500,2026-11-04,101.05000305175781,WATCH,1,NONE,Bear Trend,Neutral,Waiting,,105.48,105.83,,,,,Xylem Inc.,Industrials,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
+YUM,SP500,2026-11-04,166.30999755859375,WATCH,1,NONE,Bull Trend,Neutral,Bull Micro BOS,,135.35,140.3,,,,,Yum! Brands,Consumer Discretionary,,1.8.5-source-port,WATCH,WATCH,UNCHANGED
