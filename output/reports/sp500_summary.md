@@ -1,31 +1,29 @@
 CWP Daily Scan | SP500
-2026-11-10
+2026-11-11
 
-ENTRY: 7 | READY: 177 | WATCH: 313
+ENTRY: 6 | READY: 185 | WATCH: 306
 
 NEW ENTRY
-DE  2B  Bear Trend
-GE  2B  Bullish Zhongshu
-A  BRK  Bull Trend
-ALGN  BRK  Bear Trend
-CEG  BRK  Bear Trend
-DOC  BRK  Bear Trend
-TMUS  BRK  Bear Trend
+IFF  3S  Bull Trend
+CHTR  2B  Bear Trend
+DTE  2B  Bullish Zhongshu
+WYNN  2B  Bullish Zhongshu
+TTWO  BRK  Bullish Zhongshu
 
 NEW READY
-AVY  3B  Bull Trend
-CHD  3B  Bull Trend
-CHRW  3S  Bear Trend
-COO  3B  Bull Trend
-CRL  3B  Bull Trend
-DLTR  3B  Bull Trend
-JBL  3S  Bear Trend
-LIN  3B  Bull Trend
-PG  3B  Bull Trend
-STX  3S  Bear Trend
-URI  3B  Bull Trend
-VLTO  3B  Bull Trend
-WAT  3B  Bull Trend
-WDC  3S  Bear Trend
-AIG  2S  Bull Trend
-… and 9 more
+BDX  3B  Bull Trend
+DHR  3B  Bull Trend
+IDXX  3B  Bull Trend
+MO  3B  Bull Trend
+WRB  3B  Bull Trend
+XYL  3S  Bear Trend
+BAX  2B  Bullish Zhongshu
+GD  2B  Bull Trend
+GM  2B  Bullish Zhongshu
+HII  2B  Bull Trend
+LHX  2B  Bull Trend
+LMT  2B  Bull Trend
+LOW  2B  Bullish Zhongshu
+NEE  2B  Bullish Zhongshu
+NSC  2B  Bearish Zhongshu
+… and 4 more
