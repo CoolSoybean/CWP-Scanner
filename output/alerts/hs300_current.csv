@@ -1,78 +1,76 @@
 symbol,market,signal_date,close,status,status_rank,setup,regime,wyckoff,trigger,direction,zs_zd,zs_zg,entry_price,sl,tp1,tp2,name,sector,notes,engine_version
-600660,HS300,2026-11-10,56.45,ENTRY,3,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,54.86,55.88,56.45,55.25,58.84,60.04,福耀玻璃,nan,,1.8.5-source-port
-601689,HS300,2026-11-10,48.42,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,42.76,45.01,48.42,40.78,63.7,71.34,拓普集团,nan,,1.8.5-source-port
-601838,HS300,2026-11-10,20.33,ENTRY,3,2B,Bullish Zhongshu,Distribution,Bull Micro BOS,LONG,18.98,19.85,20.33,19.37,22.25,23.21,成都银行,nan,,1.8.5-source-port
-002600,HS300,2026-11-10,12.23,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,11.71,11.94,12.23,11.77,13.15,13.61,领益智造,nan,,1.8.5-source-port
-002920,HS300,2026-11-10,83.09,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,80.18,81.61,83.09,78.8,91.66,95.95,德赛西威,nan,,1.8.5-source-port
-300433,HS300,2026-11-10,29.17,ENTRY,3,BRK,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,25.05,28.5,29.17,28.16,31.19,32.2,蓝思科技,nan,,1.8.5-source-port
-000538,HS300,2026-11-10,54.72,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,52.55,54.38,,,,,云南白药,nan,,1.8.5-source-port
-000568,HS300,2026-11-10,79.99,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,71.29,73.18,,,,,泸州老窖,nan,,1.8.5-source-port
-000708,HS300,2026-11-10,12.43,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,12.64,12.68,,,,,中信特钢,nan,,1.8.5-source-port
-000963,HS300,2026-11-10,26.87,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,25.65,26.86,,,,,华东医药,nan,,1.8.5-source-port
-000999,HS300,2026-11-10,25.39,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,24.37,24.63,,,,,华润三九,nan,,1.8.5-source-port
-002027,HS300,2026-11-10,5.64,READY,2,3B,Bull Trend,Neutral,Bull Micro BOS,LONG,5.06,5.36,,,,,分众传媒,nan,,1.8.5-source-port
-002049,HS300,2026-11-10,51.85,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,51.69,56.6,,,,,紫光国微,nan,,1.8.5-source-port
-002475,HS300,2026-11-10,51.68,READY,2,3B,Bullish Zhongshu,Distribution,Waiting,LONG,44.51,50.7,,,,,立讯精密,nan,,1.8.5-source-port
-002532,HS300,2026-11-10,11.47,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,11.59,12.16,,,,,天山铝业,nan,,1.8.5-source-port
-002625,HS300,2026-11-10,19.55,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,22.55,24.48,,,,,光启技术,nan,,1.8.5-source-port
-002938,HS300,2026-11-10,49.57,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,70.8,77.66,,,,,鹏鼎控股,nan,,1.8.5-source-port
-300628,HS300,2026-11-10,39.02,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,38.56,38.77,,,,,亿联网络,nan,,1.8.5-source-port
-300803,HS300,2026-11-10,44.17,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,52.89,53.78,,,,,指南针,nan,,1.8.5-source-port
-302132,HS300,2026-11-10,68.17,READY,2,3B,Bull Trend,Distribution,Waiting,LONG,61.38,66.43,,,,,中航成飞,nan,,1.8.5-source-port
-600019,HS300,2026-11-10,6.18,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,5.93,6.14,,,,,宝钢股份,nan,,1.8.5-source-port
-600025,HS300,2026-11-10,10.92,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,10.06,10.65,,,,,华能水电,nan,,1.8.5-source-port
-600028,HS300,2026-11-10,5.69,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,5.25,5.54,,,,,中国石化,nan,,1.8.5-source-port
-600036,HS300,2026-11-10,43.01,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,41.73,41.83,,,,,招商银行,nan,,1.8.5-source-port
-600050,HS300,2026-11-10,4.33,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,4.31,4.34,,,,,中国联通,nan,,1.8.5-source-port
-600115,HS300,2026-11-10,3.67,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,3.46,3.5,,,,,中国东航,nan,,1.8.5-source-port
-600219,HS300,2026-11-10,4.32,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,4.21,4.34,,,,,南山铝业,nan,,1.8.5-source-port
-600309,HS300,2026-11-10,71.74,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,69.1,71.48,,,,,万华化学,nan,,1.8.5-source-port
-600438,HS300,2026-11-10,11.97,READY,2,3B,Bear Trend,Accumulation,Waiting,LONG,11.18,11.84,,,,,通威股份,nan,,1.8.5-source-port
-600887,HS300,2026-11-10,31.14,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,27.38,28.29,,,,,伊利股份,nan,,1.8.5-source-port
-600905,HS300,2026-11-10,3.36,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,3.51,3.53,,,,,三峡能源,nan,,1.8.5-source-port
-600938,HS300,2026-11-10,29.88,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,34.36,34.67,,,,,中国海油,nan,,1.8.5-source-port
-600958,HS300,2026-11-10,8.35,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,8.49,8.85,,,,,东方证券,nan,,1.8.5-source-port
-600989,HS300,2026-11-10,20.9,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,21.8,22.7,,,,,宝丰能源,nan,,1.8.5-source-port
-601018,HS300,2026-11-10,3.54,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,3.48,3.54,,,,,宁波港,nan,,1.8.5-source-port
-601066,HS300,2026-11-10,22.13,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,22.63,23.36,,,,,中信建投,nan,,1.8.5-source-port
-601127,HS300,2026-11-10,43.33,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,43.61,45.0,,,,,赛力斯,nan,,1.8.5-source-port
-601166,HS300,2026-11-10,19.67,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,18.23,18.3,,,,,兴业银行,nan,,1.8.5-source-port
-601169,HS300,2026-11-10,5.98,READY,2,3B,Bull Trend,Distribution,Waiting,LONG,5.43,5.69,,,,,北京银行,nan,,1.8.5-source-port
-601601,HS300,2026-11-10,31.39,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,29.23,30.9,,,,,中国太保,nan,,1.8.5-source-port
-601618,HS300,2026-11-10,2.59,READY,2,3B,Bullish Zhongshu,Accumulation,Waiting,LONG,2.53,2.6,,,,,中国中冶,nan,,1.8.5-source-port
-601800,HS300,2026-11-10,6.13,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,6.0,6.03,,,,,中国交建,nan,,1.8.5-source-port
-601868,HS300,2026-11-10,2.29,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,2.36,2.43,,,,,中国能建,nan,,1.8.5-source-port
-601888,HS300,2026-11-10,53.21,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,50.61,50.8,,,,,中国中免,nan,,1.8.5-source-port
-601898,HS300,2026-11-10,13.1,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,13.8,14.27,,,,,中煤能源,nan,,1.8.5-source-port
-601988,HS300,2026-11-10,6.96,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,6.72,6.73,,,,,中国银行,nan,,1.8.5-source-port
-601995,HS300,2026-11-10,27.88,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,30.1,32.39,,,,,中金公司,nan,,1.8.5-source-port
-603259,HS300,2026-11-10,150.3,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,151.62,157.78,,,,,药明康德,nan,,1.8.5-source-port
-603986,HS300,2026-11-10,244.57,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,271.3,294.8,,,,,兆易创新,nan,,1.8.5-source-port
-688223,HS300,2026-11-10,4.22,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,3.92,4.06,,,,,晶科能源,nan,,1.8.5-source-port
-688472,HS300,2026-11-10,8.97,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,8.08,8.55,,,,,阿特斯,nan,,1.8.5-source-port
-688981,HS300,2026-11-10,107.75,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,113.6,113.84,,,,,中芯国际,nan,,1.8.5-source-port
-000002,HS300,2026-11-10,3.2,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,3.27,3.29,,,,,万科A,nan,,1.8.5-source-port
-000100,HS300,2026-11-10,4.6,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,4.57,4.58,,,,,TCL科技,nan,,1.8.5-source-port
-000651,HS300,2026-11-10,39.1,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,38.39,39.54,,,,,格力电器,nan,,1.8.5-source-port
-000725,HS300,2026-11-10,4.5,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,5.71,6.17,,,,,京东方A,nan,,1.8.5-source-port
-001965,HS300,2026-11-10,10.16,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,10.15,10.24,,,,,招商公路,nan,,1.8.5-source-port
-002050,HS300,2026-11-10,35.35,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,35.01,35.37,,,,,三花智控,nan,,1.8.5-source-port
-002074,HS300,2026-11-10,24.49,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,26.71,27.84,,,,,国轩高科,nan,,1.8.5-source-port
-002142,HS300,2026-11-10,34.26,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,33.47,33.89,,,,,宁波银行,nan,,1.8.5-source-port
-002493,HS300,2026-11-10,11.74,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,12.65,12.69,,,,,荣盛石化,nan,,1.8.5-source-port
-300450,HS300,2026-11-10,32.27,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,30.5,31.45,,,,,先导智能,nan,,1.8.5-source-port
-301269,HS300,2026-11-10,90.47,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,93.5,95.99,,,,,华大九天,nan,,1.8.5-source-port
-600015,HS300,2026-11-10,6.64,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,6.19,6.43,,,,,华夏银行,nan,,1.8.5-source-port
-600026,HS300,2026-11-10,16.68,READY,2,2S,Bear Trend,Neutral,Bear Micro BOS,SHORT,19.92,22.75,,,,,中远海能,nan,,1.8.5-source-port
-600027,HS300,2026-11-10,5.13,READY,2,2S,Neutral Zhongshu,Neutral,Waiting,SHORT,5.0,5.2,,,,,华电国际,nan,,1.8.5-source-port
-600482,HS300,2026-11-10,29.43,READY,2,2S,Bear Trend,Neutral,Bear Micro BOS,SHORT,30.83,32.38,,,,,中国动力,nan,,1.8.5-source-port
-600585,HS300,2026-11-10,18.31,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,17.58,17.59,,,,,海螺水泥,nan,,1.8.5-source-port
-600795,HS300,2026-11-10,5.41,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,5.18,5.35,,,,,国电电力,nan,,1.8.5-source-port
-600845,HS300,2026-11-10,16.88,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,17.14,17.68,,,,,宝信软件,nan,,1.8.5-source-port
-600919,HS300,2026-11-10,12.85,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,11.95,12.68,,,,,江苏银行,nan,,1.8.5-source-port
-601009,HS300,2026-11-10,12.51,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,11.66,12.26,,,,,南京银行,nan,,1.8.5-source-port
-601186,HS300,2026-11-10,5.94,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,6.06,6.08,,,,,中国铁建,nan,,1.8.5-source-port
-601633,HS300,2026-11-10,13.73,READY,2,2B,Bear Trend,Neutral,Bear Micro BOS,LONG,14.33,14.44,,,,,长城汽车,nan,,1.8.5-source-port
-601901,HS300,2026-11-10,6.87,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,6.67,6.89,,,,,方正证券,nan,,1.8.5-source-port
-603288,HS300,2026-11-10,35.46,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,33.6,34.18,,,,,海天味业,nan,,1.8.5-source-port
-688008,HS300,2026-11-10,154.8,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,157.72,181.88,,,,,澜起科技,nan,,1.8.5-source-port
+300433,HS300,2026-11-11,29.11,ENTRY,3,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,25.05,28.5,29.11,28.18,30.97,31.9,蓝思科技,nan,,1.8.5-source-port
+002050,HS300,2026-11-11,36.35,ENTRY,3,2B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,35.01,35.37,36.35,31.56,45.92,50.71,三花智控,nan,,1.8.5-source-port
+601100,HS300,2026-11-11,93.21,ENTRY,3,BRK,Bear Trend,Neutral,Bull Micro BOS,LONG,89.86,92.0,93.21,89.5,100.63,104.34,恒立液压,nan,,1.8.5-source-port
+000538,HS300,2026-11-11,54.3,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,52.55,54.38,,,,,云南白药,nan,,1.8.5-source-port
+000568,HS300,2026-11-11,76.99,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,71.29,73.18,,,,,泸州老窖,nan,,1.8.5-source-port
+000617,HS300,2026-11-11,6.36,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,6.43,6.61,,,,,中油资本,nan,,1.8.5-source-port
+000708,HS300,2026-11-11,12.4,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,12.64,12.68,,,,,中信特钢,nan,,1.8.5-source-port
+000999,HS300,2026-11-11,25.05,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,24.37,24.63,,,,,华润三九,nan,,1.8.5-source-port
+001979,HS300,2026-11-11,7.47,READY,2,3S,Bull Trend,Neutral,Waiting,SHORT,7.59,7.86,,,,,招商蛇口,nan,,1.8.5-source-port
+002027,HS300,2026-11-11,5.42,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,5.06,5.36,,,,,分众传媒,nan,,1.8.5-source-port
+002475,HS300,2026-11-11,51.67,READY,2,3B,Bull Trend,Distribution,Waiting,LONG,44.51,50.7,,,,,立讯精密,nan,,1.8.5-source-port
+002532,HS300,2026-11-11,11.29,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,11.59,12.16,,,,,天山铝业,nan,,1.8.5-source-port
+002600,HS300,2026-11-11,11.87,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,11.71,11.94,,,,,领益智造,nan,,1.8.5-source-port
+002625,HS300,2026-11-11,19.21,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,22.55,24.48,,,,,光启技术,nan,,1.8.5-source-port
+002920,HS300,2026-11-11,85.75,READY,2,3B,Bullish Zhongshu,Neutral,Bull Micro BOS,LONG,80.18,81.61,,,,,德赛西威,nan,,1.8.5-source-port
+002938,HS300,2026-11-11,52.56,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,70.8,77.66,,,,,鹏鼎控股,nan,,1.8.5-source-port
+300803,HS300,2026-11-11,44.53,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,52.89,53.78,,,,,指南针,nan,,1.8.5-source-port
+302132,HS300,2026-11-11,66.74,READY,2,3B,Bull Trend,Distribution,Waiting,LONG,61.38,66.43,,,,,中航成飞,nan,,1.8.5-source-port
+600016,HS300,2026-11-11,3.4,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,3.42,3.45,,,,,民生银行,nan,,1.8.5-source-port
+600025,HS300,2026-11-11,10.82,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,10.06,10.65,,,,,华能水电,nan,,1.8.5-source-port
+600028,HS300,2026-11-11,5.65,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,5.25,5.54,,,,,中国石化,nan,,1.8.5-source-port
+600036,HS300,2026-11-11,42.56,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,41.73,41.83,,,,,招商银行,nan,,1.8.5-source-port
+600115,HS300,2026-11-11,3.56,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,3.46,3.5,,,,,中国东航,nan,,1.8.5-source-port
+600406,HS300,2026-11-11,23.1,READY,2,3S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,23.32,24.0,,,,,国电南瑞,nan,,1.8.5-source-port
+600438,HS300,2026-11-11,11.73,READY,2,3B,Bear Trend,Accumulation,Waiting,LONG,11.18,11.84,,,,,通威股份,nan,,1.8.5-source-port
+600515,HS300,2026-11-11,2.61,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,2.64,2.7,,,,,海南机场,nan,,1.8.5-source-port
+600887,HS300,2026-11-11,30.61,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,27.38,28.29,,,,,伊利股份,nan,,1.8.5-source-port
+600905,HS300,2026-11-11,3.31,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,3.51,3.53,,,,,三峡能源,nan,,1.8.5-source-port
+600938,HS300,2026-11-11,30.33,READY,2,3S,Bearish Zhongshu,Neutral,Waiting,SHORT,34.36,34.67,,,,,中国海油,nan,,1.8.5-source-port
+600958,HS300,2026-11-11,8.24,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,8.49,8.85,,,,,东方证券,nan,,1.8.5-source-port
+600989,HS300,2026-11-11,20.98,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,21.8,22.7,,,,,宝丰能源,nan,,1.8.5-source-port
+601018,HS300,2026-11-11,3.52,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,3.48,3.54,,,,,宁波港,nan,,1.8.5-source-port
+601066,HS300,2026-11-11,21.89,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,22.63,23.36,,,,,中信建投,nan,,1.8.5-source-port
+601127,HS300,2026-11-11,43.16,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,43.61,45.0,,,,,赛力斯,nan,,1.8.5-source-port
+601166,HS300,2026-11-11,19.55,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,18.23,18.3,,,,,兴业银行,nan,,1.8.5-source-port
+601169,HS300,2026-11-11,5.97,READY,2,3B,Bull Trend,Distribution,Waiting,LONG,5.43,5.69,,,,,北京银行,nan,,1.8.5-source-port
+601600,HS300,2026-11-11,8.14,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,8.34,8.7,,,,,中国铝业,nan,,1.8.5-source-port
+601601,HS300,2026-11-11,31.2,READY,2,3B,Bearish Zhongshu,Neutral,Waiting,LONG,31.06,32.25,,,,,中国太保,nan,,1.8.5-source-port
+601800,HS300,2026-11-11,6.06,READY,2,3B,Bull Trend,Neutral,Waiting,LONG,6.0,6.03,,,,,中国交建,nan,,1.8.5-source-port
+601868,HS300,2026-11-11,2.28,READY,2,3S,Bear Trend,Neutral,Bear Micro BOS,SHORT,2.36,2.43,,,,,中国能建,nan,,1.8.5-source-port
+601888,HS300,2026-11-11,52.1,READY,2,3B,Bullish Zhongshu,Neutral,Waiting,LONG,50.61,50.8,,,,,中国中免,nan,,1.8.5-source-port
+601898,HS300,2026-11-11,13.14,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,13.8,14.27,,,,,中煤能源,nan,,1.8.5-source-port
+601995,HS300,2026-11-11,27.78,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,30.1,32.39,,,,,中金公司,nan,,1.8.5-source-port
+603259,HS300,2026-11-11,148.7,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,151.62,157.78,,,,,药明康德,nan,,1.8.5-source-port
+603986,HS300,2026-11-11,259.62,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,271.3,294.8,,,,,兆易创新,nan,,1.8.5-source-port
+688126,HS300,2026-11-11,21.06,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,21.48,21.55,,,,,沪硅产业,nan,,1.8.5-source-port
+688223,HS300,2026-11-11,4.13,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,3.92,4.06,,,,,晶科能源,nan,,1.8.5-source-port
+688472,HS300,2026-11-11,8.69,READY,2,3B,Bear Trend,Neutral,Waiting,LONG,8.08,8.55,,,,,阿特斯,nan,,1.8.5-source-port
+688981,HS300,2026-11-11,109.31,READY,2,3S,Bear Trend,Neutral,Waiting,SHORT,113.6,113.84,,,,,中芯国际,nan,,1.8.5-source-port
+000002,HS300,2026-11-11,3.2,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,3.27,3.29,,,,,万科A,nan,,1.8.5-source-port
+000100,HS300,2026-11-11,4.57,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,4.57,4.58,,,,,TCL科技,nan,,1.8.5-source-port
+000651,HS300,2026-11-11,38.66,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,38.39,39.54,,,,,格力电器,nan,,1.8.5-source-port
+000725,HS300,2026-11-11,4.56,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,5.71,6.17,,,,,京东方A,nan,,1.8.5-source-port
+001965,HS300,2026-11-11,10.1,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,10.15,10.24,,,,,招商公路,nan,,1.8.5-source-port
+002074,HS300,2026-11-11,24.37,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,26.71,27.84,,,,,国轩高科,nan,,1.8.5-source-port
+002142,HS300,2026-11-11,33.97,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,33.47,33.89,,,,,宁波银行,nan,,1.8.5-source-port
+002493,HS300,2026-11-11,11.67,READY,2,2B,Bear Trend,Neutral,Waiting,LONG,12.65,12.69,,,,,荣盛石化,nan,,1.8.5-source-port
+300450,HS300,2026-11-11,31.89,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,30.5,31.45,,,,,先导智能,nan,,1.8.5-source-port
+301269,HS300,2026-11-11,90.73,READY,2,2B,Bull Trend,Neutral,Waiting,LONG,93.5,95.99,,,,,华大九天,nan,,1.8.5-source-port
+600015,HS300,2026-11-11,6.56,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,6.19,6.43,,,,,华夏银行,nan,,1.8.5-source-port
+600026,HS300,2026-11-11,16.96,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,19.92,22.75,,,,,中远海能,nan,,1.8.5-source-port
+600027,HS300,2026-11-11,5.09,READY,2,2S,Neutral Zhongshu,Neutral,Waiting,SHORT,5.0,5.2,,,,,华电国际,nan,,1.8.5-source-port
+600482,HS300,2026-11-11,29.7,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,30.83,32.38,,,,,中国动力,nan,,1.8.5-source-port
+600585,HS300,2026-11-11,18.03,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,17.58,17.59,,,,,海螺水泥,nan,,1.8.5-source-port
+600795,HS300,2026-11-11,5.33,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,5.18,5.35,,,,,国电电力,nan,,1.8.5-source-port
+600845,HS300,2026-11-11,16.63,READY,2,2S,Bearish Zhongshu,Neutral,Waiting,SHORT,17.14,17.68,,,,,宝信软件,nan,,1.8.5-source-port
+600919,HS300,2026-11-11,12.81,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,11.95,12.68,,,,,江苏银行,nan,,1.8.5-source-port
+601009,HS300,2026-11-11,12.49,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,11.66,12.26,,,,,南京银行,nan,,1.8.5-source-port
+601021,HS300,2026-11-11,44.91,READY,2,2B,Bullish Zhongshu,Neutral,Waiting,LONG,38.18,40.38,,,,,春秋航空,nan,,1.8.5-source-port
+601186,HS300,2026-11-11,5.88,READY,2,2S,Bearish Zhongshu,Neutral,Bear Micro BOS,SHORT,6.06,6.08,,,,,中国铁建,nan,,1.8.5-source-port
+601633,HS300,2026-11-11,13.45,READY,2,2B,Bear Trend,Neutral,Bear Micro BOS,LONG,14.33,14.44,,,,,长城汽车,nan,,1.8.5-source-port
+601901,HS300,2026-11-11,6.77,READY,2,2B,Neutral Zhongshu,Neutral,Bear Micro BOS,LONG,6.67,6.89,,,,,方正证券,nan,,1.8.5-source-port
+601988,HS300,2026-11-11,6.94,READY,2,2S,Bull Trend,Neutral,Waiting,SHORT,6.72,6.73,,,,,中国银行,nan,,1.8.5-source-port
+603288,HS300,2026-11-11,34.61,READY,2,2B,Bullish Zhongshu,Neutral,Bear Micro BOS,LONG,33.6,34.18,,,,,海天味业,nan,,1.8.5-source-port
+688008,HS300,2026-11-11,162.86,READY,2,2S,Bear Trend,Neutral,Waiting,SHORT,157.72,181.88,,,,,澜起科技,nan,,1.8.5-source-port
