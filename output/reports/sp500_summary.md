@@ -1,16 +1,17 @@
 CWP Daily Scan | SP500
-2026-11-13
+2026-11-14
 
-ENTRY: 2 | READY: 185 | WATCH: 310
+ENTRY: 3 | READY: 183 | WATCH: 311
 
 NEW ENTRY
-AMCR  3S  Bull Trend
-CEG  3B  Bear Trend
+DASH  3S  Bull Trend
+CBOE  BRK  Bull Trend
+CME  BRK  Bull Trend
 
 NEW READY
-DVA  3S  Bearish Zhongshu
-IBKR  3S  Bear Trend
-PANW  3S  Bear Trend
-XOM  3B  Bull Trend
-ES  2B  Bearish Zhongshu
-EXR  2B  Bullish Zhongshu
+APO  3B  Bull Trend
+ERIE  3B  Bull Trend
+PYPL  3B  Bull Trend
+DXCM  2B  Bull Trend
+FIS  2S  Bearish Zhongshu
+SBAC  2S  Bull Trend
