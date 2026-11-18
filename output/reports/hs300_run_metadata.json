@@ -1,16 +1,16 @@
 {
   "market": "HS300",
-  "started_at": "2026-11-17T18:11:32.042537+00:00",
-  "finished_at": "2026-11-17T18:30:47.587282+00:00",
+  "started_at": "2026-11-18T17:28:20.468723+00:00",
+  "finished_at": "2026-11-18T17:31:11.710537+00:00",
   "constituent_count": 300,
   "incremental_success": 300,
   "full_refresh": 0,
   "cache_fallback": 0,
   "failed": 0,
-  "download_seconds": 1122.138,
+  "download_seconds": 143.556,
   "valid_symbol_count": 300,
-  "newest_market_date": "2026-11-17",
-  "scan_seconds": 18.295,
-  "total_seconds": 1155.545,
+  "newest_market_date": "2026-11-18",
+  "scan_seconds": 14.04,
+  "total_seconds": 171.242,
   "force_full_download": false
 }
